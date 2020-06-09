@@ -1,0 +1,48 @@
+{
+  "name": "@seek/node-datadog-custom-metrics",
+  "description": "Helpers for sending Datadog custom metrics",
+  "version": "0.0.0-semantically-released",
+  "main": "lib/commonjs",
+  "module": "lib/es2015",
+  "typings": "lib/index.d.ts",
+  "files": [
+    "lib"
+  ],
+  "sideEffects": false,
+  "license": "UNLICENSED",
+  "scripts": {
+    "build": "smt build",
+    "commit": "smt commit",
+    "format": "smt format",
+    "format:check": "smt format check",
+    "lint": "concurrently 'smt lint' 'yarn -s format:check'",
+    "prerelease": "smt build",
+    "release": "smt release",
+    "test:jest": "jest --coverage",
+    "test:build": "tsc --incremental false --noEmit",
+    "test": "concurrently 'yarn -s test:jest' 'yarn -s test:build' 'yarn -s lint'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SEEK-Jobs/node-datadog-custom-metrics"
+  },
+  "devDependencies": {
+    "@seek/seek-module-toolkit": "3.0.21",
+    "@types/jest": "25.2.3",
+    "@types/node": "14.0.12",
+    "concurrently": "5.2.0",
+    "eslint-plugin-tsdoc": "0.2.5",
+    "hot-shots": "7.5.0",
+    "jest": "26.0.1",
+    "ts-jest": "26.1.0"
+  },
+  "peerDependencies": {
+    "hot-shots": "6.x || 7.x"
+  },
+  "peerDependenciesMeta": {
+    "hot-shots": {
+      "optional": true
+    }
+  },
+  "dependencies": {}
+}
