@@ -1,12 +1,6 @@
 module.exports = {
-  roots: ['<rootDir>/src'],
-  transform: {
-    '^.+\\.ts$': 'ts-jest',
-  },
-  testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.tsx?$',
-  moduleFileExtensions: ['ts', 'js', 'json', 'node'],
-  testEnvironment: 'node',
-  collectCoverage: true,
+  ...require('skuba/config/jest'),
+
   coverageThreshold: {
     global: {
       branches: 100,
@@ -14,5 +8,4 @@ module.exports = {
       functions: 100,
     },
   },
-  collectCoverageFrom: ['src/**/*.ts'],
 };

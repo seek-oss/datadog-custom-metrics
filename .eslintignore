@@ -7,10 +7,3 @@ node_modules*/
 /dist*/
 /lib*/
 /tmp*/
-
-.DS_Store
-.npmrc
-*.tsbuildinfo
-npm-debug.log
-package-lock.json
-yarn-error.log

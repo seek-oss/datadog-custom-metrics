@@ -1,14 +1,13 @@
-# 🐶 node-datadog-custom-metrics
-
-[![Slack Channel](https://img.shields.io/badge/slack-%23indirect--apply-aa6dca.svg?style=flat-square)](https://seekchat.slack.com/messages/indirect-apply/)
-[![Build status](https://badge.buildkite.com/0e1adc2fa4366020ed5e5cf2032c7db533ad0ccb008c6dd663.svg?branch=master)](https://buildkite.com/seek/node-datadog-custom-metrics)
-[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg?style=flat-square)](https://github.com/semantic-release/semantic-release)
-[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?style=flat-square)](http://commitizen.github.io/cz-cli/)
+# 🐶 Datadog Custom Metrics
 
 Helpers for sending [Datadog custom metrics](https://docs.datadoghq.com/developers/metrics/custom_metrics/) from Node.js.
 
 For containerized services this depends on [hot-shots](https://github.com/brightcove/hot-shots).
 For Lambda this uses [Datadog's CloudWatch integration](https://docs.datadoghq.com/integrations/amazon_lambda/#using-cloudwatch-logs).
+
+```shell
+yarn add seek-datadog-custom-metrics
+```
 
 ## Tagging Convention
 
@@ -28,7 +27,7 @@ These tags are consistent with tags sent by [Gantry](https://github.com/SEEK-Job
 This is intended for containerized services, particularly those deployed with [Gantry](https://github.com/SEEK-Jobs/gantry).
 
 ```typescript
-import { createStatsDClient } from '@seek/node-datadog-custom-metrics';
+import { createStatsDClient } from 'seek-datadog-custom-metrics';
 
 // Expects `name`, `version`, `environment` and `metricsServer` properties
 import config from '../config';
@@ -49,7 +48,7 @@ const metricsClient = createStatsDClient(config, errorHandler);
 This is intended for use in Lambda functions.
 
 ```typescript
-import { createCloudWatchClient } from '@seek/node-datadog-custom-metrics';
+import { createCloudWatchClient } from 'seek-datadog-custom-metrics';
 
 // Expects `name`, `version` and `environment` properties
 import config from '../config';
@@ -64,7 +63,7 @@ const metricsClient = createCloudWatchClient(config);
 This is intended as a lightweight alternative to [APM](https://www.datadoghq.com/apm/) where nested spans aren't required.
 
 ```typescript
-import { createTimedSpan } from '@seek/node-datadog-custom-metrics';
+import { createTimedSpan } from 'seek-datadog-custom-metrics';
 
 // Takes a StatsD instance or `MetricsClient`
 const timedSpan = createTimedSpan(metricsClient);
@@ -74,6 +73,6 @@ const loadPrivateKey = async (): Promise<PrivateKey> =>
     // Prefix for the custom metrics
     'secrets.load_private_key',
     // Closure to be timed
-    () => client.getSecretValue({ SecretId }).promise()
+    () => client.getSecretValue({ SecretId }).promise(),
   );
 ```

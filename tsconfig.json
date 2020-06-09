@@ -1,5 +1,4 @@
 {
-  "extends": "@seek/seek-module-toolkit/config/tsconfig.json",
   "compilerOptions": {
     "target": "ES2018",
     "outDir": "lib",
@@ -8,5 +7,6 @@
     "incremental": true,
     "strict": true
   },
-  "include": ["src/**/*"]
+  "exclude": ["lib/**/*"],
+  "extends": "skuba/config/tsconfig.json"
 }
