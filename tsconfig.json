@@ -1,0 +1,12 @@
+{
+  "extends": "@seek/seek-module-toolkit/config/tsconfig.json",
+  "compilerOptions": {
+    "target": "ES2018",
+    "outDir": "lib",
+    "moduleResolution": "node",
+    "removeComments": false,
+    "incremental": true,
+    "strict": true
+  },
+  "include": ["src/**/*"]
+}

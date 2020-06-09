@@ -1,0 +1,6 @@
+plugins:
+  - 'eslint-plugin-tsdoc'
+extends: './node_modules/@seek/seek-module-toolkit/config/.eslintrc.yml'
+rules:
+  tsdoc/syntax:
+    - error
