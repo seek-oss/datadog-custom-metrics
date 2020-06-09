@@ -1,41 +1,26 @@
 {
-  "name": "@seek/node-datadog-custom-metrics",
+  "bugs": {
+    "url": "https://github.com/seek-oss/datadog-custom-metrics/issues"
+  },
+  "dependencies": {},
   "description": "Helpers for sending Datadog custom metrics",
-  "version": "0.0.0-semantically-released",
-  "main": "lib/commonjs",
-  "module": "lib/es2015",
-  "typings": "lib/index.d.ts",
-  "files": [
-    "lib"
-  ],
-  "sideEffects": false,
-  "license": "UNLICENSED",
-  "scripts": {
-    "build": "smt build",
-    "commit": "smt commit",
-    "format": "smt format",
-    "format:check": "smt format check",
-    "lint": "concurrently 'smt lint' 'yarn -s format:check'",
-    "prerelease": "smt build",
-    "release": "smt release",
-    "test:jest": "jest --coverage",
-    "test:build": "tsc --incremental false --noEmit",
-    "test": "concurrently 'yarn -s test:jest' 'yarn -s test:build' 'yarn -s lint'"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/SEEK-Jobs/node-datadog-custom-metrics"
-  },
   "devDependencies": {
-    "@seek/seek-module-toolkit": "3.0.21",
-    "@types/jest": "25.2.3",
     "@types/node": "14.0.12",
-    "concurrently": "5.2.0",
     "eslint-plugin-tsdoc": "0.2.5",
     "hot-shots": "7.5.0",
-    "jest": "26.0.1",
-    "ts-jest": "26.1.0"
+    "semantic-release": "17.0.8",
+    "skuba": "3.5.0-beta.2"
   },
+  "files": [
+    "lib*/**/*.d.ts",
+    "lib*/**/*.js",
+    "lib*/**/*.js.map"
+  ],
+  "homepage": "https://github.com/seek-oss/datadog-custom-metrics#readme",
+  "license": "MIT",
+  "main": "./lib-commonjs/index.js",
+  "module": "./lib-es2015/index.js",
+  "name": "seek-datadog-custom-metrics",
   "peerDependencies": {
     "hot-shots": "6.x || 7.x"
   },
@@ -44,5 +29,24 @@
       "optional": true
     }
   },
-  "dependencies": {}
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seek-oss/datadog-custom-metrics.git"
+  },
+  "scripts": {
+    "build": "skuba build-package",
+    "format": "skuba format",
+    "lint": "skuba lint",
+    "release": "yarn build && semantic-release --success false",
+    "test": "skuba test --coverage"
+  },
+  "sideEffects": false,
+  "skuba": {
+    "entryPoint": null,
+    "template": null,
+    "version": "3.5.0-beta.2"
+  },
+  "typings": "./lib-typings/index.d.ts",
+  "version": "0.0.0-semantically-released"
 }
