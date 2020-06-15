@@ -63,6 +63,18 @@ import config from '../config';
 const metricsClient = createCloudWatchClient(config);
 ```
 
+### `createNoOpClient`
+
+`createNoOpClient` returns a no-op client.
+This is intended for use where a MetricsClient interface is expected but you do not wish to provide one, e.g in tests.
+
+```typescript
+import { createNoOpClient } from 'seek-datadog-custom-metrics';
+
+// Returns a `MetricsClient` subset of the full StatsD interface
+const metricsClient = createNoOpClient();
+```
+
 ### `createTimedSpan`
 
 `createTimedSpan` wraps an asynchronous closure and records custom Datadog metrics about its performance.
