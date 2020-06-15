@@ -1,6 +1,7 @@
-import { StatsD } from 'hot-shots';
+import type { StatsD } from 'hot-shots';
 
 import AppConfig from './AppConfig';
+import MetricsClient from './MetricsClient';
 import globalTags from './globalTags';
 
 /**
@@ -28,12 +29,12 @@ export interface StatsDConfig extends AppConfig {
 export default (
   config: StatsDConfig,
   errorHandler?: (err: Error) => void,
-): StatsD => {
+): MetricsClient => {
   // Avoid a hard dependency on `hot-shots` for e.g. Lambda CloudWatch users
   // This severely angers TypeScript in multiple ways.
 
   // eslint-disable-next-line
-  const StatsDClass: typeof StatsD = require('hot-shots').StatsD;
+  const StatsDClass = require('hot-shots').StatsD as typeof StatsD;
 
   const client = new StatsDClass({
     // Disable ourselves if there's no configured metrics server
