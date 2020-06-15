@@ -1,7 +1,8 @@
+import type { StatsD } from 'hot-shots';
+
 import AppConfig from './AppConfig';
 import MetricsClient from './MetricsClient';
 import globalTags from './globalTags';
-import { StatsD } from './statsD';
 
 /**
  * Configuration for building a StatsD client
