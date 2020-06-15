@@ -14,7 +14,7 @@ describe('index', () => {
     expect(createCloudWatchClient).toBeInstanceOf(Function);
   });
 
-  it('should export a createEmptyClient function', () => {
+  it('should export a createNoOpClient function', () => {
     expect(createNoOpClient).toBeInstanceOf(Function);
   });
 
