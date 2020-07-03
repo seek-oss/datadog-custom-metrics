@@ -6,16 +6,26 @@
 [![npm package](https://img.shields.io/npm/v/seek-datadog-custom-metrics)](https://www.npmjs.com/package/seek-datadog-custom-metrics)
 [![Powered by skuba](https://img.shields.io/badge/🤿%20skuba-powered-009DC4)](https://github.com/seek-oss/skuba)
 
-Helpers for sending [Datadog custom metrics](https://docs.datadoghq.com/developers/metrics/custom_metrics/) from Node.js.
+Common interface for sending [Datadog custom metrics](https://docs.datadoghq.com/developers/metrics/custom_metrics/) from Node.js runtime environments:
 
-For containerized services this depends on [hot-shots](https://github.com/brightcove/hot-shots).
-For Lambda this uses [Datadog's CloudWatch integration](https://docs.datadoghq.com/integrations/amazon_lambda/#using-cloudwatch-logs).
+- Containers (via [hot-shots](https://github.com/brightcove/hot-shots))
+- AWS Lambda (via [Datadog's CloudWatch integration](https://docs.datadoghq.com/integrations/amazon_lambda/#using-cloudwatch-logs))
 
 ```shell
 yarn add seek-datadog-custom-metrics
 ```
 
-## Tagging Convention
+## Table of contents
+
+- [Tagging convention](#tagging-convention)
+- [API reference](#api-reference)
+  - [createStatsDClient](#createstatsdclient)
+  - [createCloudWatchClient](#createcloudwatchclient)
+  - [createNoOpClient](#createnoopclient)
+  - [createTimedSpan](#createtimedspan)
+- [Contributing](https://github.com/seek-oss/datadog-custom-metrics/blob/master/CONTRIBUTING.md)
+
+## Tagging convention
 
 All custom metrics are prefixed by `AppConfig.name`.
 Two global tags are also added to every custom metric:
@@ -25,7 +35,7 @@ Two global tags are also added to every custom metric:
 
 These tags are consistent with tags sent by [Gantry](https://github.com/SEEK-Jobs/gantry) via Datadog's AWS integration.
 
-## Usage
+## API reference
 
 ### `createStatsDClient`
 
