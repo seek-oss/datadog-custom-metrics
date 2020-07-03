@@ -7,6 +7,6 @@
     "incremental": true,
     "strict": true
   },
-  "exclude": ["lib/**/*"],
+  "exclude": ["lib*/**/*"],
   "extends": "skuba/config/tsconfig.json"
 }
