@@ -6,10 +6,9 @@
   "description": "Helpers for sending Datadog custom metrics",
   "devDependencies": {
     "@types/node": "14.0.12",
-    "eslint-plugin-tsdoc": "0.2.5",
     "hot-shots": "7.5.0",
     "semantic-release": "17.0.8",
-    "skuba": "3.5.0-beta.2"
+    "skuba": "3.7.3"
   },
   "files": [
     "lib*/**/*.d.ts",
@@ -43,10 +42,11 @@
   },
   "sideEffects": false,
   "skuba": {
-    "entryPoint": null,
+    "entryPoint": "src/index.ts",
     "template": null,
-    "version": "3.5.0-beta.2"
+    "type": "package",
+    "version": "3.7.3"
   },
-  "typings": "./lib-types/index.d.ts",
+  "types": "./lib-types/index.d.ts",
   "version": "0.0.0-semantically-released"
 }
