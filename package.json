@@ -7,7 +7,6 @@
   "devDependencies": {
     "@types/node": "14.0.12",
     "hot-shots": "7.7.1",
-    "semantic-release": "17.0.8",
     "skuba": "3.7.3"
   },
   "files": [
@@ -37,7 +36,7 @@
     "build": "skuba build-package",
     "format": "skuba format",
     "lint": "skuba lint",
-    "release": "yarn build && semantic-release --success false",
+    "release": "yarn build && skuba release",
     "test": "skuba test --coverage"
   },
   "sideEffects": false,
