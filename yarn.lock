@@ -1089,13 +1089,13 @@
     "@types/yargs" "^15.0.0"
     chalk "^4.0.0"
 
-"@microsoft/tsdoc-config@0.13.4":
-  version "0.13.4"
-  resolved "https://registry.yarnpkg.com/@microsoft/tsdoc-config/-/tsdoc-config-0.13.4.tgz#84ad92b88d3899683376224de91567b01d447d18"
-  integrity sha512-B3F3mndJTGUmcHTt8chqjN4EPvxJlkzZIkrZUHwJvKvbr74HEe6mB8Aa6Rlh8jj6mHq7mmtyiUn17+5zr4vbXw==
+"@microsoft/tsdoc-config@0.13.5":
+  version "0.13.5"
+  resolved "https://registry.yarnpkg.com/@microsoft/tsdoc-config/-/tsdoc-config-0.13.5.tgz#2efeb27f5e4d191b8356aa4eb09e146c0813070c"
+  integrity sha512-KlnIdTRnPSsU9Coz9wzDAkT8JCLopP3ec1sgsgo7trwE6QLMKRpM4hZi2uzVX897SW49Q4f439auGBcQLnZQfA==
   dependencies:
     "@microsoft/tsdoc" "0.12.20"
-    ajv "~6.10.2"
+    ajv "~6.12.3"
     jju "~1.4.0"
     resolve "~1.12.0"
 
@@ -1645,22 +1645,12 @@ aggregate-error@^3.0.0:
     clean-stack "^2.0.0"
     indent-string "^4.0.0"
 
-ajv@^6.10.0, ajv@^6.10.2, ajv@^6.5.5:
+ajv@^6.10.0, ajv@^6.10.2, ajv@^6.5.5, ajv@~6.12.3:
   version "6.12.3"
   resolved "https://registry.yarnpkg.com/ajv/-/ajv-6.12.3.tgz#18c5af38a111ddeb4f2697bd78d68abc1cabd706"
   integrity sha512-4K0cK3L1hsqk9xIb2z9vs/XU+PGJZ9PNpJRDS9YLzmNdX6jmVPfamLvTJr0aDAusnHyCHO6MjzlkAsgtqp9teA==
   dependencies:
     fast-deep-equal "^3.1.1"
-    fast-json-stable-stringify "^2.0.0"
-    json-schema-traverse "^0.4.1"
-    uri-js "^4.2.2"
-
-ajv@~6.10.2:
-  version "6.10.2"
-  resolved "https://registry.yarnpkg.com/ajv/-/ajv-6.10.2.tgz#d3cea04d6b017b2894ad69040fec8b623eb4bd52"
-  integrity sha512-TXtUUEYHuaTEbLZWIKUr5pmBuhDLy+8KYtPYdcV8qC+pOZL+NKqYwvWSRrVXHn+ZmRRAu8vJTAznH7Oag6RVRw==
-  dependencies:
-    fast-deep-equal "^2.0.1"
     fast-json-stable-stringify "^2.0.0"
     json-schema-traverse "^0.4.1"
     uri-js "^4.2.2"
@@ -3343,15 +3333,15 @@ eslint-config-seek@^7.0.2:
     eslint-plugin-react-hooks "^4.0.4"
     find-root "^1.1.0"
 
-eslint-config-skuba@1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/eslint-config-skuba/-/eslint-config-skuba-1.0.3.tgz#2d61f270f82dcaa05d30bd09f5c1f74f35cd7727"
-  integrity sha512-qYgaPU0y6JHUE1UddJAwOdPiYORv/dhZKqIXJ/zYcy9ApSoSLrO0gxmsTJi0RO86kEXKSx1J2LkKftS9cQawCw==
+eslint-config-skuba@1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/eslint-config-skuba/-/eslint-config-skuba-1.0.4.tgz#c80f839339b09960c09136a36bb71c0bb74513c1"
+  integrity sha512-AgpqF4MFxaffJ7J+6gDujedRQ8wCGWtTsbVdaDIxHuiAz4na+0zA7vVSXwcR5/dEknEJi7UBZq7g/Qfq47lYJg==
   dependencies:
     "@types/eslint" "^7.2.0"
     eslint-config-seek "^7.0.2"
-    eslint-plugin-jest "^23.17.1"
-    eslint-plugin-tsdoc "^0.2.5"
+    eslint-plugin-jest "^23.18.0"
+    eslint-plugin-tsdoc "^0.2.6"
 
 eslint-import-resolver-node@^0.3.3:
   version "0.3.3"
@@ -3411,10 +3401,10 @@ eslint-plugin-import@^2.21.2:
     resolve "^1.17.0"
     tsconfig-paths "^3.9.0"
 
-eslint-plugin-jest@^23.13.2, eslint-plugin-jest@^23.17.1:
-  version "23.17.1"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-jest/-/eslint-plugin-jest-23.17.1.tgz#c0f39ba78e0f33b7ee1ce4ec92b773e39026ea3f"
-  integrity sha512-/o36fw67qNbJGWbSBIBMfseMsNP/d88WUHAGHCi1xFwsNB3XXZGdvxbOw49j3iQz6MCW/yw8OeOsuQhi6mM5ZA==
+eslint-plugin-jest@^23.13.2, eslint-plugin-jest@^23.18.0:
+  version "23.18.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-jest/-/eslint-plugin-jest-23.18.0.tgz#4813eacb181820ed13c5505f400956d176b25af8"
+  integrity sha512-wLPM/Rm1SGhxrFQ2TKM/BYsYPhn7ch6ZEK92S2o/vGkAAnDXM0I4nTIo745RIX+VlCRMFgBuJEax6XfTHMdeKg==
   dependencies:
     "@typescript-eslint/experimental-utils" "^2.5.0"
 
@@ -3440,13 +3430,13 @@ eslint-plugin-react@^7.20.0:
     string.prototype.matchall "^4.0.2"
     xregexp "^4.3.0"
 
-eslint-plugin-tsdoc@^0.2.5:
-  version "0.2.5"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-tsdoc/-/eslint-plugin-tsdoc-0.2.5.tgz#ae8b1117c11b771d57797314da4bab620dfccc61"
-  integrity sha512-KXquQlf/3u2U7A3LebYdcmAMtMxmUW3HN4JtOluq+iRuRPbBNVeUlg4SOXrnqSuQCOpSITHlPhP418IwjExA+w==
+eslint-plugin-tsdoc@^0.2.6:
+  version "0.2.6"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-tsdoc/-/eslint-plugin-tsdoc-0.2.6.tgz#8e63aeff24708da5a01ac2bef1e46c4cd779ce09"
+  integrity sha512-pU6/VVEOlC85BrUjsqZGGSRy41N+PHfWXokqjpQRWT1LSpBsAEbRpsueNYSFS+93Sx9CFD0511kjLKVySRbLbg==
   dependencies:
     "@microsoft/tsdoc" "0.12.20"
-    "@microsoft/tsdoc-config" "0.13.4"
+    "@microsoft/tsdoc-config" "0.13.5"
 
 eslint-scope@^5.0.0, eslint-scope@^5.1.0:
   version "5.1.0"
@@ -3672,11 +3662,6 @@ extsprintf@^1.2.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/extsprintf/-/extsprintf-1.4.0.tgz#e2689f8f356fad62cca65a3a91c5df5f9551692f"
   integrity sha1-4mifjzVvrWLMplo6kcXfX5VRaS8=
-
-fast-deep-equal@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/fast-deep-equal/-/fast-deep-equal-2.0.1.tgz#7b05218ddf9667bf7f370bf7fdb2cb15fdd0aa49"
-  integrity sha1-ewUhjd+WZ79/Nwv3/bLLFf3Qqkk=
 
 fast-deep-equal@^3.1.1:
   version "3.1.3"
@@ -8028,10 +8013,10 @@ run-queue@^1.0.0, run-queue@^1.0.3:
   dependencies:
     aproba "^1.1.1"
 
-runtypes@^4.2.0:
-  version "4.2.0"
-  resolved "https://registry.yarnpkg.com/runtypes/-/runtypes-4.2.0.tgz#6bb01a4683c1ac76015de8669df32a034c6cb0fe"
-  integrity sha512-s89DYbxI7qKSpDMmdKQCGg61nH45tYA5LJMR0pWfJ/1nwPdpww75fusQqGzXE7llpk+rwe8fNPSx78FRGKenJg==
+runtypes@^5.0.0:
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/runtypes/-/runtypes-5.0.1.tgz#406d140410266f6ece17c3501a37234f91faa346"
+  integrity sha512-+TWVlCmFsgrG4Nd2u+ambpNFO8Yp4heAflGQi9oNj6GRkxZo8aSDBxO1Y0vlKIQCWKKFxato+8Hn67XeAqKhRA==
 
 rxjs@^6.5.2:
   version "6.5.3"
@@ -8235,10 +8220,10 @@ sisteransi@^1.0.3:
   resolved "https://registry.yarnpkg.com/sisteransi/-/sisteransi-1.0.3.tgz#98168d62b79e3a5e758e27ae63c4a053d748f4eb"
   integrity sha512-SbEG75TzH8G7eVXFSN5f9EExILKfly7SUvVY5DhhYLvfhKqhDFY0OzevWa/zwak0RLRfWS5AvfMWpd9gJvr5Yg==
 
-skuba@3.7.5:
-  version "3.7.5"
-  resolved "https://registry.yarnpkg.com/skuba/-/skuba-3.7.5.tgz#1bbe37d67f9a2a8aac332fcd4796c6a8370bd1f9"
-  integrity sha512-3cwCCIaat1zPvkJpZcoxuqcluul8KjHOaKctve2h1SZrXPIdxRR4x9k62ZkPKWpRowvbG/hnbTWV4typCt+y1A==
+skuba@3.7.6:
+  version "3.7.6"
+  resolved "https://registry.yarnpkg.com/skuba/-/skuba-3.7.6.tgz#88c1fa73a79d2f3fc75f3007fefc7d294af0617f"
+  integrity sha512-yCr0+0DGLjlYX6OYYPtZtHO50C0nYI3gHOZb6U9M8ovd2QfS0zaZ3UqLeKRro/OC6t1KJK/AR7S3w9foc4jlBg==
   dependencies:
     "@babel/cli" "^7.10.3"
     "@babel/core" "^7.10.3"
@@ -8253,7 +8238,7 @@ skuba@3.7.5:
     ejs "^3.1.3"
     enquirer "^2.3.5"
     eslint "^7.3.1"
-    eslint-config-skuba "1.0.3"
+    eslint-config-skuba "1.0.4"
     execa "^4.0.2"
     fs-extra "^9.0.1"
     get-port "^5.1.1"
@@ -8267,13 +8252,13 @@ skuba@3.7.5:
     npm-which "^3.0.1"
     prettier "2.0.5"
     read-pkg-up "^7.0.1"
-    runtypes "^4.2.0"
+    runtypes "^5.0.0"
     semantic-release "^17.0.8"
     ts-jest "^26.1.0"
     ts-node "^8.10.2"
     ts-node-dev "^1.0.0-pre.44"
     tsconfig-seek "1.0.2"
-    typescript "3.9.6"
+    typescript "3.9.7"
 
 slash@^2.0.0:
   version "2.0.0"
@@ -9130,10 +9115,10 @@ typedarray@^0.0.6:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
-typescript@3.9.6:
-  version "3.9.6"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.9.6.tgz#8f3e0198a34c3ae17091b35571d3afd31999365a"
-  integrity sha512-Pspx3oKAPJtjNwE92YS05HQoY7z2SFyOpHo9MqJor3BXAGNaPUs83CuVp9VISFkSjyRfiTpmKuAYGJB7S7hOxw==
+typescript@3.9.7:
+  version "3.9.7"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.9.7.tgz#98d600a5ebdc38f40cb277522f12dc800e9e25fa"
+  integrity sha512-BLbiRkiBzAwsjut4x/dsibSTB6yWpwT5qWmC2OfuCg3GgVQCSgMs4vEctYPhsaGtd0AeuuHMkjZ2h2WG8MSzRw==
 
 uglify-js@^3.1.4:
   version "3.9.4"
