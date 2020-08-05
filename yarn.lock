@@ -5886,6 +5886,11 @@ lodash.memoize@4.x:
   resolved "https://registry.yarnpkg.com/lodash.memoize/-/lodash.memoize-4.1.2.tgz#bcc6c49a42a2840ed997f323eada5ecd182e0bfe"
   integrity sha1-vMbEmkKihA7Zl/Mj6tpezRguC/4=
 
+lodash.mergewith@^4.6.2:
+  version "4.6.2"
+  resolved "https://registry.yarnpkg.com/lodash.mergewith/-/lodash.mergewith-4.6.2.tgz#617121f89ac55f59047c7aec1ccd6654c6590f55"
+  integrity sha512-GK3g5RPZWTRSeLSpgP8Xhra+pnjBC56q9FZYe1d5RN3TJ35dbkGy3YqBSMbyCrlbi+CM9Z3Jk5yTL7RCsqboyQ==
+
 lodash.restparam@*:
   version "3.6.1"
   resolved "https://registry.yarnpkg.com/lodash.restparam/-/lodash.restparam-3.6.1.tgz#936a4e309ef330a7645ed4145986c85ae5b20805"
@@ -8069,7 +8074,7 @@ saxes@^5.0.0:
   dependencies:
     xmlchars "^2.2.0"
 
-semantic-release@^17.0.8:
+semantic-release@^17.1.1:
   version "17.1.1"
   resolved "https://registry.yarnpkg.com/semantic-release/-/semantic-release-17.1.1.tgz#d9775968e841b2b7c5020559e4481aea8520ca75"
   integrity sha512-9H+207eynBJElrQBHySZm+sIEoJeUhPA2zU4cdlY1QSInd2lnE8GRD2ALry9EassE22c9WW+aCREwBhro5AIIg==
@@ -8220,10 +8225,10 @@ sisteransi@^1.0.3:
   resolved "https://registry.yarnpkg.com/sisteransi/-/sisteransi-1.0.3.tgz#98168d62b79e3a5e758e27ae63c4a053d748f4eb"
   integrity sha512-SbEG75TzH8G7eVXFSN5f9EExILKfly7SUvVY5DhhYLvfhKqhDFY0OzevWa/zwak0RLRfWS5AvfMWpd9gJvr5Yg==
 
-skuba@3.7.6:
-  version "3.7.6"
-  resolved "https://registry.yarnpkg.com/skuba/-/skuba-3.7.6.tgz#88c1fa73a79d2f3fc75f3007fefc7d294af0617f"
-  integrity sha512-yCr0+0DGLjlYX6OYYPtZtHO50C0nYI3gHOZb6U9M8ovd2QfS0zaZ3UqLeKRro/OC6t1KJK/AR7S3w9foc4jlBg==
+skuba@3.7.7:
+  version "3.7.7"
+  resolved "https://registry.yarnpkg.com/skuba/-/skuba-3.7.7.tgz#04c8c74cd276a782a4eefcb88cf4f95825b8b6cb"
+  integrity sha512-VH/O9ThzoxZMgAd2uyq2qm+lRIWiks11Wn92/kmNMkzf7ZVnLhDaAtEFKNw1z/+e7C0xdI5yUVUQDP6QwPUBFQ==
   dependencies:
     "@babel/cli" "^7.10.3"
     "@babel/core" "^7.10.3"
@@ -8245,7 +8250,7 @@ skuba@3.7.6:
     ignore "^5.1.8"
     jest "^26.0.1"
     latest-version "^5.1.0"
-    lodash "^4.17.15"
+    lodash.mergewith "^4.6.2"
     nodemon "^2.0.4"
     normalize-package-data "^2.5.0"
     npm-run-path "^4.0.1"
@@ -8253,7 +8258,7 @@ skuba@3.7.6:
     prettier "2.0.5"
     read-pkg-up "^7.0.1"
     runtypes "^5.0.0"
-    semantic-release "^17.0.8"
+    semantic-release "^17.1.1"
     ts-jest "^26.1.0"
     ts-node "^8.10.2"
     ts-node-dev "^1.0.0-pre.44"
