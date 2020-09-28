@@ -20,7 +20,7 @@
   "module": "./lib-es2015/index.js",
   "name": "seek-datadog-custom-metrics",
   "peerDependencies": {
-    "hot-shots": "6.x || 7.x"
+    "hot-shots": "6.x || 7.x || 8.x"
   },
   "peerDependenciesMeta": {
     "hot-shots": {
