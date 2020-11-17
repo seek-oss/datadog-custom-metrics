@@ -43,6 +43,7 @@ These tags are consistent with tags sent by [Gantry](https://github.com/SEEK-Job
 This is intended for containerized services, particularly those deployed with [Gantry](https://github.com/SEEK-Jobs/gantry).
 
 ```typescript
+import { StatsD } from 'hot-shots';
 import { createStatsDClient } from 'seek-datadog-custom-metrics';
 
 // Expects `name`, `version`, `environment` and `metricsServer` properties
@@ -55,7 +56,7 @@ const errorHandler = (err: Error) => {
 };
 
 // Returns a standard hot-shots StatsD instance
-const metricsClient = createStatsDClient(config, errorHandler);
+const metricsClient = createStatsDClient(StatsD, config, errorHandler);
 ```
 
 ### `createCloudWatchClient`

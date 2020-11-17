@@ -1,8 +1,22 @@
-import type { StatsD } from 'hot-shots';
-
 import AppConfig from './AppConfig';
 import MetricsClient from './MetricsClient';
 import globalTags from './globalTags';
+
+interface InternalStatsD extends MetricsClient {
+  socket?: {
+    close(callback?: () => void): void;
+  };
+}
+
+interface StatsD<T extends InternalStatsD> {
+  new (options?: {
+    mock?: boolean;
+    host?: string;
+    errorHandler?: (err: Error) => void;
+    prefix?: string;
+    globalTags?: Record<string, string> | string[];
+  }): T;
+}
 
 /**
  * Configuration for building a StatsD client
@@ -23,20 +37,16 @@ export interface StatsDConfig extends AppConfig {
  * The returned client is configured to use a common tagging convention based
  * on the application's name, environment and version.
  *
+ * @param StatsD       - StatsD class from `hot-shots`
  * @param config       - Application configuration
  * @param errorHandler - Optional error handler function
  */
-export default (
+export default <T extends InternalStatsD>(
+  StatsD: StatsD<T>,
   config: StatsDConfig,
   errorHandler?: (err: Error) => void,
-): MetricsClient => {
-  // Avoid a hard dependency on `hot-shots` for e.g. Lambda CloudWatch users
-  // This severely angers TypeScript in multiple ways.
-
-  // eslint-disable-next-line
-  const StatsDClass = require('hot-shots').StatsD as typeof StatsD;
-
-  const client = new StatsDClass({
+): T => {
+  const client = new StatsD({
     // Disable ourselves if there's no configured metrics server
     mock: !config.metricsServer,
     host: config.metricsServer,
