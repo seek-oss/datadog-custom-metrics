@@ -1,7 +1,9 @@
+import { StatsD } from 'hot-shots';
+
 import createStatsDClient from './createStatsDClient';
 import createTimedSpan from './createTimedSpan';
 
-const metricsClient = createStatsDClient({
+const metricsClient = createStatsDClient(StatsD, {
   name: 'jest',
   version: '0.0.1',
   environment: 'dev',
