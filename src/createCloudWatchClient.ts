@@ -44,25 +44,27 @@ export default (config: AppConfig): MetricsClient => {
 
   // This is used to implement `increment` and `decrement`
   // `countToValue` is a hook to allow `decrement` to flip the sign of the count
-  const sendCount = (countToValue: (value: number) => number) => (
-    name: string,
-    countOrTags?: number | string[],
-    tagsIfCount?: string[],
-  ): void => {
-    let count: number;
-    let tags: string[] | undefined;
+  const sendCount =
+    (countToValue: (value: number) => number) =>
+    (
+      name: string,
+      countOrTags?: number | string[],
+      tagsIfCount?: string[],
+    ): void => {
+      let count: number;
+      let tags: string[] | undefined;
 
-    // Emulate overloading from StatsD's interface
-    if (typeof countOrTags === 'number') {
-      count = countOrTags;
-      tags = tagsIfCount;
-    } else {
-      count = 1;
-      tags = countOrTags;
-    }
+      // Emulate overloading from StatsD's interface
+      if (typeof countOrTags === 'number') {
+        count = countOrTags;
+        tags = tagsIfCount;
+      } else {
+        count = 1;
+        tags = countOrTags;
+      }
 
-    send({ name, tags, type: 'count', value: countToValue(count) });
-  };
+      send({ name, tags, type: 'count', value: countToValue(count) });
+    };
 
   return {
     increment: sendCount((count) => count),
