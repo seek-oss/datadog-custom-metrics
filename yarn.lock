@@ -1660,10 +1660,10 @@
   dependencies:
     "@types/istanbul-lib-report" "*"
 
-"@types/jest@^26.0.23":
-  version "26.0.24"
-  resolved "https://registry.yarnpkg.com/@types/jest/-/jest-26.0.24.tgz#943d11976b16739185913a1936e0de0c4a7d595a"
-  integrity sha512-E/X5Vib8BWqZNRlDxj9vYXhsDwPYbPINqKF9BsnSoon4RQ0D9moEuLD8txgyypFLH7J4+Lho9Nr/c8H0Fi+17w==
+"@types/jest@^27.0.0":
+  version "27.0.0"
+  resolved "https://registry.yarnpkg.com/@types/jest/-/jest-27.0.0.tgz#f1c28f741371739c7cd0e8edb5ed8e67acfa6c35"
+  integrity sha512-IlpQZVpxufe+3qPaAqEoSPHVSxnJh1cf0BqqWHJeKiAUbwnHdmNzjP3ZCWSZSTbmAGXQPNk9QmM3Bif0pR54rg==
   dependencies:
     jest-diff "^26.0.0"
     pretty-format "^26.0.0"
@@ -7601,17 +7601,17 @@ sisteransi@^1.0.5:
   resolved "https://registry.yarnpkg.com/sisteransi/-/sisteransi-1.0.5.tgz#134d681297756437cc05ca01370d3a7a571075ed"
   integrity sha512-bLGGlR1QxBcynn2d5YmDX4MGjlZvy2MRBDRNHLJ8VI6l6+9FUiyTFNJ0IveOSP0bcXgVDPRcfGqA0pjaqUpfVg==
 
-skuba@3.14.3:
-  version "3.14.3"
-  resolved "https://registry.yarnpkg.com/skuba/-/skuba-3.14.3.tgz#a567442d0bb9b3c41c91dc4bfe6bd7dd0e26efdc"
-  integrity sha512-GFDk6LF3qpwBh9Lz6GUYRiguWGdiYthUSSSvZPbK0/0ZXrs5m9vnJvQJxhD5LAm2TmSWYxJwQUwVW16Q/vaZAA==
+skuba@3.14.4:
+  version "3.14.4"
+  resolved "https://registry.yarnpkg.com/skuba/-/skuba-3.14.4.tgz#ef90a83a5d159d05e67224070d45c4f0b2c7ff17"
+  integrity sha512-arlkoq0l0gPBPwqx0yJ7p7nMd713ZIhbTaKZFov0FO9FmSlgNF68wxVWAF20O26nZJ4ACQIAcD0h0kDNO9nnhQ==
   dependencies:
     "@babel/cli" "^7.14.3"
     "@babel/core" "^7.14.3"
     "@babel/node" "^7.14.2"
     "@babel/preset-env" "^7.14.4"
     "@babel/preset-typescript" "^7.13.0"
-    "@types/jest" "^26.0.23"
+    "@types/jest" "^27.0.0"
     babel-plugin-macros "^3.1.0"
     babel-plugin-module-resolver "^4.1.0"
     chalk "^4.1.0"
