@@ -6,7 +6,7 @@
   "description": "Helpers for sending Datadog custom metrics",
   "devDependencies": {
     "@types/node": "14.17.19",
-    "hot-shots": "8.5.1",
+    "hot-shots": "8.5.2",
     "skuba": "3.14.4"
   },
   "files": [
