@@ -992,6 +992,11 @@
   resolved "https://registry.yarnpkg.com/@humanwhocodes/object-schema/-/object-schema-1.2.0.tgz#87de7af9c231826fdd68ac7258f77c429e0e5fcf"
   integrity sha512-wdppn25U8z/2yiaT6YGquE6X8sSv7hNMWSXYSSU1jGv/yd6XqjXgTDJ8KP4NgjTXfJ3GbRjeeb8RTV7a/VpM+w==
 
+"@isaacs/string-locale-compare@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@isaacs/string-locale-compare/-/string-locale-compare-1.0.1.tgz#f2852dfe90b4b0caccb3132c36b59a59afc48e05"
+  integrity sha512-AknEkBKSyAcIpl7SIUp12bs1rOmTDp9ojfDI9hvXl6qHqUCcaswkZOslbfdEbzI+8OPatiixY9AFKaUUpgGoBw==
+
 "@istanbuljs/load-nyc-config@^1.0.0":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@istanbuljs/load-nyc-config/-/load-nyc-config-1.1.0.tgz#fd3db1d59ecf7cf121e80650bb86712f9b55eced"
@@ -1219,10 +1224,11 @@
     fastq "^1.6.0"
 
 "@npmcli/arborist@*", "@npmcli/arborist@^2.3.0", "@npmcli/arborist@^2.5.0":
-  version "2.8.3"
-  resolved "https://registry.yarnpkg.com/@npmcli/arborist/-/arborist-2.8.3.tgz#5569e7d2038f6893abc81f9c879f497b506e6980"
-  integrity sha512-miFcxbZjmQqeFTeRSLLh+lc/gxIKDO5L4PVCp+dp+kmcwJmYsEJmF7YvHR2yi3jF+fxgvLf3CCFzboPIXAuabg==
+  version "2.8.5"
+  resolved "https://registry.yarnpkg.com/@npmcli/arborist/-/arborist-2.8.5.tgz#425b2326c290668b106ecaafbc2d13feb805d7e3"
+  integrity sha512-dtwuFeRQ1SiXc1FswS40r42JfDnTT8PMwVnVAxw3YCXiIM85qlI1iyAICGzN+Ty6W3+p4Avp7He26v+i5+pUWg==
   dependencies:
+    "@isaacs/string-locale-compare" "^1.0.1"
     "@npmcli/installed-package-contents" "^1.0.7"
     "@npmcli/map-workspaces" "^1.0.2"
     "@npmcli/metavuln-calculator" "^1.1.0"
