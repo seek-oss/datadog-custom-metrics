@@ -2951,6 +2951,11 @@ fsevents@^2.3.2, fsevents@~2.3.2:
   resolved "https://registry.yarnpkg.com/fsevents/-/fsevents-2.3.2.tgz#8a526f78b8fdf4623b709e0b975c52c24c02fd1a"
   integrity sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==
 
+function-arguments@^1.0.9:
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/function-arguments/-/function-arguments-1.0.9.tgz#baa49e8930e3b296d7977618d1a228950972b3c2"
+  integrity sha512-1Q6pDUjG3uve/ecbHEFpKUUOiPJzg6MZQV51f8c5pqlw1V6KCePQiztzOpQpdR/jnVJPXL2Q02xX1vNV22xx2Q==
+
 function-bind@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/function-bind/-/function-bind-1.1.1.tgz#a56899d3ea3c9bab874bb9773b7c5ede92f4895d"
@@ -5336,13 +5341,6 @@ p-is-promise@^3.0.0:
   resolved "https://registry.yarnpkg.com/p-is-promise/-/p-is-promise-3.0.0.tgz#58e78c7dfe2e163cf2a04ff869e7c1dba64a5971"
   integrity sha512-Wo8VsW4IRQSKVXsJCn7TomUaVtyfjVDn3nUP7kE967BQk0CwFpdbZs0X0uk5sW9mkBa9eNM7hCMaG93WUAwxYQ==
 
-p-limit@3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/p-limit/-/p-limit-3.1.0.tgz#e1daccbe78d0d1388ca18c64fea38e3e57e3706b"
-  integrity sha512-TYOanM3wGwNGsZN2cVTYPArw454xnXj5qmWF1bEoAc4+cU/ol7GVh7odevjp1FNHduHc3KZMcFduxU5Xc6uJRQ==
-  dependencies:
-    yocto-queue "^0.1.0"
-
 p-limit@^1.1.0:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/p-limit/-/p-limit-1.3.0.tgz#b86bd5f0c25690911c7590fcbfc2010d54b3ccb8"
@@ -6175,10 +6173,10 @@ sisteransi@^1.0.5:
   resolved "https://registry.yarnpkg.com/sisteransi/-/sisteransi-1.0.5.tgz#134d681297756437cc05ca01370d3a7a571075ed"
   integrity sha512-bLGGlR1QxBcynn2d5YmDX4MGjlZvy2MRBDRNHLJ8VI6l6+9FUiyTFNJ0IveOSP0bcXgVDPRcfGqA0pjaqUpfVg==
 
-skuba@3.15.1:
-  version "3.15.1"
-  resolved "https://registry.yarnpkg.com/skuba/-/skuba-3.15.1.tgz#b0c3704d378a7785ee5eab34dbfe7d0603fe99ea"
-  integrity sha512-s8CyMO2sFoZ9GhppmIK+KYdMwgmAofeEGz9njRbqjNnX0OvyZV4mU0NTzOaSB0+u8DfLhUxIviZqw89A2YQshQ==
+skuba@3.15.2:
+  version "3.15.2"
+  resolved "https://registry.yarnpkg.com/skuba/-/skuba-3.15.2.tgz#c0df2d88ba76fe0d824254cad29997ae65627242"
+  integrity sha512-slSfCXofUGeIX6YzjskeXPcY1yHx4s1O8hR2bNWJnlEBPjp7nOZiBoLUXXEF8ELJ95IpEPc5vcGAw2ZGdJ0tLw==
   dependencies:
     "@types/jest" "^27.0.1"
     chalk "^4.1.0"
@@ -6190,6 +6188,7 @@ skuba@3.15.1:
     execa "^5.0.0"
     fdir "^5.0.0"
     fs-extra "^10.0.0"
+    function-arguments "^1.0.9"
     get-port "^5.1.1"
     ignore "^5.1.8"
     is-installed-globally "^0.4.0"
@@ -6201,7 +6200,6 @@ skuba@3.15.1:
     normalize-package-data "^3.0.0"
     npm-run-path "^4.0.1"
     npm-which "^3.0.1"
-    p-limit "3.1.0"
     picomatch "^2.2.2"
     prettier "2.4.1"
     read-pkg-up "^7.0.1"
@@ -7203,8 +7201,3 @@ yn@3.1.1:
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/yn/-/yn-3.1.1.tgz#1e87401a09d767c1d5eab26a6e4c185182d2eb50"
   integrity sha512-Ux4ygGWsu2c7isFWe8Yu1YluJmqVhxqK2cLXNQA5AcC3QfbGNpM7fu0Y8b/z16pXLnFxZYvWhd3fhBY9DLmC6Q==
-
-yocto-queue@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/yocto-queue/-/yocto-queue-0.1.0.tgz#0294eb3dee05028d31ee1a5fa2c556a6aaf10a1b"
-  integrity sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==
