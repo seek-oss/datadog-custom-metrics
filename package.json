@@ -7,7 +7,7 @@
   "devDependencies": {
     "@types/node": "14.17.32",
     "hot-shots": "9.0.0",
-    "skuba": "3.15.2"
+    "skuba": "3.16.1"
   },
   "files": [
     "lib*/**/*.d.ts",
