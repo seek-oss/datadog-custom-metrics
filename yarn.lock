@@ -6167,10 +6167,10 @@ sisteransi@^1.0.5:
   resolved "https://registry.yarnpkg.com/sisteransi/-/sisteransi-1.0.5.tgz#134d681297756437cc05ca01370d3a7a571075ed"
   integrity sha512-bLGGlR1QxBcynn2d5YmDX4MGjlZvy2MRBDRNHLJ8VI6l6+9FUiyTFNJ0IveOSP0bcXgVDPRcfGqA0pjaqUpfVg==
 
-skuba@3.17.0:
-  version "3.17.0"
-  resolved "https://registry.yarnpkg.com/skuba/-/skuba-3.17.0.tgz#52c69586075fcbd6c4ad506ef591bee1be0ab0e6"
-  integrity sha512-GSYaWtwvgM1p04Em+LTF639pKDLALULdkp+2Q2j4ZU7I9HwaH7KyrCqRxTNhspbh1RzYa9B9lqXPJJNkEjMQcQ==
+skuba@3.17.1:
+  version "3.17.1"
+  resolved "https://registry.yarnpkg.com/skuba/-/skuba-3.17.1.tgz#8beac238c9ba04410e326108ba3f998ae01dceae"
+  integrity sha512-iJhFUM5gu2qMe9MG7RAHso94SwKUXt/Z0n7KrDYif7TS4h63PvRC5jditmDIJsZFRMlitydYnWMXWBb6feraXw==
   dependencies:
     "@octokit/rest" "^18.12.0"
     "@octokit/types" "^6.34.0"
@@ -6202,7 +6202,7 @@ skuba@3.17.0:
     semantic-release "^17.4.7"
     serialize-error "^8.0.1"
     strip-ansi "^6.0.1"
-    ts-jest "^27.0.5"
+    ts-jest "^27.1.2"
     ts-node "^9.1.1"
     ts-node-dev "^1.1.8"
     tsconfig-paths "^3.11.0"
@@ -6699,7 +6699,7 @@ trim-newlines@^3.0.0:
   resolved "https://registry.yarnpkg.com/trim-newlines/-/trim-newlines-3.0.1.tgz#260a5d962d8b752425b32f3a7db0dcacd176c144"
   integrity sha512-c1PTsA3tYrIsLGkJkzHF+w9F2EyxfXGo4UyJc4pFL++FMjnq0HJS69T3M7d//gKrFKwy429bouPescbjecU+Zw==
 
-ts-jest@^27.0.5:
+ts-jest@^27.1.2:
   version "27.1.2"
   resolved "https://registry.yarnpkg.com/ts-jest/-/ts-jest-27.1.2.tgz#5991d6eb3fd8e1a8d4b8f6de3ec0a3cc567f3151"
   integrity sha512-eSOiJOWq6Hhs6Khzk5wKC5sgWIXgXqOCiIl1+3lfnearu58Hj4QpE5tUhQcA3xtZrELbcvAGCsd6HB8OsaVaTA==
