@@ -5,7 +5,7 @@
   "dependencies": {},
   "description": "Helpers for sending Datadog custom metrics",
   "devDependencies": {
-    "@types/node": "14.18.9",
+    "@types/node": "16.11.24",
     "hot-shots": "9.0.0",
     "skuba": "4.0.0"
   },
@@ -44,7 +44,7 @@
     "entryPoint": "src/index.ts",
     "template": null,
     "type": "package",
-    "version": "3.7.3"
+    "version": "4.0.0"
   },
   "types": "./lib-types/index.d.ts",
   "version": "0.0.0-semantically-released"
