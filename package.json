@@ -37,7 +37,8 @@
     "format": "skuba format",
     "lint": "skuba lint",
     "release": "yarn build && skuba release",
-    "test": "skuba test --coverage"
+    "test": "skuba test",
+    "test:ci": "skuba test --coverage"
   },
   "sideEffects": false,
   "skuba": {
