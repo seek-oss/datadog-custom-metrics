@@ -17,11 +17,12 @@ const sanitiseTag = (tag: string): string => tag.replace(/\||@|,/g, '_');
 /**
  * Creates a new CloudWatch Datadog client configured for the given app
  *
- * This depends on Datadog's AWS Lambda integration. The returned client is
- * configured to use a common tagging convention based on the application's
- * name, environment and version.
+ * @deprecated This depends on Datadog's deprecated CloudWatch log integration.
+ * This has been superseded by the Datadog Lambda Extension which does not
+ * support the `count` metric type required by our `MetricClient` interface.
  *
- * @see {@link https://docs.datadoghq.com/integrations/amazon_lambda/#using-cloudwatch-logs}
+ * @see {@link https://docs.datadoghq.com/serverless/libraries_integrations/extension/}
+ * @see {@link https://docs.datadoghq.com/serverless/custom_metrics/#deprecated-cloudwatch-logs}
  *
  * @param config - Application configuration
  */

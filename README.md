@@ -6,10 +6,7 @@
 [![npm package](https://img.shields.io/npm/v/seek-datadog-custom-metrics)](https://www.npmjs.com/package/seek-datadog-custom-metrics)
 [![Powered by skuba](https://img.shields.io/badge/🤿%20skuba-powered-009DC4)](https://github.com/seek-oss/skuba)
 
-Common interface for sending [Datadog custom metrics](https://docs.datadoghq.com/developers/metrics/custom_metrics/) from Node.js runtime environments:
-
-- Containers (via [hot-shots](https://github.com/brightcove/hot-shots))
-- AWS Lambda (via [Datadog's CloudWatch integration](https://docs.datadoghq.com/integrations/amazon_lambda/#using-cloudwatch-logs))
+Helpers for sending [Datadog custom metrics](https://docs.datadoghq.com/developers/metrics/custom_metrics/) via [hot-shots](https://github.com/brightcove/hot-shots).
 
 ```shell
 yarn add seek-datadog-custom-metrics
@@ -20,7 +17,6 @@ yarn add seek-datadog-custom-metrics
 - [Tagging convention](#tagging-convention)
 - [API reference](#api-reference)
   - [createStatsDClient](#createstatsdclient)
-  - [createCloudWatchClient](#createcloudwatchclient)
   - [createNoOpClient](#createnoopclient)
   - [createTimedSpan](#createtimedspan)
 - [Contributing](https://github.com/seek-oss/datadog-custom-metrics/blob/master/CONTRIBUTING.md)
@@ -57,21 +53,6 @@ const errorHandler = (err: Error) => {
 
 // Returns a standard hot-shots StatsD instance
 const metricsClient = createStatsDClient(StatsD, config, errorHandler);
-```
-
-### `createCloudWatchClient`
-
-`createCloudWatchClient` returns a client that uses [Datadog's CloudWatch integration](https://docs.datadoghq.com/integrations/amazon_lambda/#using-cloudwatch-logs).
-This is intended for use in Lambda functions.
-
-```typescript
-import { createCloudWatchClient } from 'seek-datadog-custom-metrics';
-
-// Expects `name`, `version` and `environment` properties
-import config from '../config';
-
-// Returns a `MetricsClient` subset of the full StatsD interface
-const metricsClient = createCloudWatchClient(config);
 ```
 
 ### `createNoOpClient`

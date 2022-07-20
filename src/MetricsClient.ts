@@ -1,9 +1,9 @@
 /**
  * Abstract interface for recording metrics
  *
- * This covers both the StatsD and CloudWatch clients. This is intended for
- * libraries that need to abstract over the two client types. Applications
- * using StatsD can use the richer `StatsD` type from `hot-shots` instead.
+ * This was intended to cover both the StatsD and CloudWatch clients. As the
+ * CloudWatch client type is now deprecated, consumers can use the richer
+ * `StatsD` type from `hot-shots` instead.
  */
 export default interface MetricsClient {
   /**
