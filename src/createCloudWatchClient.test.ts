@@ -1,4 +1,4 @@
-import createCloudWatchClient from './createCloudWatchClient';
+import { createCloudWatchClient } from './createCloudWatchClient';
 
 describe('createCloudWatchClient', () => {
   const metricsClient = createCloudWatchClient({

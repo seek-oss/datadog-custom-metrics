@@ -1,7 +1,7 @@
 /**
  * Configuration for building a new metrics client
  */
-export default interface AppConfig {
+export interface AppConfig {
   /**
    * Name of the application
    *

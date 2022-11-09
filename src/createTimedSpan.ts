@@ -1,4 +1,4 @@
-import MetricsClient from './MetricsClient';
+import { MetricsClient } from './MetricsClient';
 
 /**
  * Sends timing related metrics for an asynchronous operation
@@ -11,7 +11,8 @@ import MetricsClient from './MetricsClient';
  * @param name          - Name of the custom metric
  * @param block         - Function returning the promise to time
  */
-export default (metricsClient: MetricsClient) =>
+export const createTimedSpan =
+  (metricsClient: MetricsClient) =>
   async <T>(name: string, block: () => PromiseLike<T>): Promise<T> => {
     const startTime = process.hrtime.bigint();
 

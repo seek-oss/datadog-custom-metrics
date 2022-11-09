@@ -1,4 +1,4 @@
-import MetricsClient from './MetricsClient';
+import { MetricsClient } from './MetricsClient';
 
 /**
  * Creates a no-op Datadog client
@@ -7,7 +7,7 @@ import MetricsClient from './MetricsClient';
  * but you'd like to avoid using one in some environments
  *
  */
-export default (): MetricsClient => ({
+export const createNoOpClient = (): MetricsClient => ({
   increment: () => {},
   decrement: () => {},
   histogram: () => {},

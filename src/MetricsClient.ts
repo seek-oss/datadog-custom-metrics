@@ -5,7 +5,7 @@
  * CloudWatch client type is now deprecated, consumers can use the richer
  * `StatsD` type from `hot-shots` instead.
  */
-export default interface MetricsClient {
+export interface MetricsClient {
   /**
    * Records a time in milliseconds
    *

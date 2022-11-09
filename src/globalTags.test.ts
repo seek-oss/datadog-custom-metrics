@@ -1,4 +1,4 @@
-import globalTags from './globalTags';
+import { globalTags } from './globalTags';
 
 describe('globalTags', () => {
   it('should generate `env` and `version` tags', () => {
