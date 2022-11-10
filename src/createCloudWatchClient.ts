@@ -1,6 +1,6 @@
-import AppConfig from './AppConfig';
-import MetricsClient from './MetricsClient';
-import globalTags from './globalTags';
+import { AppConfig } from './AppConfig';
+import { MetricsClient } from './MetricsClient';
+import { globalTags } from './globalTags';
 
 interface DatadogMetric {
   name: string;
@@ -26,7 +26,7 @@ const sanitiseTag = (tag: string): string => tag.replace(/\||@|,/g, '_');
  *
  * @param config - Application configuration
  */
-export default (config: AppConfig): MetricsClient => {
+export const createCloudWatchClient = (config: AppConfig): MetricsClient => {
   const send = (metric: DatadogMetric) => {
     const { type, value } = metric;
 

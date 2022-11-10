@@ -1,16 +1,8 @@
-import AppConfig from './AppConfig';
-import MetricsClient from './MetricsClient';
-import createCloudWatchClient from './createCloudWatchClient';
-import createNoOpClient from './createNoOpClient';
-import createStatsDClient, { StatsDConfig } from './createStatsDClient';
-import createTimedSpan from './createTimedSpan';
+export { createCloudWatchClient } from './createCloudWatchClient';
+export { createNoOpClient } from './createNoOpClient';
+export { createStatsDClient } from './createStatsDClient';
+export { createTimedSpan } from './createTimedSpan';
 
-export {
-  createTimedSpan,
-  createStatsDClient,
-  createCloudWatchClient,
-  createNoOpClient,
-  AppConfig,
-  MetricsClient,
-  StatsDConfig,
-};
+export type { AppConfig } from './AppConfig';
+export type { MetricsClient } from './MetricsClient';
+export type { StatsDConfig } from './createStatsDClient';

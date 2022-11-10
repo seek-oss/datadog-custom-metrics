@@ -1,6 +1,6 @@
-import AppConfig from './AppConfig';
-import MetricsClient from './MetricsClient';
-import globalTags from './globalTags';
+import { AppConfig } from './AppConfig';
+import { MetricsClient } from './MetricsClient';
+import { globalTags } from './globalTags';
 
 interface InternalStatsD extends MetricsClient {
   socket?: {
@@ -41,7 +41,7 @@ export interface StatsDConfig extends AppConfig {
  * @param config       - Application configuration
  * @param errorHandler - Optional error handler function
  */
-export default <T extends InternalStatsD>(
+export const createStatsDClient = <T extends InternalStatsD>(
   StatsD: StatsD<T>,
   config: StatsDConfig,
   errorHandler?: (err: Error) => void,
