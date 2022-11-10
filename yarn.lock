@@ -2672,10 +2672,10 @@ eslint-config-seek@^10.0.0:
     eslint-plugin-react-hooks "^4.3.0"
     find-root "^1.1.0"
 
-eslint-config-skuba@1.1.4:
-  version "1.1.4"
-  resolved "https://registry.yarnpkg.com/eslint-config-skuba/-/eslint-config-skuba-1.1.4.tgz#9f4afd3a3cee8e0219564838dd3273d394304144"
-  integrity sha512-nGwBDKT7aGj4aRYmU1XkoHwmDYmezyTHqm+grMcg2Uddo2bH/Ol9QqHe3Q3buRkJ/hNYO8Z455/g2O0yS4jj0w==
+eslint-config-skuba@1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-skuba/-/eslint-config-skuba-1.2.0.tgz#089142e173d76227022a47c65e5dbf017084ccb3"
+  integrity sha512-ZfmRan/ARs9qRCkzwFpG0tiqT9zqm7f+vUwVxocSzA5hmBXajvs8pivIKnQQNRKgfQncTbv5OIY2FTOcmYgXNw==
   dependencies:
     "@types/eslint" "^8.4.1"
     "@typescript-eslint/eslint-plugin" "^5.36.0"
@@ -6067,10 +6067,10 @@ sisteransi@^1.0.5:
   resolved "https://registry.yarnpkg.com/sisteransi/-/sisteransi-1.0.5.tgz#134d681297756437cc05ca01370d3a7a571075ed"
   integrity sha512-bLGGlR1QxBcynn2d5YmDX4MGjlZvy2MRBDRNHLJ8VI6l6+9FUiyTFNJ0IveOSP0bcXgVDPRcfGqA0pjaqUpfVg==
 
-skuba@5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/skuba/-/skuba-5.0.0.tgz#0bfca0e2fde5e8abf00bab938cb3f14a5a4d3735"
-  integrity sha512-C8sOuLb8gJRvBbcvcsN+wKncqHY554LdGBthiFFwxItu9/y6se/cIFqOiQJxdHMWmkK9DX2kFr0GDSMrhi3Y6A==
+skuba@5.0.1:
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/skuba/-/skuba-5.0.1.tgz#4ec11dcd934b8eed2a3d7df753cacbf714f78c43"
+  integrity sha512-tF/QuF25NYYa3NlUF8zTaP29KzzcgIsdr0RDkZboUhIC/VvQ/UyqkswPpYsus37VDPtvex8ULxJMOoyW8X4Ptg==
   dependencies:
     "@esbuild-plugins/tsconfig-paths" "^0.0.4"
     "@jest/types" "^29.0.0"
@@ -6087,7 +6087,7 @@ skuba@5.0.0:
     enquirer "^2.3.6"
     esbuild "~0.15.7"
     eslint "^8.11.0"
-    eslint-config-skuba "1.1.4"
+    eslint-config-skuba "1.2.0"
     execa "^5.0.0"
     fdir "^5.0.0"
     fs-extra "^10.0.0"
