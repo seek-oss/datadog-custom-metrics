@@ -30,7 +30,10 @@ export const inferResourceName = (
   }
 
   const route = url
-    .replace(/[0-9a-f-]{36}/gi, 'uuid')
+    .replace(
+      /[0-9a-f]{8}-?[0-9a-f]{4}-?[0-9a-f]{4}-?[0-9a-f]{4}-?[0-9a-f]{12}/gi,
+      'uuid',
+    )
     .replace(/\d+/g, 'number');
 
   return `${req.method} ${route}`;

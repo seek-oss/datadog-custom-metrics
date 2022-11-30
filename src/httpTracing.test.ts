@@ -14,6 +14,7 @@ describe('inferResourceName', () => {
       '/path/to/resource',
       '/product-sets?advertiserId=67890',
       '/product-sets/fbfb9754-63e6-494E-9473-EF46CA51FF47?advertiserId=0',
+      '/product-sets/FBFB975463E6494E9473EF46CA51FF47',
     ];
 
     const results = path.map((p) => {
@@ -43,6 +44,10 @@ describe('inferResourceName', () => {
         [
           "GET https://example.com/product-sets/fbfb9754-63e6-494E-9473-EF46CA51FF47?advertiserId=0",
           "GET https://example.com/product-sets/uuid?advertiserId=number",
+        ],
+        [
+          "GET https://example.com/product-sets/FBFB975463E6494E9473EF46CA51FF47",
+          "GET https://example.com/product-sets/uuid",
         ],
       ]
     `);
