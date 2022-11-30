@@ -6,6 +6,7 @@
   "description": "Helpers for sending Datadog custom metrics",
   "devDependencies": {
     "@types/node": "16.11.38",
+    "dd-trace": "3.8.0",
     "hot-shots": "9.2.0",
     "skuba": "5.0.1"
   },
@@ -38,7 +39,8 @@
     "lint": "skuba lint",
     "release": "yarn build && skuba release",
     "test": "skuba test",
-    "test:ci": "skuba test --coverage"
+    "test:ci": "skuba test --coverage",
+    "test:watch": "skuba test --watch"
   },
   "sideEffects": false,
   "skuba": {

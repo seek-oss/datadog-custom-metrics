@@ -2,6 +2,7 @@ export { createCloudWatchClient } from './createCloudWatchClient';
 export { createNoOpClient } from './createNoOpClient';
 export { createStatsDClient } from './createStatsDClient';
 export { createTimedSpan } from './createTimedSpan';
+export { httpTracingConfig } from './httpTracing';
 
 export type { AppConfig } from './AppConfig';
 export type { MetricsClient } from './MetricsClient';

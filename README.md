@@ -19,6 +19,7 @@ yarn add seek-datadog-custom-metrics
   - [createStatsDClient](#createstatsdclient)
   - [createNoOpClient](#createnoopclient)
   - [createTimedSpan](#createtimedspan)
+  - [httpTracingConfig](#httptracingconfig)
 - [Contributing](https://github.com/seek-oss/datadog-custom-metrics/blob/master/CONTRIBUTING.md)
 
 ## Tagging convention
@@ -86,3 +87,38 @@ const loadPrivateKey = async (): Promise<PrivateKey> =>
     () => client.getSecretValue({ SecretId }).promise(),
   );
 ```
+
+### `httpTracingConfig`
+
+The [dd-trace] package can instrument your application and trace its outbound HTTP requests.
+However, its emitted `trace.http.request` metric only captures the HTTP method against the `resource.name` tag,
+which is not useful if your application makes HTTP requests to multiple resources and you want to inspect latency by resource.
+
+This configuration object adds a hook to replace the `resource.name` with a HTTP method and semi-normalised URL.
+For example, if your application makes the following HTTP request:
+
+```http
+PUT https://www.example.com/path/to/123?idempotencyKey=c1083fb6-519c-42bf-8619-08dfd6229954
+```
+
+The `trace.http.request` metric will see the following tag change:
+
+```diff
+- resource_name:put
++ resource_name:put_https://www.example.com/path/to/number?idempotencyKey=uuid
+```
+
+Apply the configuration object where you bootstrap your application with the Datadog tracer:
+
+```typescript
+import { httpTracingConfig } from 'seek-datadog-custom-metrics';
+
+// DataDog/dd-trace-js#1118
+datadogTracer?.use('http', httpTracingConfig);
+```
+
+This configuration may be superseded in future if the underlying [dd-trace] implementation is corrected.
+
+[DataDog/dd-trace-js#1118](https://github.com/DataDog/dd-trace-js/issues/1118)
+
+[dd-trace]: https://github.com/DataDog/dd-trace-js
