@@ -3,6 +3,7 @@ import {
   createNoOpClient,
   createStatsDClient,
   createTimedSpan,
+  httpTracingConfig,
 } from './';
 
 describe('index', () => {
@@ -18,7 +19,11 @@ describe('index', () => {
     expect(createNoOpClient).toBeInstanceOf(Function);
   });
 
-  it('should export a timedSpan function', () => {
+  it('should export a createTimedSpan function', () => {
     expect(createTimedSpan).toBeInstanceOf(Function);
+  });
+
+  it('should export a httpTracingConfig object', () => {
+    expect(httpTracingConfig).toBeInstanceOf(Object);
   });
 });

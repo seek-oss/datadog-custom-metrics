@@ -145,6 +145,16 @@ describe('request', () => {
     );
   });
 
+  it('gracefully continues on missing parameters', () => {
+    const span = {
+      setTag: jest.fn(),
+    };
+
+    expect(() => request()).not.toThrow();
+
+    expect(span.setTag).not.toHaveBeenCalled();
+  });
+
   it('gracefully continues on inference failure', () => {
     const span = {
       setTag: jest.fn(),
