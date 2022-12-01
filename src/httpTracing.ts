@@ -1,5 +1,3 @@
-import path from 'path';
-
 interface HttpRequest {
   host?: string;
   method?: string;
@@ -22,7 +20,7 @@ export const inferResourceName = (
   const url =
     req.url ??
     (req.protocol && req.host && req.path
-      ? `${req.protocol}//${path.join(req.host, req.path)}`
+      ? `${req.protocol}//${req.host}${req.path}`
       : undefined);
 
   if (!url) {
