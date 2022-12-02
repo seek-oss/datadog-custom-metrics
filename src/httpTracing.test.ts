@@ -8,17 +8,19 @@ describe('inferResourceName', () => {
   const HOST = 'example.com';
 
   it('handles direct URL variants', () => {
-    const path = [
+    const paths = [
       '/accounts/1?include=rules',
       '/brands/default?id=12345&type=seekId',
       '/path/to/resource',
       '/product-sets?advertiserId=67890',
       '/product-sets/fbfb9754-63e6-494E-9473-EF46CA51FF47?advertiserId=0',
       '/product-sets/FBFB975463E6494E9473EF46CA51FF47',
+      '/v2/resource',
+      '/v10/resource',
     ];
 
-    const results = path.map((p) => {
-      const url = `${PROTOCOL}//${HOST}${p}`;
+    const results = paths.map((path) => {
+      const url = `${PROTOCOL}//${HOST}${path}`;
 
       return [`${METHOD} ${url}`, inferResourceName({ method: METHOD, url })];
     });
@@ -49,6 +51,14 @@ describe('inferResourceName', () => {
           "GET https://example.com/product-sets/FBFB975463E6494E9473EF46CA51FF47",
           "GET https://example.com/product-sets/uuid",
         ],
+        [
+          "GET https://example.com/v2/resource",
+          "GET https://example.com/v2/resource",
+        ],
+        [
+          "GET https://example.com/v10/resource",
+          "GET https://example.com/v10/resource",
+        ],
       ]
     `);
   });
@@ -62,12 +72,12 @@ describe('inferResourceName', () => {
       '/product-sets/fbfb9754-63e6-494E-9473-EF46CA51FF47?advertiserId=0',
     ];
 
-    const results = paths.map((p) => [
-      `${METHOD} ${PROTOCOL}//${HOST}${p}`,
+    const results = paths.map((path) => [
+      `${METHOD} ${PROTOCOL}//${HOST}${path}`,
       inferResourceName({
         host: HOST,
         method: METHOD,
-        path: p,
+        path,
         protocol: PROTOCOL,
       }),
     ]);
@@ -93,6 +103,37 @@ describe('inferResourceName', () => {
         [
           "GET https://example.com/product-sets/fbfb9754-63e6-494E-9473-EF46CA51FF47?advertiserId=0",
           "GET https://example.com/product-sets/uuid?advertiserId=number",
+        ],
+      ]
+    `);
+  });
+
+  it('preserves IP hosts', () => {
+    const hosts = [
+      '127.0.0.1',
+      '::1',
+      '0000:0000:0000:0000:0000:0000:0000:0000',
+    ];
+
+    const results = hosts.map((host) => {
+      const url = `${PROTOCOL}//${host}`;
+
+      return [`${METHOD} ${url}`, inferResourceName({ method: METHOD, url })];
+    });
+
+    expect(results).toMatchInlineSnapshot(`
+      [
+        [
+          "GET https://127.0.0.1",
+          "GET https://127.0.0.1",
+        ],
+        [
+          "GET https://::1",
+          "GET https://::1",
+        ],
+        [
+          "GET https://0000:0000:0000:0000:0000:0000:0000:0000",
+          "GET https://0000:0000:0000:0000:0000:0000:0000:0000",
         ],
       ]
     `);

@@ -28,11 +28,16 @@ export const inferResourceName = (
   }
 
   const route = url
+    // Use `-?` to catch both hyphenated and unhyphenated UUIDs.
     .replace(
       /[0-9a-f]{8}-?[0-9a-f]{4}-?[0-9a-f]{4}-?[0-9a-f]{4}-?[0-9a-f]{12}/gi,
       'uuid',
     )
-    .replace(/\d+/g, 'number');
+    // Match numbers that entirely occupy the space between word boundaries.
+    // This ensures that we preserve API versioning path segments like `/v2/`.
+    // Lookbehinds and lookaheads are employed to exclude `.` and `:` boundaries
+    // to ensure that we preserve IPv4 and IPv6 addresses.
+    .replace(/\b(?<![\.:])\d+(?![\.:])\b/g, 'number');
 
   return `${req.method} ${route}`;
 };
