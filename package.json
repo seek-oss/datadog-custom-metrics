@@ -1,38 +1,26 @@
 {
+  "name": "seek-datadog-custom-metrics",
+  "version": "0.0.0-semantically-released",
+  "private": false,
+  "description": "Helpers for sending Datadog custom metrics",
+  "homepage": "https://github.com/seek-oss/datadog-custom-metrics#readme",
   "bugs": {
     "url": "https://github.com/seek-oss/datadog-custom-metrics/issues"
   },
-  "dependencies": {},
-  "description": "Helpers for sending Datadog custom metrics",
-  "devDependencies": {
-    "@types/node": "16.11.38",
-    "dd-trace": "3.9.3",
-    "hot-shots": "9.3.0",
-    "skuba": "5.1.0"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seek-oss/datadog-custom-metrics.git"
   },
+  "license": "MIT",
+  "sideEffects": false,
+  "main": "./lib-commonjs/index.js",
+  "module": "./lib-es2015/index.js",
+  "types": "./lib-types/index.d.ts",
   "files": [
     "lib*/**/*.d.ts",
     "lib*/**/*.js",
     "lib*/**/*.js.map"
   ],
-  "homepage": "https://github.com/seek-oss/datadog-custom-metrics#readme",
-  "license": "MIT",
-  "main": "./lib-commonjs/index.js",
-  "module": "./lib-es2015/index.js",
-  "name": "seek-datadog-custom-metrics",
-  "peerDependencies": {
-    "hot-shots": "6.x || 7.x || 8.x || 9.x"
-  },
-  "peerDependenciesMeta": {
-    "hot-shots": {
-      "optional": true
-    }
-  },
-  "private": false,
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/seek-oss/datadog-custom-metrics.git"
-  },
   "scripts": {
     "build": "skuba build-package",
     "format": "skuba format",
@@ -42,13 +30,25 @@
     "test:ci": "skuba test --coverage",
     "test:watch": "skuba test --watch"
   },
-  "sideEffects": false,
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "16.11.38",
+    "dd-trace": "3.9.3",
+    "hot-shots": "9.3.0",
+    "skuba": "5.1.0"
+  },
+  "peerDependencies": {
+    "hot-shots": "6.x || 7.x || 8.x || 9.x"
+  },
+  "peerDependenciesMeta": {
+    "hot-shots": {
+      "optional": true
+    }
+  },
   "skuba": {
     "entryPoint": "src/index.ts",
     "template": null,
     "type": "package",
     "version": "4.0.0"
-  },
-  "types": "./lib-types/index.d.ts",
-  "version": "0.0.0-semantically-released"
+  }
 }
