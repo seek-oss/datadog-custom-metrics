@@ -8,7 +8,7 @@
     "@types/node": "16.11.38",
     "dd-trace": "3.9.3",
     "hot-shots": "9.3.0",
-    "skuba": "5.0.1"
+    "skuba": "5.1.0"
   },
   "files": [
     "lib*/**/*.d.ts",
