@@ -32,7 +32,7 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@types/node": "16.11.38",
+    "@types/node": "16.18.11",
     "dd-trace": "3.9.3",
     "hot-shots": "9.3.0",
     "skuba": "5.1.1"
