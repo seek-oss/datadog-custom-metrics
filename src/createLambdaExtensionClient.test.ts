@@ -117,26 +117,4 @@ describe('createLambdaExtensionClient', () => {
       );
     });
   });
-
-  describe('decrement', () => {
-    it('should decrement with an implicit value', () => {
-      metricsClient.decrement('my_custom_metric');
-
-      expect(sendDistributionMetric).toHaveBeenCalledTimes(1);
-      expect(sendDistributionMetric).toHaveBeenCalledWith(
-        'test.my_custom_metric',
-        -1,
-      );
-    });
-
-    it('should decrement with an explicit value', () => {
-      metricsClient.decrement('my_custom_metric', 10);
-
-      expect(sendDistributionMetric).toHaveBeenCalledTimes(1);
-      expect(sendDistributionMetric).toHaveBeenCalledWith(
-        'test.my_custom_metric',
-        -10,
-      );
-    });
-  });
 });

@@ -54,31 +54,24 @@ export const createLambdaExtensionClient = (
     }
   };
 
-  // This is used to implement `increment` and `decrement`
-  // `countToValue` is a hook to allow `decrement` to flip the sign of the count
+  const sendCount = (
+    name: string,
+    countOrTags?: number | string[],
+    tagsIfCount?: string[],
+  ): void => {
+    let count: number;
+    let tags: string[] | undefined;
 
-  // @TODO: Do we need `decrement`? We don't actually use it in Indirect at least.
-  const sendCount =
-    (countToValue: (value: number) => number) =>
-    (
-      name: string,
-      countOrTags?: number | string[],
-      tagsIfCount?: string[],
-    ): void => {
-      let count: number;
-      let tags: string[] | undefined;
+    if (typeof countOrTags === 'number') {
+      count = countOrTags;
+      tags = tagsIfCount;
+    } else {
+      count = 1;
+      tags = countOrTags;
+    }
 
-      // Emulate overloading from StatsD's interface
-      if (typeof countOrTags === 'number') {
-        count = countOrTags;
-        tags = tagsIfCount;
-      } else {
-        count = 1;
-        tags = countOrTags;
-      }
-
-      send({ name, tags, value: countToValue(count) });
-    };
+    send({ name, tags, value: count });
+  };
 
   return {
     /**
@@ -94,8 +87,7 @@ export const createLambdaExtensionClient = (
       config.metrics ? (datadog(fn) as Handler<Event, Output>) : fn,
 
     metricsClient: {
-      increment: sendCount((count) => count),
-      decrement: sendCount((count) => -count),
+      increment: sendCount,
 
       distribution: (name: string, value: number, tags?: string[]): void => {
         send({ name, tags, value });

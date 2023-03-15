@@ -38,21 +38,4 @@ export interface LambdaExtensionMetricsClient {
    * @param tags  - Optional list of tags for the metric.
    */
   increment(name: string, count: number, tags?: string[]): void;
-
-  /**
-   * Decrements a counter by one
-   *
-   * @param name  - Name of the metric to increment.
-   * @param tags  - Optional list of tags for the metric.
-   */
-  decrement(name: string, tags?: string[]): void;
-
-  /**
-   * Decrements a counter by the specified integer count
-   *
-   * @param name  - Name of the metric to increment.
-   * @param count - Number to decrement the counter by.
-   * @param tags  - Optional list of tags for the metric.
-   */
-  decrement(name: string, count: number, tags?: string[]): void;
 }
