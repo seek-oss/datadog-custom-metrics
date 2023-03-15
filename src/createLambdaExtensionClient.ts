@@ -21,6 +21,12 @@ type Handler<Event, Output> = (
 
 interface LambdaExtensionClient {
   metricsClient: LambdaExtensionMetricsClient;
+  /**
+   * Conditionally wraps your AWS lambda handler function based on the provided config.
+   *
+   * This is necessary for initialising metrics/tracing support.
+   */
+  // This also "fixes" its broken type definitions.
   withLambdaExtension: <Event, Output = unknown>(
     fn: Handler<Event, Output>,
   ) => Handler<Event, Output>;
@@ -74,13 +80,6 @@ export const createLambdaExtensionClient = (
   };
 
   return {
-    /**
-     * TODO: Provide an description.
-     *
-     * Conditionally applies the Datadog wrapper to a Lambda handler.
-     *
-     * This also "fixes" its broken type definitions.
-     */
     withLambdaExtension: <Event, Output = unknown>(
       fn: Handler<Event, Output>,
     ): Handler<Event, Output> =>

@@ -1,6 +1,4 @@
 /**
- * TODO: Could just make this extend from the original MetricsClient 🤔.
- *
  * Abstract interface for recording metrics for AWS Lambda
  */
 export interface LambdaExtensionMetricsClient {
