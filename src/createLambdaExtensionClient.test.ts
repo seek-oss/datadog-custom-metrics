@@ -24,6 +24,17 @@ describe('createLambdaExtensionClient', () => {
 
       expect(datadog).toHaveBeenCalledTimes(1);
     });
+
+    it('should not call the `datadog` wrapper when metrics is turned off', () => {
+      const client = createLambdaExtensionClient({
+        name: 'test',
+        metrics: false,
+      });
+
+      client.withLambdaExtension(() => Promise.resolve({}));
+
+      expect(datadog).not.toHaveBeenCalled();
+    });
   });
 
   describe('timing', () => {
