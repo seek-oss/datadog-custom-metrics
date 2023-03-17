@@ -14,13 +14,15 @@ yarn add seek-datadog-custom-metrics
 
 ## Table of contents
 
-- [Tagging convention](#tagging-convention)
-- [API reference](#api-reference)
-  - [createStatsDClient](#createstatsdclient)
-  - [createNoOpClient](#createnoopclient)
-  - [createTimedSpan](#createtimedspan)
-  - [httpTracingConfig](#httptracingconfig)
-- [Contributing](https://github.com/seek-oss/datadog-custom-metrics/blob/master/CONTRIBUTING.md)
+- [🐶 Datadog Custom Metrics](#-datadog-custom-metrics)
+  - [Table of contents](#table-of-contents)
+  - [Tagging convention](#tagging-convention)
+  - [API reference](#api-reference)
+    - [`createStatsDClient`](#createstatsdclient)
+    - [`createLambdaExtensionClient`](#createlambdaextensionclient)
+    - [`createNoOpClient`](#createnoopclient)
+    - [`createTimedSpan`](#createtimedspan)
+    - [`httpTracingConfig`](#httptracingconfig)
 
 ## Tagging convention
 
@@ -54,6 +56,40 @@ const errorHandler = (err: Error) => {
 
 // Returns a standard hot-shots StatsD instance
 const metricsClient = createStatsDClient(StatsD, config, errorHandler);
+```
+
+### `createLambdaExtensionClient`
+
+`createLambdaExtensionClient` creates a [lambda extension](https://docs.datadoghq.com/serverless/libraries_integrations/extension/) client.
+This is intended for AWS Lambda functions and is a replacement for `createCloudWatchClient`.
+
+This client will only submit metrics as a [distribution](https://docs.datadoghq.com/metrics/distributions/) which enables broader aggregations for percentiles (p50, p75, p90 etc).
+
+```typescript
+import { createLambdaExtensionClient } from 'seek-datadog-custom-metrics';
+
+// Expects `name` and `metrics` properties
+import config from '../config';
+
+// Returns a standard hot-shots StatsD instance
+const { metricsClient, withLambdaExtension } =
+  createLambdaExtensionClient(config);
+
+export const handler = withLambdaExtension(
+  (event: unknown, lambdaContext: LambdaContext) => {
+    try {
+      logger.info('request');
+
+      await lambdaFunction(event);
+    } catch (err) {
+      logger.error({ err }, 'request');
+
+      metricsClient.increment('invocation_error');
+
+      throw new Error('invoke error');
+    }
+  },
+);
 ```
 
 ### `createNoOpClient`
