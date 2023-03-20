@@ -30,9 +30,10 @@
     "test:ci": "skuba test --coverage",
     "test:watch": "skuba test --watch"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@types/aws-lambda": "8.10.108"
+  },
   "devDependencies": {
-    "@types/aws-lambda": "8.10.108",
     "@types/node": "16.18.12",
     "datadog-lambda-js": "6.84.0",
     "dd-trace": "3.9.3",
