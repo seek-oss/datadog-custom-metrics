@@ -1,5 +1,4 @@
 import type { Context } from 'aws-lambda';
-import { datadog, sendDistributionMetric } from 'datadog-lambda-js';
 
 import { LambdaExtensionMetricsClient } from './LambdaExtensionMetricsClient';
 
@@ -47,6 +46,10 @@ const sanitiseTag = (tag: string): string => tag.replace(/\||@|,/g, '_');
 export const createLambdaExtensionClient = (
   config: DatadogConfig,
 ): LambdaExtensionClient => {
+  const { datadog, sendDistributionMetric } =
+    // eslint-disable-next-line @typescript-eslint/no-var-requires
+    require('datadog-lambda-js') as typeof import('datadog-lambda-js');
+
   const send = (metric: DatadogMetric) => {
     const { value } = metric;
 
