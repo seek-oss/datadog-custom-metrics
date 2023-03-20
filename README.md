@@ -12,18 +12,6 @@ Helpers for sending [Datadog custom metrics](https://docs.datadoghq.com/develope
 yarn add seek-datadog-custom-metrics
 ```
 
-## Table of contents
-
-- [🐶 Datadog Custom Metrics](#-datadog-custom-metrics)
-  - [Table of contents](#table-of-contents)
-  - [Tagging convention](#tagging-convention)
-  - [API reference](#api-reference)
-    - [`createStatsDClient`](#createstatsdclient)
-    - [`createLambdaExtensionClient`](#createlambdaextensionclient)
-    - [`createNoOpClient`](#createnoopclient)
-    - [`createTimedSpan`](#createtimedspan)
-    - [`httpTracingConfig`](#httptracingconfig)
-
 ## Tagging convention
 
 All custom metrics are prefixed by `AppConfig.name`.
