@@ -63,21 +63,19 @@ import config from '../config';
 const { metricsClient, withLambdaExtension } =
   createLambdaExtensionClient(config);
 
-export const handler = withLambdaExtension(
-  (event, _ctx) => {
-    try {
-      logger.info('request');
+export const handler = withLambdaExtension((event, _ctx) => {
+  try {
+    logger.info('request');
 
-      await lambdaFunction(event);
-    } catch (err) {
-      logger.error({ err }, 'request');
+    await lambdaFunction(event);
+  } catch (err) {
+    logger.error({ err }, 'request');
 
-      metricsClient.increment('invocation_error');
+    metricsClient.increment('invocation_error');
 
-      throw new Error('invoke error');
-    }
-  },
-);
+    throw new Error('invoke error');
+  }
+});
 ```
 
 ### `createNoOpClient`
