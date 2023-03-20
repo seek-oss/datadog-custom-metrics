@@ -18,8 +18,7 @@ const sanitiseTag = (tag: string): string => tag.replace(/\||@|,/g, '_');
  * Creates a new CloudWatch Datadog client configured for the given app
  *
  * @deprecated This depends on Datadog's deprecated CloudWatch log integration.
- * This has been superseded by the Datadog Lambda Extension which does not
- * support the `count` metric type required by our `MetricClient` interface.
+ * Consumers should migrate to the `createLambdaExtensionClient` function.
  *
  * @see {@link https://docs.datadoghq.com/serverless/libraries_integrations/extension/}
  * @see {@link https://docs.datadoghq.com/serverless/custom_metrics/#deprecated-cloudwatch-logs}
