@@ -60,10 +60,10 @@ const metricsClient = createStatsDClient(StatsD, config, errorHandler);
 
 ### `createLambdaExtensionClient`
 
-`createLambdaExtensionClient` creates a [lambda extension](https://docs.datadoghq.com/serverless/libraries_integrations/extension/) client.
+`createLambdaExtensionClient` creates a [Lambda extension](https://docs.datadoghq.com/serverless/libraries_integrations/extension/) client.
 This is intended for AWS Lambda functions and is a replacement for `createCloudWatchClient`.
 
-This client will only submit metrics as a [distribution](https://docs.datadoghq.com/metrics/distributions/) which enables broader aggregations for percentiles (p50, p75, p90 etc).
+This client will only submit metrics as a [distribution](https://docs.datadoghq.com/metrics/distributions/) which enables globally accurate aggregations for percentiles (p50, p75, p90, etc).
 
 ```typescript
 import { createLambdaExtensionClient } from 'seek-datadog-custom-metrics';
@@ -76,7 +76,7 @@ const { metricsClient, withLambdaExtension } =
   createLambdaExtensionClient(config);
 
 export const handler = withLambdaExtension(
-  (event: unknown, lambdaContext: LambdaContext) => {
+  (event, _ctx) => {
     try {
       logger.info('request');
 
