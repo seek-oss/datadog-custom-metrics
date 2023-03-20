@@ -31,7 +31,7 @@
     "test:watch": "skuba test --watch"
   },
   "dependencies": {
-    "@types/aws-lambda": "8.10.108"
+    "@types/aws-lambda": "^8.10.108"
   },
   "devDependencies": {
     "@types/node": "16.18.12",
