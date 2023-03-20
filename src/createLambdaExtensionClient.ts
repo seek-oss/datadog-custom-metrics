@@ -2,6 +2,19 @@ import type { Context } from 'aws-lambda';
 
 import { LambdaExtensionMetricsClient } from './LambdaExtensionMetricsClient';
 
+/**
+ * Vendored from `datadog-lambda-js`.
+ */
+abstract class DatadogLambdaJs {
+  abstract datadog: <T>(handler: T) => T;
+
+  abstract sendDistributionMetric: (
+    name: string,
+    value: number,
+    ...tags: string[]
+  ) => void;
+}
+
 interface DatadogMetric {
   name: string;
   tags?: string[];
@@ -48,7 +61,7 @@ export const createLambdaExtensionClient = (
 ): LambdaExtensionClient => {
   const { datadog, sendDistributionMetric } =
     // eslint-disable-next-line @typescript-eslint/no-var-requires
-    require('datadog-lambda-js') as typeof import('datadog-lambda-js');
+    require('datadog-lambda-js') as DatadogLambdaJs;
 
   const send = (metric: DatadogMetric) => {
     const { value } = metric;
@@ -85,8 +98,7 @@ export const createLambdaExtensionClient = (
   return {
     withLambdaExtension: <Event, Output = unknown>(
       fn: Handler<Event, Output>,
-    ): Handler<Event, Output> =>
-      config.metrics ? (datadog(fn) as Handler<Event, Output>) : fn,
+    ): Handler<Event, Output> => (config.metrics ? datadog(fn) : fn),
 
     metricsClient: {
       increment: sendCount,
