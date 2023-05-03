@@ -1,5 +1,5 @@
-import { AppConfig } from './AppConfig';
-import { MetricsClient } from './MetricsClient';
+import type { AppConfig } from './AppConfig';
+import type { MetricsClient } from './MetricsClient';
 import { globalTags } from './globalTags';
 
 interface DatadogMetric {
