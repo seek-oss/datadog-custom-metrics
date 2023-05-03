@@ -1,4 +1,4 @@
-import { AppConfig } from './AppConfig';
+import type { AppConfig } from './AppConfig';
 
 export const globalTags = (config: AppConfig): string[] => {
   const { environment, version } = config;
