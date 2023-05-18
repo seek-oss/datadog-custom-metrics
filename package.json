@@ -38,7 +38,7 @@
     "datadog-lambda-js": "6.84.0",
     "dd-trace": "3.9.3",
     "hot-shots": "9.3.0",
-    "skuba": "6.1.0"
+    "skuba": "6.2.0"
   },
   "peerDependencies": {
     "datadog-lambda-js": "6.x",
