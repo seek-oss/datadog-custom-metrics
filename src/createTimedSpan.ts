@@ -15,15 +15,22 @@ type TimingMetricsClient = Pick<MetricsClient, 'increment' | 'timing'>;
  */
 export const createTimedSpan =
   (metricsClient: TimingMetricsClient) =>
-  async <T>(name: string, block: () => PromiseLike<T>): Promise<T> => {
+  async <T>(
+    name: string,
+    block: () => PromiseLike<T>,
+    afterCompletion?: (duration: number, success: boolean) => void,
+  ): Promise<T> => {
     const startTime = process.hrtime.bigint();
 
     const handleCompletion = (success: boolean) => {
       const durationNanos = process.hrtime.bigint() - startTime;
       const successTag = success ? 'success' : 'failure';
+      const durationMilliseconds = Number(durationNanos) / 1e6;
 
-      metricsClient.timing(`${name}.latency`, Number(durationNanos) / 1e6);
+      metricsClient.timing(`${name}.latency`, durationMilliseconds);
       metricsClient.increment(`${name}.count`, [successTag]);
+
+      afterCompletion?.(durationMilliseconds, success);
     };
 
     try {
