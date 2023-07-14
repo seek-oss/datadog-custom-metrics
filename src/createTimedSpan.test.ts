@@ -45,6 +45,27 @@ describe('timedSpan', () => {
     }
   });
 
+  it('should call afterCompletion', async () => {
+    jest.spyOn(metricsClient, 'increment');
+    jest.spyOn(metricsClient, 'timing');
+
+    let duration = 0;
+
+    const result = await timedSpan(
+      'test',
+      // This is false but we still successfully resolved
+      () => Promise.resolve(false),
+      (timedDuration) => {
+        duration = timedDuration;
+      },
+    );
+
+    expect(result).toBe(false);
+
+    // Hopefully this doesn't become flaky and end up as 0
+    expect(duration).toBeGreaterThan(0);
+  });
+
   it('should handle failure', async () => {
     const mockIncrement = jest.spyOn(metricsClient, 'increment');
     const mockTiming = jest.spyOn(metricsClient, 'timing');
