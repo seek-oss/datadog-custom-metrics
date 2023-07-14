@@ -18,7 +18,7 @@ export const createTimedSpan =
   async <T>(
     name: string,
     block: () => PromiseLike<T>,
-    afterCompletion?: (duration: number) => void,
+    afterCompletion?: (duration: number, success: boolean) => void,
   ): Promise<T> => {
     const startTime = process.hrtime.bigint();
 
@@ -30,7 +30,7 @@ export const createTimedSpan =
       metricsClient.timing(`${name}.latency`, durationMilliseconds);
       metricsClient.increment(`${name}.count`, [successTag]);
 
-      afterCompletion?.(durationMilliseconds);
+      afterCompletion?.(durationMilliseconds, success);
     };
 
     try {
