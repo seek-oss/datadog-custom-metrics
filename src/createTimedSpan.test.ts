@@ -66,6 +66,30 @@ describe('timedSpan', () => {
     expect(duration).toBeGreaterThan(0);
   });
 
+  it('should pass along tags', async () => {
+    const mockIncrement = jest.spyOn(metricsClient, 'increment');
+    const mockTiming = jest.spyOn(metricsClient, 'timing');
+
+    await timedSpan(
+      'test',
+      // This is false but we still successfully resolved
+      () => Promise.resolve(false),
+      () => {},
+      ['new-tags'],
+    );
+
+    expect(mockIncrement).toHaveBeenCalledWith('test.count', [
+      'success',
+      'new-tags',
+    ]);
+
+    expect(mockTiming).toHaveBeenCalledWith(
+      'test.latency',
+      expect.any(Number),
+      ['new-tags'],
+    );
+  });
+
   it('should handle failure', async () => {
     const mockIncrement = jest.spyOn(metricsClient, 'increment');
     const mockTiming = jest.spyOn(metricsClient, 'timing');

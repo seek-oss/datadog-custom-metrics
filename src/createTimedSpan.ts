@@ -19,6 +19,7 @@ export const createTimedSpan =
     name: string,
     block: () => PromiseLike<T>,
     afterCompletion?: (duration: number, success: boolean) => void,
+    tags?: string[],
   ): Promise<T> => {
     const startTime = process.hrtime.bigint();
 
@@ -27,8 +28,8 @@ export const createTimedSpan =
       const successTag = success ? 'success' : 'failure';
       const durationMilliseconds = Number(durationNanos) / 1e6;
 
-      metricsClient.timing(`${name}.latency`, durationMilliseconds);
-      metricsClient.increment(`${name}.count`, [successTag]);
+      metricsClient.timing(`${name}.latency`, durationMilliseconds, tags);
+      metricsClient.increment(`${name}.count`, [successTag, ...(tags ?? [])]);
 
       afterCompletion?.(durationMilliseconds, success);
     };
