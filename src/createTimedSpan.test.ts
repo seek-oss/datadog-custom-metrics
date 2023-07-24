@@ -66,7 +66,7 @@ describe('timedSpan', () => {
     expect(duration).toBeGreaterThan(0);
   });
 
-  it('should pass along tags', async () => {
+  it('should pass along tags from `timedSpan`', async () => {
     const mockIncrement = jest.spyOn(metricsClient, 'increment');
     const mockTiming = jest.spyOn(metricsClient, 'timing');
 
@@ -87,6 +87,54 @@ describe('timedSpan', () => {
       'test.latency',
       expect.any(Number),
       ['new-tags'],
+    );
+  });
+
+  it('should pass along tags from `afterCompletion`', async () => {
+    const mockIncrement = jest.spyOn(metricsClient, 'increment');
+    const mockTiming = jest.spyOn(metricsClient, 'timing');
+
+    await timedSpan(
+      'test',
+      // This is false but we still successfully resolved
+      () => Promise.resolve(false),
+      () => ({ tags: ['tags-from-after-completion'] }),
+      ['new-tags'],
+    );
+
+    expect(mockIncrement).toHaveBeenCalledWith('test.count', [
+      'success',
+      'new-tags',
+      'tags-from-after-completion',
+    ]);
+
+    expect(mockTiming).toHaveBeenCalledWith(
+      'test.latency',
+      expect.any(Number),
+      ['new-tags', 'tags-from-after-completion'],
+    );
+  });
+
+  it("should pass along tags from `afterCompletion` when original tags aren't provided", async () => {
+    const mockIncrement = jest.spyOn(metricsClient, 'increment');
+    const mockTiming = jest.spyOn(metricsClient, 'timing');
+
+    await timedSpan(
+      'test',
+      // This is false but we still successfully resolved
+      () => Promise.resolve(false),
+      () => ({ tags: ['tags-from-after-completion'] }),
+    );
+
+    expect(mockIncrement).toHaveBeenCalledWith('test.count', [
+      'success',
+      'tags-from-after-completion',
+    ]);
+
+    expect(mockTiming).toHaveBeenCalledWith(
+      'test.latency',
+      expect.any(Number),
+      ['tags-from-after-completion'],
     );
   });
 
