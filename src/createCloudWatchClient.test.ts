@@ -20,8 +20,8 @@ describe('createCloudWatchClient', () => {
     it('should record integer timings without tags', () => {
       metricsClient.timing('my_custom_metric', 100);
 
-      expect(stdoutSpy).toHaveBeenCalledTimes(1);
-      expect(stdoutSpy.mock.calls[0][0]).toMatchInlineSnapshot(`
+      const [buffer] = stdoutSpy.mock.calls[0] ?? [];
+      expect(buffer).toMatchInlineSnapshot(`
         "MONITORING|31337|100|histogram|test.my_custom_metric|#env:jest
         "
       `);
@@ -31,7 +31,9 @@ describe('createCloudWatchClient', () => {
       metricsClient.timing('my_custom_metric', 1234.5, ['pipe|special|char']);
 
       expect(stdoutSpy).toHaveBeenCalledTimes(1);
-      expect(stdoutSpy.mock.calls[0][0]).toMatchInlineSnapshot(`
+
+      const [buffer] = stdoutSpy.mock.calls[0] ?? [];
+      expect(buffer).toMatchInlineSnapshot(`
         "MONITORING|31337|1234.5|histogram|test.my_custom_metric|#env:jest,pipe_special_char
         "
       `);
@@ -43,7 +45,8 @@ describe('createCloudWatchClient', () => {
       metricsClient.histogram('my_custom_metric', 100);
 
       expect(stdoutSpy).toHaveBeenCalledTimes(1);
-      expect(stdoutSpy.mock.calls[0][0]).toMatchInlineSnapshot(`
+      const [buffer] = stdoutSpy.mock.calls[0] ?? [];
+      expect(buffer).toMatchInlineSnapshot(`
         "MONITORING|31337|100|histogram|test.my_custom_metric|#env:jest
         "
       `);
@@ -55,7 +58,8 @@ describe('createCloudWatchClient', () => {
       ]);
 
       expect(stdoutSpy).toHaveBeenCalledTimes(1);
-      expect(stdoutSpy.mock.calls[0][0]).toMatchInlineSnapshot(`
+      const [buffer] = stdoutSpy.mock.calls[0] ?? [];
+      expect(buffer).toMatchInlineSnapshot(`
         "MONITORING|31337|1234.5|histogram|test.my_custom_metric|#env:jest,pipe_special_char
         "
       `);
@@ -67,7 +71,8 @@ describe('createCloudWatchClient', () => {
       metricsClient.increment('my_custom_metric');
 
       expect(stdoutSpy).toHaveBeenCalledTimes(1);
-      expect(stdoutSpy.mock.calls[0][0]).toMatchInlineSnapshot(`
+      const [buffer] = stdoutSpy.mock.calls[0] ?? [];
+      expect(buffer).toMatchInlineSnapshot(`
         "MONITORING|31337|1|count|test.my_custom_metric|#env:jest
         "
       `);
@@ -77,7 +82,8 @@ describe('createCloudWatchClient', () => {
       metricsClient.increment('my_custom_metric', ['comma,special,char']);
 
       expect(stdoutSpy).toHaveBeenCalledTimes(1);
-      expect(stdoutSpy.mock.calls[0][0]).toMatchInlineSnapshot(`
+      const [buffer] = stdoutSpy.mock.calls[0] ?? [];
+      expect(buffer).toMatchInlineSnapshot(`
         "MONITORING|31337|1|count|test.my_custom_metric|#env:jest,comma_special_char
         "
       `);
@@ -87,7 +93,8 @@ describe('createCloudWatchClient', () => {
       metricsClient.increment('my_custom_metric', 10);
 
       expect(stdoutSpy).toHaveBeenCalledTimes(1);
-      expect(stdoutSpy.mock.calls[0][0]).toMatchInlineSnapshot(`
+      const [buffer] = stdoutSpy.mock.calls[0] ?? [];
+      expect(buffer).toMatchInlineSnapshot(`
         "MONITORING|31337|10|count|test.my_custom_metric|#env:jest
         "
       `);
@@ -97,7 +104,8 @@ describe('createCloudWatchClient', () => {
       metricsClient.increment('my_custom_metric', 10, ['compound:tag']);
 
       expect(stdoutSpy).toHaveBeenCalledTimes(1);
-      expect(stdoutSpy.mock.calls[0][0]).toMatchInlineSnapshot(`
+      const [buffer] = stdoutSpy.mock.calls[0] ?? [];
+      expect(buffer).toMatchInlineSnapshot(`
         "MONITORING|31337|10|count|test.my_custom_metric|#env:jest,compound:tag
         "
       `);
@@ -109,7 +117,8 @@ describe('createCloudWatchClient', () => {
       metricsClient.decrement('my_custom_metric');
 
       expect(stdoutSpy).toHaveBeenCalledTimes(1);
-      expect(stdoutSpy.mock.calls[0][0]).toMatchInlineSnapshot(`
+      const [buffer] = stdoutSpy.mock.calls[0] ?? [];
+      expect(buffer).toMatchInlineSnapshot(`
         "MONITORING|31337|-1|count|test.my_custom_metric|#env:jest
         "
       `);
@@ -119,7 +128,8 @@ describe('createCloudWatchClient', () => {
       metricsClient.decrement('my_custom_metric', 10);
 
       expect(stdoutSpy).toHaveBeenCalledTimes(1);
-      expect(stdoutSpy.mock.calls[0][0]).toMatchInlineSnapshot(`
+      const [buffer] = stdoutSpy.mock.calls[0] ?? [];
+      expect(buffer).toMatchInlineSnapshot(`
         "MONITORING|31337|-10|count|test.my_custom_metric|#env:jest
         "
       `);
