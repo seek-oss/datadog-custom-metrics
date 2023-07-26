@@ -30,7 +30,7 @@ describe('timedSpan', () => {
 
     expect(mockIncrement).toHaveBeenCalledTimes(1);
     {
-      const [name, tags] = mockIncrement.mock.calls[0];
+      const [name, tags] = mockIncrement.mock.calls[0] ?? [];
 
       expect(name).toBe('test.count');
       expect(tags).toEqual(['success']);
@@ -38,7 +38,7 @@ describe('timedSpan', () => {
 
     expect(mockTiming).toHaveBeenCalledTimes(1);
     {
-      const [name, latency] = mockTiming.mock.calls[0];
+      const [name, latency] = mockTiming.mock.calls[0] ?? [];
 
       expect(name).toBe('test.latency');
       expect(latency).toBeGreaterThanOrEqual(0);
@@ -150,7 +150,7 @@ describe('timedSpan', () => {
 
     expect(mockIncrement).toHaveBeenCalledTimes(1);
     {
-      const [name, tags] = mockIncrement.mock.calls[0];
+      const [name, tags] = mockIncrement.mock.calls[0] ?? [];
 
       expect(name).toBe('test.count');
       expect(tags).toEqual(['failure']);
@@ -158,7 +158,7 @@ describe('timedSpan', () => {
 
     expect(mockTiming).toHaveBeenCalledTimes(1);
     {
-      const [name, latency] = mockTiming.mock.calls[0];
+      const [name, latency] = mockTiming.mock.calls[0] ?? [];
 
       expect(name).toBe('test.latency');
       expect(latency).toBeGreaterThanOrEqual(0);
