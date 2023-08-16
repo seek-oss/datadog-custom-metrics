@@ -69,7 +69,7 @@ export const createLambdaExtensionClient = (
     const sanitisedLambdaName = config.name.replace(new RegExp('-', 'g'), '_');
     const name = `${sanitisedLambdaName}.${metric.name.toLowerCase()}`;
 
-    const tags = (metric.tags || []).map(sanitiseTag);
+    const tags = (metric.tags ?? []).map(sanitiseTag);
 
     if (config.metrics) {
       sendDistributionMetric(name, value, ...tags);

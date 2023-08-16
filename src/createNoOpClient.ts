@@ -8,8 +8,8 @@ import type { MetricsClient } from './MetricsClient';
  *
  */
 export const createNoOpClient = (): MetricsClient => ({
-  increment: () => {},
-  decrement: () => {},
-  histogram: () => {},
-  timing: () => {},
+  increment: () => undefined,
+  decrement: () => undefined,
+  histogram: () => undefined,
+  timing: () => undefined,
 });

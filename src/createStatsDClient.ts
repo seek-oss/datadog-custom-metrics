@@ -8,15 +8,13 @@ interface InternalStatsD extends MetricsClient {
   };
 }
 
-interface StatsD<T extends InternalStatsD> {
-  new (options?: {
-    mock?: boolean;
-    host?: string;
-    errorHandler?: (err: Error) => void;
-    prefix?: string;
-    globalTags?: Record<string, string> | string[];
-  }): T;
-}
+type StatsD<T extends InternalStatsD> = new (options?: {
+  mock?: boolean;
+  host?: string;
+  errorHandler?: (err: Error) => void;
+  prefix?: string;
+  globalTags?: Record<string, string> | string[];
+}) => T;
 
 /**
  * Configuration for building a StatsD client
