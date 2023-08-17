@@ -31,7 +31,7 @@ export const createCloudWatchClient = (config: AppConfig): MetricsClient => {
 
     const name = `${config.name}.${metric.name.toLowerCase()}`;
 
-    const tags = [...globalTags(config), ...(metric.tags || [])]
+    const tags = [...globalTags(config), ...(metric.tags ?? [])]
       .map(sanitiseTag)
       .join(',');
 

@@ -39,7 +39,7 @@ export const createTimedSpan =
       const complete = afterCompletion?.(durationMilliseconds, success, result);
 
       const tagsToAdd =
-        tags || complete?.tags
+        tags ?? complete?.tags
           ? [...(tags ?? []), ...(complete?.tags ?? [])]
           : undefined;
 

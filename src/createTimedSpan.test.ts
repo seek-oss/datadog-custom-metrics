@@ -74,7 +74,7 @@ describe('timedSpan', () => {
       'test',
       // This is false but we still successfully resolved
       () => Promise.resolve(false),
-      () => {},
+      () => undefined,
       ['new-tags'],
     );
 

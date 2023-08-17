@@ -6,7 +6,9 @@ const sendDistributionMetric = jest
   .spyOn(datadogJS, 'sendDistributionMetric')
   .mockReturnValue();
 
-const datadog = jest.spyOn(datadogJS, 'datadog').mockReturnValue(() => {});
+const datadog = jest
+  .spyOn(datadogJS, 'datadog')
+  .mockReturnValue(() => undefined);
 
 describe('createLambdaExtensionClient', () => {
   const { metricsClient, withLambdaExtension } = createLambdaExtensionClient({
