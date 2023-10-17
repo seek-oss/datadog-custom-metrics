@@ -22,7 +22,7 @@ jobs:
           node-version: 18.17
 
       - name: Install dependencies
-        run: yarn install --frozen-lockfile --no-optional
+        run: yarn install --frozen-lockfile
 
       - name: Test
         run: yarn test:ci
