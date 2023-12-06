@@ -382,10 +382,10 @@
   dependencies:
     "@jridgewell/trace-mapping" "0.3.9"
 
-"@datadog/native-appsec@^4.0.0":
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/@datadog/native-appsec/-/native-appsec-4.1.0.tgz#bfe1c6172895bd1d877ddf53e801e677662333fb"
-  integrity sha512-BdKCIIQIfNcv2M3Lz1sHC9S3hFiNxkGQlHDe1Lj4XVU24wv5JkIgKyis+Ikyyi7sUX0Y5PJL3XYZu7reS0iwWw==
+"@datadog/native-appsec@4.0.0":
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/@datadog/native-appsec/-/native-appsec-4.0.0.tgz#ee08138b987dec557eac3650a43a972dac85b6a6"
+  integrity sha512-myTguXJ3VQHS2E1ylNsSF1avNpDmq5t+K4Q47wdzeakGc3sDIDDyEbvuFTujl9c9wBIkup94O1mZj5DR37ajzA==
   dependencies:
     node-gyp-build "^3.9.0"
 
@@ -397,10 +397,10 @@
     lru-cache "^7.14.0"
     node-gyp-build "^4.5.0"
 
-"@datadog/native-iast-taint-tracking@1.6.3":
-  version "1.6.3"
-  resolved "https://registry.yarnpkg.com/@datadog/native-iast-taint-tracking/-/native-iast-taint-tracking-1.6.3.tgz#cb2125f7bf18806da6f326c3a6b7210da3e05d8b"
-  integrity sha512-u/bBPNx0w8Bq+I+30enI99Ua2WPbVLkANGNyQNjW4tz2PHyeGI++HyzZV+fGm0YSy41FuHZq9EWP3SSDz/eSVw==
+"@datadog/native-iast-taint-tracking@1.6.4":
+  version "1.6.4"
+  resolved "https://registry.yarnpkg.com/@datadog/native-iast-taint-tracking/-/native-iast-taint-tracking-1.6.4.tgz#16c21ad7c36a53420c0d3c5a3720731809cc7e98"
+  integrity sha512-Owxk7hQ4Dxwv4zJAoMjRga0IvE6lhvxnNc8pJCHsemCWBXchjr/9bqg05Zy5JnMbKUWn4XuZeJD6RFZpRa8bfw==
   dependencies:
     node-gyp-build "^3.9.0"
 
@@ -2757,10 +2757,10 @@ cssesc@^3.0.0:
   resolved "https://registry.yarnpkg.com/cssesc/-/cssesc-3.0.0.tgz#37741919903b868565e1c09ea747445cd18983ee"
   integrity sha512-/Tb/JcjK111nNScGob5MNtsntNM1aCNUDipB/TkwZFhyDrrE47SOx/18wF2bbjgc3ZzCSKW1T5nt5EbFoAz/Vg==
 
-datadog-lambda-js@7.99.0:
-  version "7.99.0"
-  resolved "https://registry.yarnpkg.com/datadog-lambda-js/-/datadog-lambda-js-7.99.0.tgz#ba83c8684eee1cd2b0f3a5eeeabe5c90073c1546"
-  integrity sha512-EZ31di74LjtsN0jIMkS74FDbksSYO/AkiL/bkkQX7/3t2QfTabIoWRMQYCWO59srhdSLJ86vQkd0cvc1l8GTjg==
+datadog-lambda-js@7.100.0:
+  version "7.100.0"
+  resolved "https://registry.yarnpkg.com/datadog-lambda-js/-/datadog-lambda-js-7.100.0.tgz#e7e6bfbc501d92c72519a8a26c561b1d40f0ca8e"
+  integrity sha512-Jf0Xz3GfYSaJ0xAjQS7Kn6FA5ybxEssE9JQbtIq/AxAOCmXcL5hp3phMRlWRRct0XYPq33qVzgPOO3ApmsQGqg==
   dependencies:
     bignumber.js "^9.0.1"
     hot-shots "8.5.0"
@@ -2781,21 +2781,26 @@ dateformat@^3.0.3:
   resolved "https://registry.yarnpkg.com/dateformat/-/dateformat-3.0.3.tgz#a6e37499a4d9a9cf85ef5872044d62901c9889ae"
   integrity sha512-jyCETtSl3VMZMWeRo7iY1FL19ges1t55hMo5yaam4Jrsm5EPL89UQkoQRyiI+Yf4k8r2ZpdngkV8hr1lIdjb3Q==
 
-dd-trace@4.18.0:
-  version "4.18.0"
-  resolved "https://registry.yarnpkg.com/dd-trace/-/dd-trace-4.18.0.tgz#0c469c9d8df4b79cdfd1ef31db698532ee5e5815"
-  integrity sha512-rycfmSIshWcphYavFE4iozpu0QbnLpXiUuan+Ft3mvPFe+wYgqY8agu+goRNGAXZYFXNLk7jVN5OTXYO2AMJtQ==
+dc-polyfill@^0.1.2:
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/dc-polyfill/-/dc-polyfill-0.1.3.tgz#fe9eefc86813439dd46d6f9ad9582ec079c39720"
+  integrity sha512-Wyk5n/5KUj3GfVKV2jtDbtChC/Ff9fjKsBcg4ZtYW1yQe3DXNHcGURvmoxhqQdfOQ9TwyMjnfyv1lyYcOkFkFA==
+
+dd-trace@4.20.0:
+  version "4.20.0"
+  resolved "https://registry.yarnpkg.com/dd-trace/-/dd-trace-4.20.0.tgz#9a2cc3f28ff558c5605927b1362eb64605df76c1"
+  integrity sha512-y7IDLSSt6nww6zMdw/I8oLdfgOQADIOkERCNdfSzlBrXHz5CHimEOFfsHN87ag0mn6vusr06aoi+CQRZSNJz2g==
   dependencies:
-    "@datadog/native-appsec" "^4.0.0"
+    "@datadog/native-appsec" "4.0.0"
     "@datadog/native-iast-rewriter" "2.2.1"
-    "@datadog/native-iast-taint-tracking" "1.6.3"
+    "@datadog/native-iast-taint-tracking" "1.6.4"
     "@datadog/native-metrics" "^2.0.0"
     "@datadog/pprof" "4.0.1"
     "@datadog/sketches-js" "^2.1.0"
     "@opentelemetry/api" "^1.0.0"
     "@opentelemetry/core" "^1.14.0"
     crypto-randomuuid "^1.0.0"
-    diagnostics_channel "^1.1.0"
+    dc-polyfill "^0.1.2"
     ignore "^5.2.4"
     import-in-the-middle "^1.4.2"
     int64-buffer "^0.1.9"
@@ -2815,6 +2820,7 @@ dd-trace@4.18.0:
     node-abort-controller "^3.1.1"
     opentracing ">=0.12.1"
     path-to-regexp "^0.1.2"
+    pprof-format "^2.0.7"
     protobufjs "^7.2.4"
     retry "^0.13.1"
     semver "^7.5.4"
@@ -2950,11 +2956,6 @@ detect-newline@^4.0.0:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/detect-newline/-/detect-newline-4.0.1.tgz#fcefdb5713e1fb8cb2839b8b6ee22e6716ab8f23"
   integrity sha512-qE3Veg1YXzGHQhlA6jzebZN2qVf6NX+A7m7qlhCGG30dJixrAQhYOsJjsnBjJkCSmuOPpCk30145fr8FV0bzog==
-
-diagnostics_channel@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/diagnostics_channel/-/diagnostics_channel-1.1.0.tgz#bd66c49124ce3bac697dff57466464487f57cea5"
-  integrity sha512-OE1ngLDjSBPG6Tx0YATELzYzy3RKHC+7veQ8gLa8yS7AAgw65mFbVdcsu3501abqOZCEZqZyAIemB0zXlqDSuw==
 
 diff-sequences@^29.6.3:
   version "29.6.3"
