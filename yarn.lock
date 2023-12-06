@@ -2757,13 +2757,12 @@ cssesc@^3.0.0:
   resolved "https://registry.yarnpkg.com/cssesc/-/cssesc-3.0.0.tgz#37741919903b868565e1c09ea747445cd18983ee"
   integrity sha512-/Tb/JcjK111nNScGob5MNtsntNM1aCNUDipB/TkwZFhyDrrE47SOx/18wF2bbjgc3ZzCSKW1T5nt5EbFoAz/Vg==
 
-datadog-lambda-js@7.101.0:
-  version "7.101.0"
-  resolved "https://registry.yarnpkg.com/datadog-lambda-js/-/datadog-lambda-js-7.101.0.tgz#cdeb82f73b0217a19287dded8fa90b01c32943ad"
-  integrity sha512-sIkYHirpdhZXoWWv8s747Jioa/W/0hwgoOG0SrUD2W4mzpjUxiNc21txSbpe8g6QVxnYVMmBU0/q8A285lzyDQ==
+datadog-lambda-js@7.100.0:
+  version "7.100.0"
+  resolved "https://registry.yarnpkg.com/datadog-lambda-js/-/datadog-lambda-js-7.100.0.tgz#e7e6bfbc501d92c72519a8a26c561b1d40f0ca8e"
+  integrity sha512-Jf0Xz3GfYSaJ0xAjQS7Kn6FA5ybxEssE9JQbtIq/AxAOCmXcL5hp3phMRlWRRct0XYPq33qVzgPOO3ApmsQGqg==
   dependencies:
     bignumber.js "^9.0.1"
-    dc-polyfill "^0.1.3"
     hot-shots "8.5.0"
     promise-retry "^2.0.1"
     serialize-error "^8.1.0"
@@ -2782,7 +2781,7 @@ dateformat@^3.0.3:
   resolved "https://registry.yarnpkg.com/dateformat/-/dateformat-3.0.3.tgz#a6e37499a4d9a9cf85ef5872044d62901c9889ae"
   integrity sha512-jyCETtSl3VMZMWeRo7iY1FL19ges1t55hMo5yaam4Jrsm5EPL89UQkoQRyiI+Yf4k8r2ZpdngkV8hr1lIdjb3Q==
 
-dc-polyfill@^0.1.2, dc-polyfill@^0.1.3:
+dc-polyfill@^0.1.2:
   version "0.1.3"
   resolved "https://registry.yarnpkg.com/dc-polyfill/-/dc-polyfill-0.1.3.tgz#fe9eefc86813439dd46d6f9ad9582ec079c39720"
   integrity sha512-Wyk5n/5KUj3GfVKV2jtDbtChC/Ff9fjKsBcg4ZtYW1yQe3DXNHcGURvmoxhqQdfOQ9TwyMjnfyv1lyYcOkFkFA==
