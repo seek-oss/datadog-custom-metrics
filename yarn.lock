@@ -382,10 +382,10 @@
   dependencies:
     "@jridgewell/trace-mapping" "0.3.9"
 
-"@datadog/native-appsec@4.0.0":
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/@datadog/native-appsec/-/native-appsec-4.0.0.tgz#ee08138b987dec557eac3650a43a972dac85b6a6"
-  integrity sha512-myTguXJ3VQHS2E1ylNsSF1avNpDmq5t+K4Q47wdzeakGc3sDIDDyEbvuFTujl9c9wBIkup94O1mZj5DR37ajzA==
+"@datadog/native-appsec@5.0.0":
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/@datadog/native-appsec/-/native-appsec-5.0.0.tgz#e42e77f42062532ad7defa3a79090dc8b020c22b"
+  integrity sha512-Ks8a4L49N40w+TJjj2e9ncGssUIEjo4wnmUFjPBRvlLGuVj1VJLxCx7ztpd8eTycM5QQlzggCDOP6CMEVmeZbA==
   dependencies:
     node-gyp-build "^3.9.0"
 
@@ -412,10 +412,10 @@
     node-addon-api "^6.1.0"
     node-gyp-build "^3.9.0"
 
-"@datadog/pprof@4.0.1":
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/@datadog/pprof/-/pprof-4.0.1.tgz#f8629ecb62646d90ed49b6252dd0583d8d5001d3"
-  integrity sha512-TavqyiyQZOaUM9eQB07r8+K/T1CqKyOdsUGxpN79+BF+eOQBpTj/Cte6KdlhcUSKL3h5hSjC+vlgA7uW2qtVhA==
+"@datadog/pprof@4.1.0":
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/@datadog/pprof/-/pprof-4.1.0.tgz#db86a720f1dfecbcab8838bc1f148eb0a402af55"
+  integrity sha512-g7EWI185nwSuFwlmnAGDPxbPsqe+ipOoDB2oP841WMNRaJBPRdg5J90c+6ucmyltuC9VpTrmzzqcachkOTzZEQ==
   dependencies:
     delay "^5.0.0"
     node-gyp-build "<4.0"
@@ -2757,12 +2757,13 @@ cssesc@^3.0.0:
   resolved "https://registry.yarnpkg.com/cssesc/-/cssesc-3.0.0.tgz#37741919903b868565e1c09ea747445cd18983ee"
   integrity sha512-/Tb/JcjK111nNScGob5MNtsntNM1aCNUDipB/TkwZFhyDrrE47SOx/18wF2bbjgc3ZzCSKW1T5nt5EbFoAz/Vg==
 
-datadog-lambda-js@7.100.0:
-  version "7.100.0"
-  resolved "https://registry.yarnpkg.com/datadog-lambda-js/-/datadog-lambda-js-7.100.0.tgz#e7e6bfbc501d92c72519a8a26c561b1d40f0ca8e"
-  integrity sha512-Jf0Xz3GfYSaJ0xAjQS7Kn6FA5ybxEssE9JQbtIq/AxAOCmXcL5hp3phMRlWRRct0XYPq33qVzgPOO3ApmsQGqg==
+datadog-lambda-js@7.102.0:
+  version "7.102.0"
+  resolved "https://registry.yarnpkg.com/datadog-lambda-js/-/datadog-lambda-js-7.102.0.tgz#a541ee08855fed9cb6636ee60fb32fcb492b9ba1"
+  integrity sha512-bv2CvXLL2e0WU2EOT8ALItOj/IHlbPg1LqGoqI+cPObp/A8/eaHXK8qyb8ntSctQup74eLCWV1JJF9xijSTbkA==
   dependencies:
     bignumber.js "^9.0.1"
+    dc-polyfill "^0.1.3"
     hot-shots "8.5.0"
     promise-retry "^2.0.1"
     serialize-error "^8.1.0"
@@ -2781,21 +2782,21 @@ dateformat@^3.0.3:
   resolved "https://registry.yarnpkg.com/dateformat/-/dateformat-3.0.3.tgz#a6e37499a4d9a9cf85ef5872044d62901c9889ae"
   integrity sha512-jyCETtSl3VMZMWeRo7iY1FL19ges1t55hMo5yaam4Jrsm5EPL89UQkoQRyiI+Yf4k8r2ZpdngkV8hr1lIdjb3Q==
 
-dc-polyfill@^0.1.2:
+dc-polyfill@^0.1.2, dc-polyfill@^0.1.3:
   version "0.1.3"
   resolved "https://registry.yarnpkg.com/dc-polyfill/-/dc-polyfill-0.1.3.tgz#fe9eefc86813439dd46d6f9ad9582ec079c39720"
   integrity sha512-Wyk5n/5KUj3GfVKV2jtDbtChC/Ff9fjKsBcg4ZtYW1yQe3DXNHcGURvmoxhqQdfOQ9TwyMjnfyv1lyYcOkFkFA==
 
-dd-trace@4.20.0:
-  version "4.20.0"
-  resolved "https://registry.yarnpkg.com/dd-trace/-/dd-trace-4.20.0.tgz#9a2cc3f28ff558c5605927b1362eb64605df76c1"
-  integrity sha512-y7IDLSSt6nww6zMdw/I8oLdfgOQADIOkERCNdfSzlBrXHz5CHimEOFfsHN87ag0mn6vusr06aoi+CQRZSNJz2g==
+dd-trace@4.21.0:
+  version "4.21.0"
+  resolved "https://registry.yarnpkg.com/dd-trace/-/dd-trace-4.21.0.tgz#1a6969838edba7258eeefefed5e24136f95a199d"
+  integrity sha512-nuFHfDJNy039Qns1sbJdIbXeP1ZmUioctwzXfw60k4Dif8dC3RmrHebvW48EbYCKrJj3Awri/vmwcBNf6xNpHw==
   dependencies:
-    "@datadog/native-appsec" "4.0.0"
+    "@datadog/native-appsec" "5.0.0"
     "@datadog/native-iast-rewriter" "2.2.1"
     "@datadog/native-iast-taint-tracking" "1.6.4"
     "@datadog/native-metrics" "^2.0.0"
-    "@datadog/pprof" "4.0.1"
+    "@datadog/pprof" "4.1.0"
     "@datadog/sketches-js" "^2.1.0"
     "@opentelemetry/api" "^1.0.0"
     "@opentelemetry/core" "^1.14.0"
@@ -2821,9 +2822,10 @@ dd-trace@4.20.0:
     opentracing ">=0.12.1"
     path-to-regexp "^0.1.2"
     pprof-format "^2.0.7"
-    protobufjs "^7.2.4"
+    protobufjs "^7.2.5"
     retry "^0.13.1"
     semver "^7.5.4"
+    tlhunter-sorted-set "^0.1.0"
 
 debug@4, debug@^4.0.0, debug@^4.1.0, debug@^4.1.1, debug@^4.3.1, debug@^4.3.2, debug@^4.3.3, debug@^4.3.4:
   version "4.3.4"
@@ -6829,7 +6831,7 @@ proto-list@~1.2.1:
   resolved "https://registry.yarnpkg.com/proto-list/-/proto-list-1.2.4.tgz#212d5bfe1318306a420f6402b8e26ff39647a849"
   integrity sha512-vtK/94akxsTMhe0/cbfpR+syPuszcuwhqVjJq26CuNDgFGj682oRBXOP5MJpv2r7JtE8MsiepGIqvvOTBwn2vA==
 
-protobufjs@^7.2.4:
+protobufjs@^7.2.5:
   version "7.2.5"
   resolved "https://registry.yarnpkg.com/protobufjs/-/protobufjs-7.2.5.tgz#45d5c57387a6d29a17aab6846dcc283f9b8e7f2d"
   integrity sha512-gGXRSXvxQ7UiPgfw8gevrfRWcTlSbOFg+p/N+JVJEK5VhueL2miT6qTymqAmjr1Q5WbOCyJbyrk6JfWKwlFn6A==
@@ -7869,6 +7871,11 @@ titleize@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/titleize/-/titleize-3.0.0.tgz#71c12eb7fdd2558aa8a44b0be83b8a76694acd53"
   integrity sha512-KxVu8EYHDPBdUYdKZdKtU2aj2XfEx9AfjXxE/Aj0vT06w2icA09Vus1rh6eSu1y01akYg6BjIK/hxyLJINoMLQ==
+
+tlhunter-sorted-set@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/tlhunter-sorted-set/-/tlhunter-sorted-set-0.1.0.tgz#1c3eae28c0fa4dff97e9501d2e3c204b86406f4b"
+  integrity sha512-eGYW4bjf1DtrHzUYxYfAcSytpOkA44zsr7G2n3PV7yOUR23vmkGe3LL4R+1jL9OsXtbsFOwe8XtbCrabeaEFnw==
 
 tmpl@1.0.5:
   version "1.0.5"
