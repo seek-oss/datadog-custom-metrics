@@ -2762,10 +2762,10 @@ cssesc@^3.0.0:
   resolved "https://registry.yarnpkg.com/cssesc/-/cssesc-3.0.0.tgz#37741919903b868565e1c09ea747445cd18983ee"
   integrity sha512-/Tb/JcjK111nNScGob5MNtsntNM1aCNUDipB/TkwZFhyDrrE47SOx/18wF2bbjgc3ZzCSKW1T5nt5EbFoAz/Vg==
 
-datadog-lambda-js@7.102.0:
-  version "7.102.0"
-  resolved "https://registry.yarnpkg.com/datadog-lambda-js/-/datadog-lambda-js-7.102.0.tgz#a541ee08855fed9cb6636ee60fb32fcb492b9ba1"
-  integrity sha512-bv2CvXLL2e0WU2EOT8ALItOj/IHlbPg1LqGoqI+cPObp/A8/eaHXK8qyb8ntSctQup74eLCWV1JJF9xijSTbkA==
+datadog-lambda-js@7.104.0:
+  version "7.104.0"
+  resolved "https://registry.yarnpkg.com/datadog-lambda-js/-/datadog-lambda-js-7.104.0.tgz#56a971390984da97357fa1185fca37b14447aa02"
+  integrity sha512-EeFzgZl8uqAsxwUjIw9Wxpu4BNuWXbOJWb3sTQuEulDAkuvfgnYs3Zgrj+PHKVJdocjWUEooufMVtw0TjXClGw==
   dependencies:
     bignumber.js "^9.0.1"
     dc-polyfill "^0.1.3"
