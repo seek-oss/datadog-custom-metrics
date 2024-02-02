@@ -412,10 +412,10 @@
     node-addon-api "^6.1.0"
     node-gyp-build "^3.9.0"
 
-"@datadog/pprof@4.1.0":
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/@datadog/pprof/-/pprof-4.1.0.tgz#db86a720f1dfecbcab8838bc1f148eb0a402af55"
-  integrity sha512-g7EWI185nwSuFwlmnAGDPxbPsqe+ipOoDB2oP841WMNRaJBPRdg5J90c+6ucmyltuC9VpTrmzzqcachkOTzZEQ==
+"@datadog/pprof@5.0.0":
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/@datadog/pprof/-/pprof-5.0.0.tgz#0c0aaf06def6d2bc4b2d353ec7b264dadbfbefab"
+  integrity sha512-vhNan4SBuNWLpexunDJQ+hNbRAgWdk2qy5Iyh7Nn94uSSHXigAJMAvu4jwMKKQKFfchtobOkWT8GQUWW3tgpFg==
   dependencies:
     delay "^5.0.0"
     node-gyp-build "<4.0"
@@ -2699,10 +2699,10 @@ cssesc@^3.0.0:
   resolved "https://registry.yarnpkg.com/cssesc/-/cssesc-3.0.0.tgz#37741919903b868565e1c09ea747445cd18983ee"
   integrity sha512-/Tb/JcjK111nNScGob5MNtsntNM1aCNUDipB/TkwZFhyDrrE47SOx/18wF2bbjgc3ZzCSKW1T5nt5EbFoAz/Vg==
 
-datadog-lambda-js@7.104.0:
-  version "7.104.0"
-  resolved "https://registry.yarnpkg.com/datadog-lambda-js/-/datadog-lambda-js-7.104.0.tgz#56a971390984da97357fa1185fca37b14447aa02"
-  integrity sha512-EeFzgZl8uqAsxwUjIw9Wxpu4BNuWXbOJWb3sTQuEulDAkuvfgnYs3Zgrj+PHKVJdocjWUEooufMVtw0TjXClGw==
+datadog-lambda-js@7.105.0:
+  version "7.105.0"
+  resolved "https://registry.yarnpkg.com/datadog-lambda-js/-/datadog-lambda-js-7.105.0.tgz#c0824f2313875271cded0454ee1f0ab32c56789d"
+  integrity sha512-Zgug1iOcqybW7MB9fGRYL0HPcBxBxgfT7HLIhb+7k7BOCrG0kKN9rA64DNpfqonJlqUf5l+9MYfpAlCEHEFMTg==
   dependencies:
     bignumber.js "^9.0.1"
     dc-polyfill "^0.1.3"
@@ -2729,29 +2729,29 @@ dc-polyfill@^0.1.2, dc-polyfill@^0.1.3:
   resolved "https://registry.yarnpkg.com/dc-polyfill/-/dc-polyfill-0.1.3.tgz#fe9eefc86813439dd46d6f9ad9582ec079c39720"
   integrity sha512-Wyk5n/5KUj3GfVKV2jtDbtChC/Ff9fjKsBcg4ZtYW1yQe3DXNHcGURvmoxhqQdfOQ9TwyMjnfyv1lyYcOkFkFA==
 
-dd-trace@4.22.0:
-  version "4.22.0"
-  resolved "https://registry.yarnpkg.com/dd-trace/-/dd-trace-4.22.0.tgz#aa3c5402edd4c30acf2c2cc78f4476c68c86bf8d"
-  integrity sha512-29mFmPNEA5obdKQSSK3fcke0fhpwpETB5+R6UWRoBn6BqirBWGbkQeU7xW1vZMHzgTV5d4MkQFmjTPK8SlsgHg==
+dd-trace@4.24.0:
+  version "4.24.0"
+  resolved "https://registry.yarnpkg.com/dd-trace/-/dd-trace-4.24.0.tgz#5a7f2d9a7d676dbddcaf9f475d20e5fe11b08363"
+  integrity sha512-ItmcumH8A0kzN6n1Rujuu1A+f3MUsKFFE7JFjVlH7xyHKY8SmW1jx+242Oxbnw2z+2tLG0dI9ZBz3B5Fz10CcA==
   dependencies:
     "@datadog/native-appsec" "6.0.0"
     "@datadog/native-iast-rewriter" "2.2.2"
     "@datadog/native-iast-taint-tracking" "1.6.4"
     "@datadog/native-metrics" "^2.0.0"
-    "@datadog/pprof" "4.1.0"
+    "@datadog/pprof" "5.0.0"
     "@datadog/sketches-js" "^2.1.0"
     "@opentelemetry/api" "^1.0.0"
     "@opentelemetry/core" "^1.14.0"
     crypto-randomuuid "^1.0.0"
     dc-polyfill "^0.1.2"
     ignore "^5.2.4"
-    import-in-the-middle "^1.4.2"
+    import-in-the-middle "^1.7.1"
     int64-buffer "^0.1.9"
     ipaddr.js "^2.1.0"
     istanbul-lib-coverage "3.2.0"
     jest-docblock "^29.7.0"
     koalas "^1.0.2"
-    limiter "^1.1.4"
+    limiter "1.1.5"
     lodash.kebabcase "^4.1.1"
     lodash.pick "^4.4.0"
     lodash.sortby "^4.7.0"
@@ -4211,7 +4211,7 @@ import-from@^4.0.0:
   resolved "https://registry.yarnpkg.com/import-from/-/import-from-4.0.0.tgz#2710b8d66817d232e16f4166e319248d3d5492e2"
   integrity sha512-P9J71vT5nLlDeV8FHs5nNxaLbrpfAV5cF5srvbZfpwpcJoM/xZR3hiv+q+SAnuSmuGbXMWud063iIMx/V/EWZQ==
 
-import-in-the-middle@^1.4.2:
+import-in-the-middle@^1.7.1:
   version "1.7.3"
   resolved "https://registry.yarnpkg.com/import-in-the-middle/-/import-in-the-middle-1.7.3.tgz#ffa784cdd57a47d2b68d2e7dd33070ff06baee43"
   integrity sha512-R2I11NRi0lI3jD2+qjqyVlVEahsejw7LDnYEbGb47QEFjczE3bZYsmWheCTQA+LFs2DzOQxR7Pms7naHW1V4bQ==
@@ -5343,7 +5343,7 @@ libnpmversion@^4.0.2:
     proc-log "^3.0.0"
     semver "^7.3.7"
 
-limiter@^1.1.4:
+limiter@1.1.5:
   version "1.1.5"
   resolved "https://registry.yarnpkg.com/limiter/-/limiter-1.1.5.tgz#8f92a25b3b16c6131293a0cc834b4a838a2aa7c2"
   integrity sha512-FWWMIEOxz3GwUI4Ts/IvgVy6LPvoMPgjMdQ185nN6psJyBJ4yOpzqm695/h5umdLJg2vW3GR5iG11MAkR2AzJA==
