@@ -6559,10 +6559,10 @@ picomatch@^2.0.4, picomatch@^2.2.1, picomatch@^2.2.3, picomatch@^2.3.1:
   resolved "https://registry.yarnpkg.com/picomatch/-/picomatch-2.3.1.tgz#3ba3833733646d9d3e4995946c1365a67fb07a42"
   integrity sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==
 
-picomatch@^3.0.0:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/picomatch/-/picomatch-3.0.1.tgz#817033161def55ec9638567a2f3bbc876b3e7516"
-  integrity sha512-I3EurrIQMlRc9IaAZnqRR044Phh2DXY+55o7uJ0V+hYZAcQYSuFWsc9q5PvyDHUSCe1Qxn/iBz+78s86zWnGag==
+picomatch@^4.0.0:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/picomatch/-/picomatch-4.0.1.tgz#68c26c8837399e5819edce48590412ea07f17a07"
+  integrity sha512-xUXwsxNjwTQ8K3GnT4pCJm+xq3RUPQbmkYJTP5aFIfNIvbcc/4MUxgBaaRSZJ6yGJZiGSyYlM6MzwTsRk8SYCg==
 
 pify@^3.0.0:
   version "3.0.0"
@@ -7168,6 +7168,11 @@ side-channel@^1.0.4:
     get-intrinsic "^1.0.2"
     object-inspect "^1.9.0"
 
+siginfo@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/siginfo/-/siginfo-2.0.0.tgz#32e76c70b79724e3bb567cb9d543eb858ccfaf30"
+  integrity sha512-ybx0WO1/8bSBLEWXZvEd7gMW3Sn3JFlW3TvX1nREbDLRNQNaeNN8WK0meBwPdAaOI7TtRRRJn/Es1zhrrCHu7g==
+
 signal-exit@^3.0.3, signal-exit@^3.0.7:
   version "3.0.7"
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.7.tgz#a9a1767f8af84155114eaabd73f99273c8f59ad9"
@@ -7226,10 +7231,10 @@ sisteransi@^1.0.5:
   resolved "https://registry.yarnpkg.com/sisteransi/-/sisteransi-1.0.5.tgz#134d681297756437cc05ca01370d3a7a571075ed"
   integrity sha512-bLGGlR1QxBcynn2d5YmDX4MGjlZvy2MRBDRNHLJ8VI6l6+9FUiyTFNJ0IveOSP0bcXgVDPRcfGqA0pjaqUpfVg==
 
-skuba@7.4.1:
-  version "7.4.1"
-  resolved "https://registry.yarnpkg.com/skuba/-/skuba-7.4.1.tgz#f1fbfb60a8e8c6b9d7b0ad4cfe1543b4bf717bd0"
-  integrity sha512-+Flhf18ZBiLdylnt35zNi1Bc4pTXOTRUvp7SAY4u/53Sq6wSz20pz/r1KeVxo9pDPGKVIZeaSnNk73sf2Ld1Pw==
+skuba@7.5.0:
+  version "7.5.0"
+  resolved "https://registry.yarnpkg.com/skuba/-/skuba-7.5.0.tgz#abc34c0197f9692e1f61eb44c26e32cd41430978"
+  integrity sha512-RCHmGnYlsbo9NhvT4FgKNCSTQpUClmFJD4t7ITyaIiDU9Nm+bZLCSgofOSnPa9dMxbxWgYTUFiT/VAHKogS9qA==
   dependencies:
     "@esbuild-plugins/tsconfig-paths" "^0.1.0"
     "@jest/types" "^29.0.0"
@@ -7249,6 +7254,7 @@ skuba@7.4.1:
     eslint "^8.11.0"
     eslint-config-skuba "3.1.0"
     execa "^5.0.0"
+    fast-glob "^3.3.2"
     fdir "^6.0.0"
     fs-extra "^11.0.0"
     function-arguments "^1.0.9"
@@ -7265,7 +7271,7 @@ skuba@7.4.1:
     normalize-package-data "^6.0.0"
     npm-run-path "^4.0.1"
     npm-which "^3.0.1"
-    picomatch "^3.0.0"
+    picomatch "^4.0.0"
     prettier "~3.2.5"
     prettier-plugin-packagejson "^2.4.10"
     read-pkg-up "^7.0.1"
@@ -7281,6 +7287,7 @@ skuba@7.4.1:
     tsconfig-seek "2.0.0"
     typescript "~5.3.0"
     validate-npm-package-name "^5.0.0"
+    why-is-node-running "^2.2.2"
     zod "^3.22.4"
 
 slash@^3.0.0:
@@ -7445,6 +7452,11 @@ stack-utils@^2.0.3:
   integrity sha512-XlkWvfIm6RmsWtNJx+uqtKLS8eqFbxUg0ZzLXqY0caEy9l7hruX8IpiDnjsLavoBgqCCR71TqWO8MaXYheJ3RQ==
   dependencies:
     escape-string-regexp "^2.0.0"
+
+stackback@0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/stackback/-/stackback-0.0.2.tgz#1ac8a0d9483848d1695e418b6d031a3c3ce68e3b"
+  integrity sha512-1XMJE5fQo1jGH6Y/7ebnwPOBEkIEnT4QF32d5R1+VXdXveM0IBMJt8zfaxX1P3QhVwrYe+576+jkANtSS2mBbw==
 
 stream-combiner2@~1.1.1:
   version "1.1.1"
@@ -8200,6 +8212,14 @@ which@^3.0.0, which@^3.0.1:
   integrity sha512-XA1b62dzQzLfaEOSQFTCOd5KFf/1VSzZo7/7TUjnya6u0vGGKzU96UQBZTAThCb2j4/xjBAyii1OhRLJEivHvg==
   dependencies:
     isexe "^2.0.0"
+
+why-is-node-running@^2.2.2:
+  version "2.2.2"
+  resolved "https://registry.yarnpkg.com/why-is-node-running/-/why-is-node-running-2.2.2.tgz#4185b2b4699117819e7154594271e7e344c9973e"
+  integrity sha512-6tSwToZxTOcotxHeA+qGCq1mVzKR3CwcJGmVcY+QE8SHy6TnpFnh8PAvPNHYr7EcuVeG0QSMxtYCuO1ta/G/oA==
+  dependencies:
+    siginfo "^2.0.0"
+    stackback "0.0.2"
 
 wide-align@^1.1.5:
   version "1.1.5"
