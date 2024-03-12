@@ -9,3 +9,4 @@ export type { AppConfig } from './AppConfig';
 export type { LambdaExtensionMetricsClient } from './LambdaExtensionMetricsClient';
 export type { MetricsClient } from './MetricsClient';
 export type { StatsDConfig } from './createStatsDClient';
+
