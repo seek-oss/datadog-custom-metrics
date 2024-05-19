@@ -13,10 +13,10 @@ export interface AppConfig {
   /**
    * Version of the application
    *
-   * This is used to tag custom metrics. It will typically be a CI build
-   * number.
+   * This is used to tag custom metrics. It will typically include a CI build
+   * number and/or a commit hash.
    */
-  version?: string;
+  version?: string | null | undefined;
 
   /**
    * Environment of the application
