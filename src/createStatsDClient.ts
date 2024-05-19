@@ -26,7 +26,7 @@ export interface StatsDConfig extends AppConfig {
    * For Gantry this is `localhost`. If this is not specified then a mock
    * client will be constructed.
    */
-  metricsServer?: string;
+  metricsServer?: string | null | undefined;
 }
 
 /**
@@ -44,10 +44,13 @@ export const createStatsDClient = <T extends InternalStatsD>(
   config: StatsDConfig,
   errorHandler?: (err: Error) => void,
 ): T => {
+  // istanbul ignore next: Jest is not picking up coalesce coverage
+  const host = config.metricsServer ?? undefined;
+
   const client = new StatsD({
     // Disable ourselves if there's no configured metrics server
     mock: !config.metricsServer,
-    host: config.metricsServer,
+    host,
     errorHandler,
 
     prefix: `${config.name}.`,
