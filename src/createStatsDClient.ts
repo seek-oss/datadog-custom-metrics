@@ -44,10 +44,13 @@ export const createStatsDClient = <T extends InternalStatsD>(
   config: StatsDConfig,
   errorHandler?: (err: Error) => void,
 ): T => {
+  // istanbul ignore next: Jest is not picking up coalesce coverage
+  const host = config.metricsServer ?? undefined;
+
   const client = new StatsD({
     // Disable ourselves if there's no configured metrics server
     mock: !config.metricsServer,
-    host: config.metricsServer ?? undefined,
+    host,
     errorHandler,
 
     prefix: `${config.name}.`,

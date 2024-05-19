@@ -12,4 +12,16 @@ describe('createStatsDClient', () => {
       }),
     ).toBeInstanceOf(Object);
   });
+
+  it('should handle null config values', () => {
+    expect(
+      createStatsDClient(StatsD, {
+        name: 'test',
+        environment: 'jest',
+        version: null,
+
+        metricsServer: null,
+      }),
+    ).toBeInstanceOf(Object);
+  });
 });
