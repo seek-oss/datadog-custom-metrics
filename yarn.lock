@@ -384,18 +384,18 @@
   dependencies:
     node-gyp-build "^3.9.0"
 
-"@datadog/native-iast-rewriter@2.3.0":
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/@datadog/native-iast-rewriter/-/native-iast-rewriter-2.3.0.tgz#67abddc698504ad76736c0d49681bcf9e330e1bd"
-  integrity sha512-78ivSaaSXOaHn3VumF9kcSI443nbPfVAWsnDTH9X1ZbqXjHpSlHHTZgK9z/TNbkvuJarS/X1GBioPMcgea1Ejg==
+"@datadog/native-iast-rewriter@2.3.1":
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/@datadog/native-iast-rewriter/-/native-iast-rewriter-2.3.1.tgz#f9d6d858df88f7a8b6e38f0c07e46fca5394da72"
+  integrity sha512-3pmt5G1Ai/+MPyxP7wBerIu/zH/BnAHxEu/EAMr+77IMpK5m7THPDUoWrPRCWcgFBfn0pK5DR7gRItG0wX3e0g==
   dependencies:
     lru-cache "^7.14.0"
     node-gyp-build "^4.5.0"
 
-"@datadog/native-iast-taint-tracking@1.7.0":
-  version "1.7.0"
-  resolved "https://registry.yarnpkg.com/@datadog/native-iast-taint-tracking/-/native-iast-taint-tracking-1.7.0.tgz#0bcd4f287c25403d2a965939b33c35ae8544b363"
-  integrity sha512-p3qnYJrUr9TQ38tuOFoutDAQWOobLdaaWpTl0SHu126JH3ANBxWL/QirtJy6czfzLpm5eXwYHwHidD1Y0mNPdg==
+"@datadog/native-iast-taint-tracking@2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@datadog/native-iast-taint-tracking/-/native-iast-taint-tracking-2.1.0.tgz#65e0350f04064a991e3a980daf1b68147069c9f2"
+  integrity sha512-DjZ6itJcjLrTdKk2vP96hak2xS0ABd0NIB8poZG3OBQU5efkzu8JOQoxbIKMklG/0P2zh7EquvGP88PdVXT9aA==
   dependencies:
     node-gyp-build "^3.9.0"
 
@@ -407,10 +407,10 @@
     node-addon-api "^6.1.0"
     node-gyp-build "^3.9.0"
 
-"@datadog/pprof@5.2.0":
-  version "5.2.0"
-  resolved "https://registry.yarnpkg.com/@datadog/pprof/-/pprof-5.2.0.tgz#a6c2779335b4f0fd51754e4de193e98591de387e"
-  integrity sha512-pSwLARpNLAIV1JttxXOBRKTn/NQYXDy1PJaV458YFDdAYxnBqpsYTat3/nX+8V5GoN4SfdHDci3zqXM+Ym66gQ==
+"@datadog/pprof@5.3.0":
+  version "5.3.0"
+  resolved "https://registry.yarnpkg.com/@datadog/pprof/-/pprof-5.3.0.tgz#c2f58d328ecced7f99887f1a559d7fe3aecb9219"
+  integrity sha512-53z2Q3K92T6Pf4vz4Ezh8kfkVEvLzbnVqacZGgcbkP//q0joFzO8q00Etw1S6NdnCX0XmX08ULaF4rUI5r14mw==
   dependencies:
     delay "^5.0.0"
     node-gyp-build "<4.0"
@@ -1261,7 +1261,7 @@
   dependencies:
     "@octokit/openapi-types" "^22.2.0"
 
-"@opentelemetry/api@^1.0.0":
+"@opentelemetry/api@>=1.0.0 <1.9.0":
   version "1.8.0"
   resolved "https://registry.yarnpkg.com/@opentelemetry/api/-/api-1.8.0.tgz#5aa7abb48f23f693068ed2999ae627d2f7d902ec"
   integrity sha512-I/s6F7yKUDdtMsoBWXJe8Qz40Tui5vsuKCWJEWVL+5q9sSWRzzx6v2KeNsOBEwd94j0eWkpWCH4yB6rZg9Mf0w==
@@ -2656,16 +2656,16 @@ data-view-byte-offset@^1.0.0:
     es-errors "^1.3.0"
     is-data-view "^1.0.1"
 
-datadog-lambda-js@8.108.0:
-  version "8.108.0"
-  resolved "https://registry.yarnpkg.com/datadog-lambda-js/-/datadog-lambda-js-8.108.0.tgz#0a4a635f0f0b1d4afd36455090934bdbd1c53f27"
-  integrity sha512-We5Fpzt45DtXAZtBBIwM27Gm+m6XUbpOnkViXMcCXH+3svm0rjNTOnQciok2kF4ia0e9x0ulmVauVLFXnH1AXw==
+datadog-lambda-js@8.111.0:
+  version "8.111.0"
+  resolved "https://registry.yarnpkg.com/datadog-lambda-js/-/datadog-lambda-js-8.111.0.tgz#9aef27b940ecae5c28d409fa66973b77eb577980"
+  integrity sha512-/QLWCZT4LWRiOxL3SZvo/NhNNd5UAXlQei/+ebWK8qI735YrOiRnrm16Z2mdwIjhet+6mgCwlJsgpVQRsteFxw==
   dependencies:
     dc-polyfill "^0.1.3"
     hot-shots "8.5.0"
     promise-retry "^2.0.1"
     serialize-error "^8.1.0"
-    shimmer "^1.2.1"
+    shimmer "1.2.1"
     ts-md5 "1.3.1"
 
 date-fns@^2.30.0:
@@ -2680,23 +2680,23 @@ dc-polyfill@^0.1.3, dc-polyfill@^0.1.4:
   resolved "https://registry.yarnpkg.com/dc-polyfill/-/dc-polyfill-0.1.6.tgz#c2940fa68ffb24a7bf127cc6cfdd15b39f0e7f02"
   integrity sha512-UV33cugmCC49a5uWAApM+6Ev9ZdvIUMTrtCO9fj96TPGOQiea54oeO3tiEVdVeo3J9N2UdJEmbS4zOkkEA35uQ==
 
-dd-trace@5.10.0:
-  version "5.10.0"
-  resolved "https://registry.yarnpkg.com/dd-trace/-/dd-trace-5.10.0.tgz#719673ff14e552767beda01ce12879616e62ba0a"
-  integrity sha512-+JyAf8DKGlCGPxhVhIHcG2+oD5h9/oGFbNj35Jlsl+EEMD/hqOWihgzZ2UzWNCVmOtVGQip3bdRGE4uqkRY+/g==
+dd-trace@5.14.1:
+  version "5.14.1"
+  resolved "https://registry.yarnpkg.com/dd-trace/-/dd-trace-5.14.1.tgz#3a9715ab172bbc3b7555161deb341e3085a5572e"
+  integrity sha512-4X8iw1ng7rX+iE3uzZoV0MiMpMO6bEsSQ0oRNFDOG0zYvTBkWjbB11Bn5WAOpkZfwHLIw+rSMW05GgfhyWauYw==
   dependencies:
     "@datadog/native-appsec" "7.1.1"
-    "@datadog/native-iast-rewriter" "2.3.0"
-    "@datadog/native-iast-taint-tracking" "1.7.0"
+    "@datadog/native-iast-rewriter" "2.3.1"
+    "@datadog/native-iast-taint-tracking" "2.1.0"
     "@datadog/native-metrics" "^2.0.0"
-    "@datadog/pprof" "5.2.0"
+    "@datadog/pprof" "5.3.0"
     "@datadog/sketches-js" "^2.1.0"
-    "@opentelemetry/api" "^1.0.0"
+    "@opentelemetry/api" ">=1.0.0 <1.9.0"
     "@opentelemetry/core" "^1.14.0"
     crypto-randomuuid "^1.0.0"
     dc-polyfill "^0.1.4"
     ignore "^5.2.4"
-    import-in-the-middle "^1.7.3"
+    import-in-the-middle "^1.7.4"
     int64-buffer "^0.1.9"
     ipaddr.js "^2.1.0"
     istanbul-lib-coverage "3.2.0"
@@ -4071,7 +4071,7 @@ import-from-esm@^1.0.3, import-from-esm@^1.3.1:
     debug "^4.3.4"
     import-meta-resolve "^4.0.0"
 
-import-in-the-middle@^1.7.3:
+import-in-the-middle@^1.7.4:
   version "1.8.0"
   resolved "https://registry.yarnpkg.com/import-in-the-middle/-/import-in-the-middle-1.8.0.tgz#c94d88d53701de9a248f9710b41f533e67f598a4"
   integrity sha512-/xQjze8szLNnJ5rvHSzn+dcVXqCAU6Plbk4P24U/jwPmg1wy7IIp9OjKIO5tYue8GSPhDpPDiApQjvBUmWwhsQ==
@@ -6805,7 +6805,7 @@ shell-quote@^1.8.1:
   resolved "https://registry.yarnpkg.com/shell-quote/-/shell-quote-1.8.1.tgz#6dbf4db75515ad5bac63b4f1894c3a154c766680"
   integrity sha512-6j1W9l1iAs/4xYBI1SYOVZyFcCis9b4KCLQ8fgAGG07QvzaRLVVRQvAy85yNmmZSjYjg4MWh4gNvlPujU/5LpA==
 
-shimmer@^1.2.1:
+shimmer@1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/shimmer/-/shimmer-1.2.1.tgz#610859f7de327b587efebf501fb43117f9aff337"
   integrity sha512-sQTKC1Re/rM6XyFM6fIAGHRPVGvyXfgzIDvzoq608vM+jeyVD0Tu1E6Np0Kc2zAIFWIj963V2800iF/9LPieQw==

@@ -35,8 +35,8 @@
   },
   "devDependencies": {
     "@types/node": "20.14.2",
-    "datadog-lambda-js": "8.108.0",
-    "dd-trace": "5.10.0",
+    "datadog-lambda-js": "8.111.0",
+    "dd-trace": "5.14.1",
     "hot-shots": "10.0.0",
     "skuba": "8.0.1"
   },
