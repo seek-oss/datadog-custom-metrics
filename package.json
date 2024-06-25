@@ -56,6 +56,6 @@
     "entryPoint": "src/index.ts",
     "template": null,
     "type": "package",
-    "version": "7.4.1"
+    "version": "8.1.0"
   }
 }
