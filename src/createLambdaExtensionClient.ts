@@ -60,7 +60,7 @@ export const createLambdaExtensionClient = (
   config: DatadogConfig,
 ): LambdaExtensionClient => {
   const { datadog, sendDistributionMetric } =
-    // eslint-disable-next-line @typescript-eslint/no-var-requires
+    // eslint-disable-next-line @typescript-eslint/no-require-imports
     require('datadog-lambda-js') as DatadogLambdaJs;
 
   const send = (metric: DatadogMetric) => {

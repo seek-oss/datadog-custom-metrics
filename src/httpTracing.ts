@@ -42,10 +42,7 @@ export const inferResourceName = (
   return `${req.method} ${route}`;
 };
 
-export const request = (
-  span?: OpenTracingSpan | undefined,
-  req?: HttpRequest | undefined,
-): void => {
+export const request = (span?: OpenTracingSpan, req?: HttpRequest): void => {
   if (!span) {
     return;
   }
