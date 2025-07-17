@@ -7,8 +7,6 @@ describe('createStatsDClient', () => {
     expect(
       createStatsDClient(StatsD, {
         name: 'test',
-        environment: 'jest',
-        version: '0',
       }),
     ).toBeInstanceOf(Object);
   });
@@ -17,9 +15,6 @@ describe('createStatsDClient', () => {
     expect(
       createStatsDClient(StatsD, {
         name: 'test',
-        environment: 'jest',
-        version: null,
-
         metricsServer: null,
       }),
     ).toBeInstanceOf(Object);

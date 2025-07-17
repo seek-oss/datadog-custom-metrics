@@ -12,28 +12,22 @@ Helpers for sending [Datadog custom metrics](https://docs.datadoghq.com/develope
 yarn add seek-datadog-custom-metrics
 ```
 
-## Tagging convention
+## Naming convention
 
-All custom metrics are prefixed by `AppConfig.name`.
-Two global tags are also added to every custom metric:
-
-- `AppConfig.environment` becomes `env:${value}`
-- `AppConfig.version` becomes `version:${value}`
-
-These tags are consistent with tags sent by [Gantry](https://github.com/SEEK-Jobs/gantry) via Datadog's AWS integration.
+All custom metrics are prefixed by `{config.name}.`.
 
 ## API reference
 
 ### `createStatsDClient`
 
-`createStatsDClient` creates a [hot-shots](https://github.com/brightcove/hot-shots) client configured with our [tagging convention](#tagging-convention).
+`createStatsDClient` creates a [hot-shots](https://github.com/brightcove/hot-shots) client.
 This is intended for containerized services, particularly those deployed with [Gantry](https://github.com/SEEK-Jobs/gantry).
 
 ```typescript
 import { StatsD } from 'hot-shots';
 import { createStatsDClient } from 'seek-datadog-custom-metrics';
 
-// Expects `name`, `version`, `environment` and `metricsServer` properties
+// Expects `name` and `metricsServer` properties
 import config from '../config';
 
 // This example assumes Bunyan/pino
