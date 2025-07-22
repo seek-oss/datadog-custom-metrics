@@ -1,5 +1,6 @@
 import type { AppConfig } from './AppConfig';
 import type { MetricsClient } from './MetricsClient';
+import { globalTags } from './globalTags';
 
 interface InternalStatsD extends MetricsClient {
   socket?: {
@@ -53,6 +54,7 @@ export const createStatsDClient = <T extends InternalStatsD>(
     errorHandler,
 
     prefix: `${config.name}.`,
+    globalTags: globalTags(config),
   });
 
   // istanbul ignore next else

@@ -3,6 +3,14 @@
  */
 export interface AppConfig {
   /**
+   * Environment of the application
+   *
+   * @deprecated Rely on the `env` set by your Datadog agent; this will be the
+   * Automat or Gantry environment name at SEEK.
+   */
+  environment?: string;
+
+  /**
    * Name of the application
    *
    * This is used to prefix custom metric names. It should typically be the name

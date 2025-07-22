@@ -7,6 +7,7 @@ describe('createStatsDClient', () => {
     expect(
       createStatsDClient(StatsD, {
         name: 'test',
+        environment: 'deprecated-but-still-here',
       }),
     ).toBeInstanceOf(Object);
   });

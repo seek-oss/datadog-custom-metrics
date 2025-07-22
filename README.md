@@ -12,9 +12,17 @@ Helpers for sending [Datadog custom metrics](https://docs.datadoghq.com/develope
 yarn add seek-datadog-custom-metrics
 ```
 
-## Naming convention
+## Tagging convention
 
 All custom metrics are prefixed by `{config.name}.`.
+
+One global tag may be optionally added to every custom metric:
+
+- `AppConfig.environment` becomes `env:${value}`
+
+  This is deprecated but remains for backward compatibility.
+  Rely on the `env` set by your Datadog agent;
+  this will be the Automat or Gantry environment name at SEEK.
 
 ## API reference
 
