@@ -1,4 +1,3 @@
-export { createCloudWatchClient } from './createCloudWatchClient';
 export { createLambdaExtensionClient } from './createLambdaExtensionClient';
 export { createNoOpClient } from './createNoOpClient';
 export { createStatsDClient } from './createStatsDClient';

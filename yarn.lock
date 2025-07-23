@@ -329,45 +329,37 @@
   dependencies:
     "@jridgewell/trace-mapping" "0.3.9"
 
-"@datadog/libdatadog@^0.4.0":
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/@datadog/libdatadog/-/libdatadog-0.4.0.tgz#aeeea02973f663b555ad9ac30c4015a31d561598"
-  integrity sha512-kGZfFVmQInzt6J4FFGrqMbrDvOxqwk3WqhAreS6n9b/De+iMVy/NMu3V7uKsY5zAvz+uQw0liDJm3ZDVH/MVVw==
+"@datadog/libdatadog@^0.6.0":
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/@datadog/libdatadog/-/libdatadog-0.6.0.tgz#299a717ca18d1ea643ecf5880095ed864ffa32a8"
+  integrity sha512-Ldu+U59LUnejtd7ceXMKJCAFZeYpNdTEEXr8PISY9HFXMa4DOwepcWMaJAAqCPU7LINJeivVwvSD1Pm14VZy7w==
 
-"@datadog/native-appsec@8.4.0":
-  version "8.4.0"
-  resolved "https://registry.yarnpkg.com/@datadog/native-appsec/-/native-appsec-8.4.0.tgz#5c44d949ff8f40a94c334554db79c1c470653bae"
-  integrity sha512-LC47AnpVLpQFEUOP/nIIs+i0wLb8XYO+et3ACaJlHa2YJM3asR4KZTqQjDQNy08PTAUbVvYWKwfSR1qVsU/BeA==
+"@datadog/native-appsec@8.5.2":
+  version "8.5.2"
+  resolved "https://registry.yarnpkg.com/@datadog/native-appsec/-/native-appsec-8.5.2.tgz#93a2c15c71c2a90e19e12506fbbdec9ccbc91541"
+  integrity sha512-lETBaVhBk+9o0pc+LDnXvp2ImDyT8K2deuqLf8A6q4/QjzCCXyR/yZO9R5+Kdoc93jZMRTWV9Pr4pBwHEdJSVA==
   dependencies:
     node-gyp-build "^3.9.0"
 
-"@datadog/native-iast-rewriter@2.8.0":
-  version "2.8.0"
-  resolved "https://registry.yarnpkg.com/@datadog/native-iast-rewriter/-/native-iast-rewriter-2.8.0.tgz#8a7eddf5e33266643afcdfb920ff5ccb30e1894a"
-  integrity sha512-DKmtvlmCld9RIJwDcPKWNkKYWYQyiuOrOtynmBppJiUv/yfCOuZtsQV4Zepj40H33sLiQyi5ct6dbWl53vxqkA==
-  dependencies:
-    lru-cache "^7.14.0"
-    node-gyp-build "^4.5.0"
-
-"@datadog/native-iast-taint-tracking@3.3.0":
-  version "3.3.0"
-  resolved "https://registry.yarnpkg.com/@datadog/native-iast-taint-tracking/-/native-iast-taint-tracking-3.3.0.tgz#5a9c87e07376e7c5a4b4d4985f140a60388eee00"
-  integrity sha512-OzmjOncer199ATSYeCAwSACCRyQimo77LKadSHDUcxa/n9FYU+2U/bYQTYsK3vquSA2E47EbSVq9rytrlTdvnA==
+"@datadog/native-iast-taint-tracking@4.0.0":
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/@datadog/native-iast-taint-tracking/-/native-iast-taint-tracking-4.0.0.tgz#a774742e6723b93d58bf31a87728e4da1634074f"
+  integrity sha512-2uF8RnQkJO5bmLi26Zkhxg+RFJn/uEsesYTflScI/Cz/BWv+792bxI+OaCKvhgmpLkm8EElenlpidcJyZm7GYw==
   dependencies:
     node-gyp-build "^3.9.0"
 
-"@datadog/native-metrics@^3.1.0":
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/@datadog/native-metrics/-/native-metrics-3.1.0.tgz#c2378841accd9fdd6866d0e49bdf6e3d76e79f22"
-  integrity sha512-yOBi4x0OQRaGNPZ2bx9TGvDIgEdQ8fkudLTFAe7gEM1nAlvFmbE5YfpH8WenEtTSEBwojSau06m2q7axtEEmCg==
+"@datadog/native-metrics@^3.1.1":
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/@datadog/native-metrics/-/native-metrics-3.1.1.tgz#4e5c9775751af13e353e64e573ab724104538cee"
+  integrity sha512-MU1gHrolwryrU4X9g+fylA1KPH3S46oqJPEtVyrO+3Kh29z80fegmtyrU22bNt8LigPUK/EdPCnSbMe88QbnxQ==
   dependencies:
     node-addon-api "^6.1.0"
     node-gyp-build "^3.9.0"
 
-"@datadog/pprof@5.5.1":
-  version "5.5.1"
-  resolved "https://registry.yarnpkg.com/@datadog/pprof/-/pprof-5.5.1.tgz#fba8124b6ad537e29326f5f15ed6e64b7a009e96"
-  integrity sha512-3pZVYqc5YkZJOj9Rc8kQ/wG4qlygcnnwFU/w0QKX6dEdJh+1+dWniuUu+GSEjy/H0jc14yhdT2eJJf/F2AnHNw==
+"@datadog/pprof@5.8.2":
+  version "5.8.2"
+  resolved "https://registry.yarnpkg.com/@datadog/pprof/-/pprof-5.8.2.tgz#7897532b738daf769f6b7242ec6621d9997dbe29"
+  integrity sha512-M+bO4v4TaxYK6k2qJBxnhf7Vh25Wode64y4LfxzGs5kLTFr8eFTp6HJai3/af7U5gjTHX/4s+CHv2bxja97pbw==
   dependencies:
     delay "^5.0.0"
     node-gyp-build "<4.0"
@@ -375,10 +367,20 @@
     pprof-format "^2.1.0"
     source-map "^0.7.4"
 
-"@datadog/sketches-js@^2.1.0":
+"@datadog/sketches-js@^2.1.1":
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/@datadog/sketches-js/-/sketches-js-2.1.1.tgz#9ec2251b3c932b4f43e1d164461fa6cb6f28b7d0"
   integrity sha512-d5RjycE+MObE/hU+8OM5Zp4VjTwiPLRa8299fj7muOmR16fb942z8byoMbCErnGh0lBevvgkGrLclQDvINbIyg==
+
+"@datadog/wasm-js-rewriter@4.0.1":
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/@datadog/wasm-js-rewriter/-/wasm-js-rewriter-4.0.1.tgz#883535e97f6b88b15427f93b5dc5d2d3a01c02b6"
+  integrity sha512-JRa05Je6gw+9+3yZnm/BroQZrEfNwRYCxms56WCCHzOBnoPihQLB0fWy5coVJS29kneCUueUvBvxGp6NVXgdqw==
+  dependencies:
+    js-yaml "^4.1.0"
+    lru-cache "^7.14.0"
+    module-details-from-path "^1.0.3"
+    node-gyp-build "^4.5.0"
 
 "@emnapi/core@^1.3.1":
   version "1.3.1"
@@ -1959,7 +1961,7 @@ acorn-walk@^8.1.1:
   dependencies:
     acorn "^8.11.0"
 
-acorn@^8.11.0, acorn@^8.14.0, acorn@^8.4.1, acorn@^8.8.2:
+acorn@^8.11.0, acorn@^8.14.0, acorn@^8.4.1:
   version "8.14.1"
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-8.14.1.tgz#721d5dc10f7d5b5609a891773d47731796935dfb"
   integrity sha512-OvQ/2pUDKmgfCg++xsTX1wGxfTaszcHVcTctW4UJB4hibJx2HXxxO5UmVgyjMa+ZDsiaf5wWLXYpRWMmBI0QHg==
@@ -2794,45 +2796,46 @@ datadog-lambda-js@9.120.0:
     serialize-error "^8.1.0"
     shimmer "1.2.1"
 
-dc-polyfill@^0.1.3, dc-polyfill@^0.1.4:
-  version "0.1.6"
-  resolved "https://registry.yarnpkg.com/dc-polyfill/-/dc-polyfill-0.1.6.tgz#c2940fa68ffb24a7bf127cc6cfdd15b39f0e7f02"
-  integrity sha512-UV33cugmCC49a5uWAApM+6Ev9ZdvIUMTrtCO9fj96TPGOQiea54oeO3tiEVdVeo3J9N2UdJEmbS4zOkkEA35uQ==
+dc-polyfill@0.1.9, dc-polyfill@^0.1.3:
+  version "0.1.9"
+  resolved "https://registry.yarnpkg.com/dc-polyfill/-/dc-polyfill-0.1.9.tgz#ee594f4366a6dcf006db1c1f9d3672f57a720856"
+  integrity sha512-D5mJThEEk9hf+CJPwTf9JFsrWdlWp8Pccjxkhf7uUT/E/cU9Mx3ebWe2Bz2OawRmJ6WS9eaDPBkeBE4uOKq9uw==
 
-dd-trace@5.39.0:
-  version "5.39.0"
-  resolved "https://registry.yarnpkg.com/dd-trace/-/dd-trace-5.39.0.tgz#32dbbec516d58f3ba7db3db180769af6fdde2932"
-  integrity sha512-vNC25L2ScHxGl9DdmmbwgrApd2gDlp4vA84N/hLq0MFWpBkia7BbhfA2GGtJ8+4vUChFdoefLMZhMKd7WAM7AA==
+dd-trace@5.56.0:
+  version "5.56.0"
+  resolved "https://registry.yarnpkg.com/dd-trace/-/dd-trace-5.56.0.tgz#2f599574d3ea4edd980e1d0cc24073d201e14472"
+  integrity sha512-1GiAh1UATmn8uZxk+nqZAdfJppiOq4kxJKiozMNvupffbcbAuDj5qnfYF9Hz3oqsk+Jtt2oheQeR05c4JRshXw==
   dependencies:
-    "@datadog/libdatadog" "^0.4.0"
-    "@datadog/native-appsec" "8.4.0"
-    "@datadog/native-iast-rewriter" "2.8.0"
-    "@datadog/native-iast-taint-tracking" "3.3.0"
-    "@datadog/native-metrics" "^3.1.0"
-    "@datadog/pprof" "5.5.1"
-    "@datadog/sketches-js" "^2.1.0"
+    "@datadog/libdatadog" "^0.6.0"
+    "@datadog/native-appsec" "8.5.2"
+    "@datadog/native-iast-taint-tracking" "4.0.0"
+    "@datadog/native-metrics" "^3.1.1"
+    "@datadog/pprof" "5.8.2"
+    "@datadog/sketches-js" "^2.1.1"
+    "@datadog/wasm-js-rewriter" "4.0.1"
     "@isaacs/ttlcache" "^1.4.1"
     "@opentelemetry/api" ">=1.0.0 <1.9.0"
     "@opentelemetry/core" "^1.14.0"
     crypto-randomuuid "^1.0.0"
-    dc-polyfill "^0.1.4"
+    dc-polyfill "0.1.9"
     ignore "^5.2.4"
-    import-in-the-middle "1.11.2"
-    istanbul-lib-coverage "3.2.0"
+    import-in-the-middle "1.14.0"
+    istanbul-lib-coverage "3.2.2"
     jest-docblock "^29.7.0"
     koalas "^1.0.2"
     limiter "1.1.5"
     lodash.sortby "^4.7.0"
-    lru-cache "^7.14.0"
-    module-details-from-path "^1.0.3"
+    lru-cache "^7.18.3"
+    module-details-from-path "^1.0.4"
+    mutexify "^1.4.0"
     opentracing ">=0.12.1"
     path-to-regexp "^0.1.12"
     pprof-format "^2.1.0"
-    protobufjs "^7.2.5"
+    protobufjs "^7.5.3"
     retry "^0.13.1"
-    rfdc "^1.3.1"
+    rfdc "^1.4.1"
     semifies "^1.0.0"
-    shell-quote "^1.8.1"
+    shell-quote "^1.8.2"
     source-map "^0.7.4"
     tlhunter-sorted-set "^0.1.0"
     ttl-set "^1.0.0"
@@ -4167,12 +4170,12 @@ import-from-esm@^1.0.3, import-from-esm@^1.3.1:
     debug "^4.3.4"
     import-meta-resolve "^4.0.0"
 
-import-in-the-middle@1.11.2:
-  version "1.11.2"
-  resolved "https://registry.yarnpkg.com/import-in-the-middle/-/import-in-the-middle-1.11.2.tgz#dd848e72b63ca6cd7c34df8b8d97fc9baee6174f"
-  integrity sha512-gK6Rr6EykBcc6cVWRSBR5TWf8nn6hZMYSRYqCcHa0l0d1fPK7JSYo6+Mlmck76jIX9aL/IZ71c06U2VpFwl1zA==
+import-in-the-middle@1.14.0:
+  version "1.14.0"
+  resolved "https://registry.yarnpkg.com/import-in-the-middle/-/import-in-the-middle-1.14.0.tgz#c9b6cd3400718ff0acbbf5c870adf708bbf5ef39"
+  integrity sha512-g5zLT0HaztRJWysayWYiUq/7E5H825QIiecMD2pI5QO7Wzr847l6GDvPvmZaDIdrDtS2w7qRczywxiK6SL5vRw==
   dependencies:
-    acorn "^8.8.2"
+    acorn "^8.14.0"
     acorn-import-attributes "^1.9.5"
     cjs-module-lexer "^1.2.2"
     module-details-from-path "^1.0.3"
@@ -4578,10 +4581,10 @@ issue-parser@^6.0.0:
     lodash.isstring "^4.0.1"
     lodash.uniqby "^4.7.0"
 
-istanbul-lib-coverage@3.2.0, istanbul-lib-coverage@^3.0.0, istanbul-lib-coverage@^3.2.0:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/istanbul-lib-coverage/-/istanbul-lib-coverage-3.2.0.tgz#189e7909d0a39fa5a3dfad5b03f71947770191d3"
-  integrity sha512-eOeJ5BHCmHYvQK7xt9GkdHuzuCGS1Y6g9Gvnx3Ym33fz/HpLRYxiS0wHNr+m/MBC8B647Xt608vCDEvhl9c6Mw==
+istanbul-lib-coverage@3.2.2, istanbul-lib-coverage@^3.0.0, istanbul-lib-coverage@^3.2.0:
+  version "3.2.2"
+  resolved "https://registry.yarnpkg.com/istanbul-lib-coverage/-/istanbul-lib-coverage-3.2.2.tgz#2d166c4b0644d43a39f04bf6c2edd1e585f31756"
+  integrity sha512-O8dpsF+r0WV/8MNRKfnmrtCWhuKjxrq2w+jpzBL5UZKTi2LeVWnWOmWRxFlesJONmc+wLAGvKQZEOanko0LFTg==
 
 istanbul-lib-instrument@^5.0.4:
   version "5.2.1"
@@ -5409,7 +5412,7 @@ lru-cache@^5.1.1:
   dependencies:
     yallist "^3.0.2"
 
-lru-cache@^7.14.0:
+lru-cache@^7.14.0, lru-cache@^7.18.3:
   version "7.18.3"
   resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-7.18.3.tgz#f793896e0fd0e954a59dfdd82f0773808df6aa89"
   integrity sha512-jumlc0BIUrS3qJGgIkWZsyfAM7NCWiBcCDhnd+3NNM5KbBmLTgHVfWBcg6W+rLUsIpzpERPsvwUP7CckAQSOoA==
@@ -5659,10 +5662,10 @@ mkdirp@^3.0.1:
   resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-3.0.1.tgz#e44e4c5607fb279c168241713cc6e0fea9adcb50"
   integrity sha512-+NsyUUAZDmo6YVHzL/stxSu3t9YS1iljliy3BSDrXJ/dkn1KYdmtZODGGjLcc9XLgVVpH4KshHB8XmZgMhaBXg==
 
-module-details-from-path@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/module-details-from-path/-/module-details-from-path-1.0.3.tgz#114c949673e2a8a35e9d35788527aa37b679da2b"
-  integrity sha512-ySViT69/76t8VhE1xXHK6Ch4NcDd26gx0MzKXLO+F7NOtnqH68d9zF94nT8ZWSxXh8ELOERsnJO/sWt1xZYw5A==
+module-details-from-path@^1.0.3, module-details-from-path@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/module-details-from-path/-/module-details-from-path-1.0.4.tgz#b662fdcd93f6c83d3f25289da0ce81c8d9685b94"
+  integrity sha512-EGWKgxALGMgzvxYF1UyGTy0HXX/2vHLkw6+NvDKW2jypWbHpjQuj4UMcqQWXHERJhVGKikolT06G3bcKe4fi7w==
 
 ms@^2.1.1, ms@^2.1.2, ms@^2.1.3:
   version "2.1.3"
@@ -5673,6 +5676,13 @@ mute-stream@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/mute-stream/-/mute-stream-1.0.0.tgz#e31bd9fe62f0aed23520aa4324ea6671531e013e"
   integrity sha512-avsJQhyd+680gKXyG/sQc0nXaC6rBkPOfyHYcFb9+hdkqQkR9bdnkJ0AMZhke0oesPqIO+mFFJ+IdBc7mst4IA==
+
+mutexify@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/mutexify/-/mutexify-1.4.0.tgz#b7f4ac0273c81824b840887c6a6e0bfab14bbe94"
+  integrity sha512-pbYSsOrSB/AKN5h/WzzLRMFgZhClWccf2XIB4RSMC8JbquiB0e0/SH5AIfdQMdyHmYtv4seU7yV/TvAwPLJ1Yg==
+  dependencies:
+    queue-tick "^1.0.0"
 
 mz@^2.4.0:
   version "2.7.0"
@@ -6512,10 +6522,10 @@ proto-list@~1.2.1:
   resolved "https://registry.yarnpkg.com/proto-list/-/proto-list-1.2.4.tgz#212d5bfe1318306a420f6402b8e26ff39647a849"
   integrity sha512-vtK/94akxsTMhe0/cbfpR+syPuszcuwhqVjJq26CuNDgFGj682oRBXOP5MJpv2r7JtE8MsiepGIqvvOTBwn2vA==
 
-protobufjs@^7.2.5:
-  version "7.4.0"
-  resolved "https://registry.yarnpkg.com/protobufjs/-/protobufjs-7.4.0.tgz#7efe324ce9b3b61c82aae5de810d287bc08a248a"
-  integrity sha512-mRUWCc3KUU4w1jU8sGxICXH/gNS94DvI1gxqDvBzhj1JpcsimQkYiOJfwsPUykUI5ZaspFbSgmBLER8IrQ3tqw==
+protobufjs@^7.5.3:
+  version "7.5.3"
+  resolved "https://registry.yarnpkg.com/protobufjs/-/protobufjs-7.5.3.tgz#13f95a9e3c84669995ec3652db2ac2fb00b89363"
+  integrity sha512-sildjKwVqOI2kmFDiXQ6aEB0fjYTafpEvIBs8tOR8qI4spuL9OPROLVu2qZqi/xgCfsHIwVqlaF8JBjWFHnKbw==
   dependencies:
     "@protobufjs/aspromise" "^1.1.2"
     "@protobufjs/base64" "^1.1.2"
@@ -6549,6 +6559,11 @@ queue-microtask@^1.2.2:
   version "1.2.3"
   resolved "https://registry.yarnpkg.com/queue-microtask/-/queue-microtask-1.2.3.tgz#4929228bbc724dfac43e0efb058caf7b6cfb6243"
   integrity sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==
+
+queue-tick@^1.0.0:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/queue-tick/-/queue-tick-1.0.1.tgz#f6f07ac82c1fd60f82e098b417a80e52f1f4c142"
+  integrity sha512-kJt5qhMxoszgU/62PLP1CJytzd2NKetjSRnyuj31fDd3Rlcz3fzlFdFLD1SItunPwyqEOkca6GbV612BWfaBag==
 
 rc@^1.2.8:
   version "1.2.8"
@@ -6760,7 +6775,7 @@ reusify@^1.0.4:
   resolved "https://registry.yarnpkg.com/reusify/-/reusify-1.0.4.tgz#90da382b1e126efc02146e90845a88db12925d76"
   integrity sha512-U9nH88a3fc/ekCF1l0/UP1IosiuIjyTh7hBvXVMHYgVcfGvt897Xguj2UOLDeI5BG2m7/uwyaLVT6fbtCwTyzw==
 
-rfdc@^1.3.1:
+rfdc@^1.4.1:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/rfdc/-/rfdc-1.4.1.tgz#778f76c4fb731d93414e8f925fbecf64cce7f6ca"
   integrity sha512-q1b3N5QkRUWUl7iyylaaj3kOpIT0N2i9MqIEQXP73GVsN9cw3fdx8X63cEmWhJGi2PPCF23Ijp7ktmd39rawIA==
@@ -6966,10 +6981,10 @@ shebang-regex@^3.0.0:
   resolved "https://registry.yarnpkg.com/shebang-regex/-/shebang-regex-3.0.0.tgz#ae16f1644d873ecad843b0307b143362d4c42172"
   integrity sha512-7++dFhtcx3353uBaq8DDR4NuxBetBzC7ZQOhmTQInHEd6bSrXdiEyzCvG07Z44UYdLShWUyXt5M/yhz8ekcb1A==
 
-shell-quote@^1.8.1:
-  version "1.8.1"
-  resolved "https://registry.yarnpkg.com/shell-quote/-/shell-quote-1.8.1.tgz#6dbf4db75515ad5bac63b4f1894c3a154c766680"
-  integrity sha512-6j1W9l1iAs/4xYBI1SYOVZyFcCis9b4KCLQ8fgAGG07QvzaRLVVRQvAy85yNmmZSjYjg4MWh4gNvlPujU/5LpA==
+shell-quote@^1.8.1, shell-quote@^1.8.2:
+  version "1.8.3"
+  resolved "https://registry.yarnpkg.com/shell-quote/-/shell-quote-1.8.3.tgz#55e40ef33cf5c689902353a3d8cd1a6725f08b4b"
+  integrity sha512-ObmnIF4hXNg1BqhnHmgbDETF8dLPCggZWBjkQfhZpbszZnYur5DUljTcCHii5LC3J5E0yeO/1LIMyH+UvHQgyw==
 
 shimmer@1.2.1:
   version "1.2.1"
