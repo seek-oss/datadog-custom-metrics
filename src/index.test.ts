@@ -4,7 +4,7 @@ import {
   createStatsDClient,
   createTimedSpan,
   httpTracingConfig,
-} from './';
+} from './index.js';
 
 describe('index', () => {
   it('should export a createStatsDClient function', () => {

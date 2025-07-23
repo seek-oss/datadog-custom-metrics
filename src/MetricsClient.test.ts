@@ -1,6 +1,6 @@
 import { StatsD } from 'hot-shots';
 
-import type { MetricsClient } from './MetricsClient';
+import type { MetricsClient } from './MetricsClient.js';
 
 describe('MetricsClient', () => {
   it("should be a subset of hot-shot's StatsD", () => {

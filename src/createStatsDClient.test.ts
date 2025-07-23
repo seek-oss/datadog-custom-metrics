@@ -1,6 +1,6 @@
 import { StatsD } from 'hot-shots';
 
-import { createStatsDClient } from './createStatsDClient';
+import { createStatsDClient } from './createStatsDClient.js';
 
 describe('createStatsDClient', () => {
   it('should create a new mock client', () => {

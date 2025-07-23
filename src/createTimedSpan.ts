@@ -1,4 +1,4 @@
-import type { MetricsClient } from './MetricsClient';
+import type { MetricsClient } from './MetricsClient.js';
 
 type TimingMetricsClient = Pick<MetricsClient, 'increment' | 'timing'>;
 

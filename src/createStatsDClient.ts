@@ -1,6 +1,6 @@
-import type { AppConfig } from './AppConfig';
-import type { MetricsClient } from './MetricsClient';
-import { globalTags } from './globalTags';
+import type { AppConfig } from './AppConfig.js';
+import type { MetricsClient } from './MetricsClient.js';
+import { globalTags } from './globalTags.js';
 
 interface InternalStatsD extends MetricsClient {
   socket?: {

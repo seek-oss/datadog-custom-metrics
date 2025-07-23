@@ -1,4 +1,4 @@
-import type { MetricsClient } from './MetricsClient';
+import type { MetricsClient } from './MetricsClient.js';
 
 /**
  * Creates a no-op Datadog client

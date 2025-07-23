@@ -1,7 +1,7 @@
 import type { Context, SQSEvent } from 'aws-lambda';
 import * as datadogJS from 'datadog-lambda-js';
 
-import { createLambdaExtensionClient } from './createLambdaExtensionClient';
+import { createLambdaExtensionClient } from './createLambdaExtensionClient.js';
 
 const sendDistributionMetric = jest
   .spyOn(datadogJS, 'sendDistributionMetric')
