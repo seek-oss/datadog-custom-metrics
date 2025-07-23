@@ -1,4 +1,4 @@
-import { globalTags } from './globalTags';
+import { globalTags } from './globalTags.js';
 
 describe('globalTags', () => {
   it('should generate `env` tag when environment is supplied', () => {

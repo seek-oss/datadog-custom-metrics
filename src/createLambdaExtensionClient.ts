@@ -1,6 +1,6 @@
 import type { Context } from 'aws-lambda';
 
-import type { LambdaExtensionMetricsClient } from './LambdaExtensionMetricsClient';
+import type { LambdaExtensionMetricsClient } from './LambdaExtensionMetricsClient.js';
 
 /**
  * Vendored from `datadog-lambda-js`.

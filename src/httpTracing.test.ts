@@ -1,6 +1,10 @@
 import tracer from 'dd-trace';
 
-import { httpTracingConfig, inferResourceName, request } from './httpTracing';
+import {
+  httpTracingConfig,
+  inferResourceName,
+  request,
+} from './httpTracing.js';
 
 describe('inferResourceName', () => {
   const METHOD = 'GET';

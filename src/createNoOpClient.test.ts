@@ -1,4 +1,4 @@
-import { createNoOpClient } from './createNoOpClient';
+import { createNoOpClient } from './createNoOpClient.js';
 
 describe('createNoOpClient', () => {
   const metricsClient = createNoOpClient();
