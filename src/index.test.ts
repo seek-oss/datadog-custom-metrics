@@ -1,5 +1,4 @@
 import {
-  createCloudWatchClient,
   createLambdaExtensionClient,
   createNoOpClient,
   createStatsDClient,
@@ -10,10 +9,6 @@ import {
 describe('index', () => {
   it('should export a createStatsDClient function', () => {
     expect(createStatsDClient).toBeInstanceOf(Function);
-  });
-
-  it('should export a createCloudWatchClient function', () => {
-    expect(createCloudWatchClient).toBeInstanceOf(Function);
   });
 
   it('should export a createLambdaExtensionClient function', () => {

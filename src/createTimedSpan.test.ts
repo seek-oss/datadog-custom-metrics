@@ -5,8 +5,6 @@ import { createTimedSpan } from './createTimedSpan';
 
 const metricsClient = createStatsDClient(StatsD, {
   name: 'jest',
-  version: '0.0.1',
-  environment: 'dev',
 });
 
 const timedSpan = createTimedSpan(metricsClient);

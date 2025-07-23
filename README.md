@@ -14,26 +14,34 @@ yarn add seek-datadog-custom-metrics
 
 ## Tagging convention
 
-All custom metrics are prefixed by `AppConfig.name`.
-Two global tags are also added to every custom metric:
+All custom metrics are prefixed by `{config.name}.`.
+
+One global tag may be optionally added to every custom metric:
 
 - `AppConfig.environment` becomes `env:${value}`
-- `AppConfig.version` becomes `version:${value}`
 
-These tags are consistent with tags sent by [Gantry](https://github.com/SEEK-Jobs/gantry) via Datadog's AWS integration.
+  This behaviour has been retained for compatibility.
+  Review whether you can rely on the `env` set by your Datadog agent;
+  this will be the Automat or Gantry environment name at SEEK.
+
+  In some scenarios, you may still want to manually set a different environment.
+  Some Gantry services may have a Gantry environment name like `prod-1` and then supply a different value like `production` here.
+  This behaviour has been retained.
+  It results in metrics that are tagged with both `env:prod-1` and `env:production`,
+  and may be useful for forward compatibility with Automat's `development` | `production`.
 
 ## API reference
 
 ### `createStatsDClient`
 
-`createStatsDClient` creates a [hot-shots](https://github.com/brightcove/hot-shots) client configured with our [tagging convention](#tagging-convention).
+`createStatsDClient` creates a [hot-shots](https://github.com/brightcove/hot-shots) client.
 This is intended for containerized services, particularly those deployed with [Gantry](https://github.com/SEEK-Jobs/gantry).
 
 ```typescript
 import { StatsD } from 'hot-shots';
 import { createStatsDClient } from 'seek-datadog-custom-metrics';
 
-// Expects `name`, `version`, `environment` and `metricsServer` properties
+// Expects `name` and `metricsServer` properties
 import config from '../config';
 
 // This example assumes Bunyan/pino
