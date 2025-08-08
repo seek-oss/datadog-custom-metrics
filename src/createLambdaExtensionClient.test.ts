@@ -1,6 +1,7 @@
+import type { Context, SQSEvent } from 'aws-lambda';
 import * as datadogJS from 'datadog-lambda-js';
 
-import { createLambdaExtensionClient } from './createLambdaExtensionClient';
+import { createLambdaExtensionClient } from './createLambdaExtensionClient.js';
 
 const sendDistributionMetric = jest
   .spyOn(datadogJS, 'sendDistributionMetric')
@@ -21,19 +22,27 @@ describe('createLambdaExtensionClient', () => {
   afterEach(() => jest.resetAllMocks());
 
   describe('withLambdaExtension', () => {
-    it('should call the `datadog` wrapper', () => {
-      withLambdaExtension(() => Promise.resolve({}));
+    it('should call the `datadog` wrapper', async () => {
+      const handler = withLambdaExtension(() => Promise.resolve());
+
+      await handler({} as SQSEvent, {} as Context);
 
       expect(datadog).toHaveBeenCalledTimes(1);
     });
 
-    it('should not call the `datadog` wrapper when metrics is turned off', () => {
+    it('should not call the `datadog` wrapper when metrics are turned off', async () => {
       const client = createLambdaExtensionClient({
         name: 'test',
         metrics: false,
       });
 
-      client.withLambdaExtension(() => Promise.resolve({}));
+      const handler = client.withLambdaExtension(() => {
+        client.metricsClient.increment('my_custom_metric');
+
+        return Promise.resolve();
+      });
+
+      await handler({} as SQSEvent, {} as Context);
 
       expect(datadog).not.toHaveBeenCalled();
     });

@@ -1,7 +1,7 @@
 import { StatsD } from 'hot-shots';
 
-import { createStatsDClient } from './createStatsDClient';
-import { createTimedSpan } from './createTimedSpan';
+import { createStatsDClient } from './createStatsDClient.js';
+import { createTimedSpan } from './createTimedSpan.js';
 
 const metricsClient = createStatsDClient(StatsD, {
   name: 'jest',

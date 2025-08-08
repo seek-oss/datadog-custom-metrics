@@ -1,10 +1,10 @@
-export { createLambdaExtensionClient } from './createLambdaExtensionClient';
-export { createNoOpClient } from './createNoOpClient';
-export { createStatsDClient } from './createStatsDClient';
-export { createTimedSpan } from './createTimedSpan';
-export { httpTracingConfig } from './httpTracing';
+export { createLambdaExtensionClient } from './createLambdaExtensionClient.js';
+export { createNoOpClient } from './createNoOpClient.js';
+export { createStatsDClient } from './createStatsDClient.js';
+export { createTimedSpan } from './createTimedSpan.js';
+export { httpTracingConfig } from './httpTracing.js';
 
-export type { AppConfig } from './AppConfig';
-export type { LambdaExtensionMetricsClient } from './LambdaExtensionMetricsClient';
-export type { MetricsClient } from './MetricsClient';
-export type { StatsDConfig } from './createStatsDClient';
+export type { AppConfig } from './AppConfig.js';
+export type { LambdaExtensionMetricsClient } from './LambdaExtensionMetricsClient.js';
+export type { MetricsClient } from './MetricsClient.js';
+export type { StatsDConfig } from './createStatsDClient.js';
