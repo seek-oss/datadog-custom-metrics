@@ -2718,14 +2718,13 @@ data-view-byte-offset@^1.0.1:
     es-errors "^1.3.0"
     is-data-view "^1.0.1"
 
-datadog-lambda-js@9.120.0:
-  version "9.120.0"
-  resolved "https://registry.yarnpkg.com/datadog-lambda-js/-/datadog-lambda-js-9.120.0.tgz#e830852fdee5046019937b1a791b540a9f4a119d"
-  integrity sha512-fki0z1gMdgNc9MX9y2a+igtrwnqh9LD3QzbfRtSScpUnUt+opaWV5GN23uh0EV5pQxF5eMUCUTIk4WvtiWxk6A==
+datadog-lambda-js@12.127.0:
+  version "12.127.0"
+  resolved "https://registry.yarnpkg.com/datadog-lambda-js/-/datadog-lambda-js-12.127.0.tgz#9425b0ce8730b405e48da4ebf688bab7c7d7c788"
+  integrity sha512-I0fduqn4HLkT1Cvm8QYhJX1jVNgcL3EyaOp9AUXcKBFGpDsZuFk07a+MdWzRiDh/lpbX8utfCwpqnXfMnuDjzg==
   dependencies:
     "@aws-crypto/sha256-js" "5.2.0"
     dc-polyfill "^0.1.3"
-    hot-shots "8.5.0"
     promise-retry "^2.0.1"
     serialize-error "^8.1.0"
     shimmer "1.2.1"
@@ -3999,19 +3998,12 @@ hosted-git-info@^8.0.0, hosted-git-info@^8.1.0:
   dependencies:
     lru-cache "^10.0.1"
 
-hot-shots@10.2.1:
-  version "10.2.1"
-  resolved "https://registry.yarnpkg.com/hot-shots/-/hot-shots-10.2.1.tgz#dbc70dd005c12f24b5484aa5af8d97446e9b945e"
-  integrity sha512-tmjcyZkG/qADhcdC7UjAp8D7v7W2DOYFgaZ48fYMuayMQmVVUg8fntKmrjes/b40ef6yZ+qt1lB8kuEDfLC4zw==
+hot-shots@11.1.0:
+  version "11.1.0"
+  resolved "https://registry.yarnpkg.com/hot-shots/-/hot-shots-11.1.0.tgz#51055fac3d5addaf2c8666740624b3b0bf635041"
+  integrity sha512-D4iAs/145g7EJ/wIzBLVANEpysTPthUy/K+4EUIw02YJQTqvzD1vUpYiM3vwR0qPAQj4FhQpQz8wBpY8KDcM0g==
   optionalDependencies:
     unix-dgram "2.x"
-
-hot-shots@8.5.0:
-  version "8.5.0"
-  resolved "https://registry.yarnpkg.com/hot-shots/-/hot-shots-8.5.0.tgz#860246a3694dfb74cfe6045501eb59fb57e16eb9"
-  integrity sha512-GNXtNSxa9qibcPhi3gndyN5g14iBJS+/DDlu7hjSPfXYJy9/fcO13DgSyfPUVWrD/aIyPY36z7MksHvDe05zYg==
-  optionalDependencies:
-    unix-dgram "2.0.x"
 
 html-escaper@^2.0.0:
   version "2.0.2"
@@ -7798,7 +7790,7 @@ universalify@^2.0.0:
   resolved "https://registry.yarnpkg.com/universalify/-/universalify-2.0.1.tgz#168efc2180964e6386d061e094df61afe239b18d"
   integrity sha512-gptHNQghINnc/vTGIk0SOFGFNXw7JVrlRUtConJRlvaw6DuX0wO5Jeko9sWrMBhh+PsYAZ7oXAiOnf/UKogyiw==
 
-unix-dgram@2.0.x, unix-dgram@2.x:
+unix-dgram@2.x:
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/unix-dgram/-/unix-dgram-2.0.6.tgz#6d567b0eb6d7a9504e561532b598a46e34c5968b"
   integrity sha512-AURroAsb73BZ6CdAyMrTk/hYKNj3DuYYEuOaB8bYMOHGKupRNScw90Q5C71tWJc3uE7dIeXRyuwN0xLLq3vDTg==

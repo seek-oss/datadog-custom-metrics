@@ -35,9 +35,9 @@
   },
   "devDependencies": {
     "@types/node": "22.16.5",
-    "datadog-lambda-js": "9.120.0",
+    "datadog-lambda-js": "12.127.0",
     "dd-trace": "5.58.0",
-    "hot-shots": "10.2.1",
+    "hot-shots": "11.1.0",
     "skuba": "12.0.2"
   },
   "peerDependencies": {
