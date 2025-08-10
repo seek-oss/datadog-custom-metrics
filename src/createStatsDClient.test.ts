@@ -12,18 +12,28 @@ describe('createStatsDClient', () => {
   });
 
   it('should handle null config values', () => {
-    expect(
-      createStatsDClient(StatsD, {
-        metricsServer: null,
-        name: 'test',
-      }),
-    ).toBeInstanceOf(Object);
+    delete process.env.DD_ENV;
+    delete process.env.DD_SERVICE;
+    delete process.env.DD_VERSION;
+
+    const client = createStatsDClient(StatsD, {
+      metricsServer: null,
+      name: 'test',
+    });
+
+    client.timing('timing', new Date(1));
+
+    expect(client.mockBuffer).toMatchInlineSnapshot(`
+      [
+        "test.timing:1754822723343|ms",
+      ]
+    `);
   });
 
   it('should support the environment config option', () => {
-    process.env.DD_ENV = 'my_env';
-    process.env.DD_SERVICE = 'my_service';
-    process.env.DD_VERSION = 'my_version';
+    delete process.env.DD_ENV;
+    delete process.env.DD_SERVICE;
+    delete process.env.DD_VERSION;
 
     const client = createStatsDClient(StatsD, {
       environment: 'deprecated-but-still-here',
@@ -40,14 +50,13 @@ describe('createStatsDClient', () => {
     `);
   });
 
-  it('should allow reading Datadog tags from environment', () => {
-    process.env.DD_ENV = 'my_env';
+  it('should append DD_ENV from environment', () => {
+    process.env.DD_ENV = 'env_var';
     process.env.DD_SERVICE = 'my_service';
     process.env.DD_VERSION = 'my_version';
 
     const client = createStatsDClient(StatsD, {
-      environment: 'dd_env_takes_precedence_over_me',
-      includeDataDogTags: true,
+      environment: 'client_config',
       metricsServer: null,
       name: 'test',
     });
@@ -56,7 +65,7 @@ describe('createStatsDClient', () => {
 
     expect(client.mockBuffer).toMatchInlineSnapshot(`
       [
-        "test.counter:1|c|#env:my_env,service:my_service,version:my_version",
+        "test.counter:1|c|#env:client_config,env:env_var",
       ]
     `);
   });

@@ -22,20 +22,6 @@ type StatsD<T extends InternalStatsD> = new (options?: {
  */
 export interface StatsDConfig extends AppConfig {
   /**
-   * Whether to read `DD_ENV`, `DD_SERVICE`, `DD_VERSION` environment variables
-   * to populate global `env`, `service`, `version` tags.
-   *
-   * If this is set to `true`, `DD_ENV` will override the value provided in the
-   * `environment` config option.
-   *
-   * For Gantry this should be set to `false`, as unified service tags are
-   * automatically propagated to the Datadog agent sidecar during deployment.
-   *
-   * Defaults to `false`.
-   */
-  includeDataDogTags?: boolean;
-
-  /**
    * Optional hostname of the metrics server
    *
    * For Gantry this is `localhost`. If this is not specified then a mock
@@ -67,7 +53,7 @@ export const createStatsDClient = <T extends InternalStatsD>(
     mock: !config.metricsServer,
     host,
     errorHandler,
-    includeDataDogTags: config.includeDataDogTags ?? false,
+    includeDataDogTags: false,
 
     prefix: `${config.name}.`,
     globalTags: globalTags(config),
