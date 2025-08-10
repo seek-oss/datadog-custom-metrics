@@ -21,11 +21,11 @@ describe('createStatsDClient', () => {
       name: 'test',
     });
 
-    client.timing('timing', new Date(1));
+    client.timing('timing', 1);
 
     expect(client.mockBuffer).toMatchInlineSnapshot(`
       [
-        "test.timing:1754822723343|ms",
+        "test.timing:1|ms",
       ]
     `);
   });

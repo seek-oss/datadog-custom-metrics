@@ -5,6 +5,6 @@ export const globalTags = (config: AppConfig): string[] => {
 
   return [
     ...(environment ? [`env:${environment}`] : []),
-    ...(process?.env?.DD_ENV ? [`env:${process.env.DD_ENV}`] : []),
+    ...(process.env.DD_ENV ? [`env:${process.env.DD_ENV}`] : []),
   ];
 };
