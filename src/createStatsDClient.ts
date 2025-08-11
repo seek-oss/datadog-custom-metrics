@@ -12,6 +12,7 @@ type StatsD<T extends InternalStatsD> = new (options?: {
   mock?: boolean;
   host?: string;
   errorHandler?: (err: Error) => void;
+  includeDataDogTags?: boolean;
   prefix?: string;
   globalTags?: Record<string, string> | string[];
 }) => T;
@@ -52,6 +53,7 @@ export const createStatsDClient = <T extends InternalStatsD>(
     mock: !config.metricsServer,
     host,
     errorHandler,
+    includeDataDogTags: false,
 
     prefix: `${config.name}.`,
     globalTags: globalTags(config),

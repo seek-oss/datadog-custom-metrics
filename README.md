@@ -20,15 +20,18 @@ One global tag may be optionally added to every custom metric:
 
 - `AppConfig.environment` becomes `env:${value}`
 
+  `DD_ENV` becomes `env:${value}`
+
   This behaviour has been retained for compatibility.
   Review whether you can rely on the `env` set by your Datadog agent;
   this will be the Automat or Gantry environment name at SEEK.
 
   In some scenarios, you may still want to manually set a different environment.
-  Some Gantry services may have a Gantry environment name like `prod-1` and then supply a different value like `production` here.
+  Some Gantry services may have a Gantry environment name like `prod-1` and then supply a different value like `production` via `environment` config or the `DD_ENV` environment variable.
   This behaviour has been retained.
-  It results in metrics that are tagged with both `env:prod-1` and `env:production`,
-  and may be useful for forward compatibility with Automat's `development` | `production`.
+  It results in metrics with multiple env tags, e.g. `env:prod,env:production,env:prod-1`,
+  and may be useful for backward compatibility with existing dashboards and monitors,
+  and forward compatibility with Automat's `development` | `production`.
 
 ## API reference
 
