@@ -42,7 +42,7 @@
   },
   "peerDependencies": {
     "datadog-lambda-js": "6.x || 7.x || 8.x || 9.x || 10.x",
-    "hot-shots": "6.x || 7.x || 8.x || 9.x || 10.x"
+    "hot-shots": "6.x || 7.x || 8.x || 9.x || 10.x || 11.x"
   },
   "peerDependenciesMeta": {
     "datadog-lambda-js": {
