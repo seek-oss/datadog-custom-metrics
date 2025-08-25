@@ -34,7 +34,7 @@
     "@types/aws-lambda": "^8.10.108"
   },
   "devDependencies": {
-    "@types/node": "22.16.5",
+    "@types/node": "22.17.2",
     "datadog-lambda-js": "12.127.0",
     "dd-trace": "5.58.0",
     "hot-shots": "11.1.0",
