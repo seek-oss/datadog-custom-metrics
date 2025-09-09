@@ -3183,13 +3183,13 @@ eslint-config-seek@14.6.0:
     globals "^16.0.0"
     typescript-eslint "^8.6.0"
 
-eslint-config-skuba@7.1.0:
-  version "7.1.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-skuba/-/eslint-config-skuba-7.1.0.tgz#e27d6c06c2afa1a1e6e72e9dd113f632725c4200"
-  integrity sha512-8BJjPV6iBm1xd0VnZV3+yKrilbLy+kA0hU7yZfw4PrZykvG6Hqb5CjuSYPpVKnoEKFoYepCmJAH5GbJyY5wwDw==
+eslint-config-skuba@7.1.1:
+  version "7.1.1"
+  resolved "https://registry.yarnpkg.com/eslint-config-skuba/-/eslint-config-skuba-7.1.1.tgz#cef1a612c99765d84e8a9e9482988da4548b1158"
+  integrity sha512-A2Vn2pPIE7ge3geopzZMyqe5lHvD6m94nmyxcLkG0dMaxjqJSbdV0inc43eClgHmTVlDsRZe0XmDvsrNptenFQ==
   dependencies:
     eslint-config-seek "14.6.0"
-    eslint-plugin-skuba "1.0.0"
+    eslint-plugin-skuba "1.0.1"
     eslint-plugin-yml "^1.14.0"
     typescript-eslint "^8.39.0"
 
@@ -3272,10 +3272,10 @@ eslint-plugin-react@^7.35.0:
     string.prototype.matchall "^4.0.12"
     string.prototype.repeat "^1.0.0"
 
-eslint-plugin-skuba@1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-skuba/-/eslint-plugin-skuba-1.0.0.tgz#10a2115b265b191562caa852f000a42bb756692f"
-  integrity sha512-V+3zRELQBW8HWGUUY4L4l9GSNNm6ZcD1qqou43Xw1wiFbslMDl2TC6ubT0vH7+LqSQ0vyfCkBfQvpJdIlDbacw==
+eslint-plugin-skuba@1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-skuba/-/eslint-plugin-skuba-1.0.1.tgz#fee29f0923c69a8c9b3ac2d3133a243170334be1"
+  integrity sha512-76etzenvVz6Ez26Z+BOyZranmSmmAZkoHiw0lR25AA8MUo5Qe4fmE3oLfkISttDsRPsb+Gja8SMiOBThIWquww==
 
 eslint-plugin-yml@^1.14.0:
   version "1.18.0"
@@ -6936,10 +6936,10 @@ skin-tone@^2.0.0:
   dependencies:
     unicode-emoji-modifier-base "^1.0.0"
 
-skuba@12.1.1:
-  version "12.1.1"
-  resolved "https://registry.yarnpkg.com/skuba/-/skuba-12.1.1.tgz#860cbd0c62b76d6477d78c9cd9cdb750fd031ec2"
-  integrity sha512-+i//xxWSwA24xUlG20eQonLw4MwycRvEbxjkIL5gkucoJMnIG4QMbO1iHv9teCOfgrW69GnbzBstAcwJ7VB6XA==
+skuba@12.2.0:
+  version "12.2.0"
+  resolved "https://registry.yarnpkg.com/skuba/-/skuba-12.2.0.tgz#0f005b609a10235673a136553548445d745d1307"
+  integrity sha512-D41iLFzO542D/sH2SQqyW/oUBy2sSCU2/rMXbWSZdWL5DFpH32ZiaAJgfc59rQsVffR4r3fQrhX0zPhOPc8RyQ==
   dependencies:
     "@esbuild-plugins/tsconfig-paths" "^0.1.0"
     "@eslint/migrate-config" "~1.3.8"
@@ -6956,7 +6956,7 @@ skuba@12.1.1:
     enquirer "^2.3.6"
     esbuild "~0.25.0"
     eslint "^9.11.1"
-    eslint-config-skuba "7.1.0"
+    eslint-config-skuba "7.1.1"
     execa "^5.0.0"
     fast-glob "^3.3.2"
     find-up "^5.0.0"
