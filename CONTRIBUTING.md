@@ -51,12 +51,12 @@ If you're on Windows, we recommend the [Windows Subsystem for Linux].
 First, some JavaScript tooling:
 
 - Node.js 12+
-- Yarn 1.x
+- pnpm
 
 Next, install npm dependencies:
 
 ```shell
-yarn install
+pnpm install
 ```
 
 ### Git workflow
@@ -100,93 +100,68 @@ If all is well, they will merge your pull request into master.
 You may find it easier to develop alongside unit tests:
 
 ```shell
-yarn test --watch
+pnpm test --watch
 ```
 
 Format your code once you're happy with it:
 
 ```shell
-yarn format
+pnpm format
 ```
 
 We run linting and testing in CI,
 but consider running these commands locally for a faster feedback loop:
 
 ```shell
-yarn lint
-yarn test
+pnpm lint
+pnpm test
 ```
 
 ## Releases
 
-### Writing a semantic commit message
+### Creating a changeset
 
-Consider whether you are making a visible change to the public **seek-datadog-custom-metrics** interface,
-which includes:
+We use [Changesets] to manage package releases.
+You'll see a 🦋 bot gliding around pull requests.
 
-- Top-level exports from [src/index.ts](/src/index.ts)
-- [npm dependencies](/package.json)
+You should write a changeset if you are changing the public interface.
+On the other hand,
+a changeset is not necessary for:
 
-A release is not necessary for:
-
-- Documentation like the [README](/README.md)
+- Documentation like the [README](README.md)
 - Internal refactoring that preserves the existing interface
-- [npm dev dependencies](/package.json)
+- [npm dev dependencies](https://github.com/seek-oss/logger/blob/master/package.json)
 
-We use **[semantic-release]** to manage package releases.
-Commits should follow the [Conventional Commits] spec for [semantic versioning]:
+```shell
+pnpm changeset
+```
 
-- No release
-
-  ```text
-  chore(scope): Update documentation
-  ```
+The Changesets CLI is interactive and follows [semantic versioning]:
 
 - Patch release `0.0.X`: fixes or tweaks to existing functionality
-
-  ```text
-  fix(scope): Squash a bug
-  ```
-
 - Minor release `0.X.0`: new, backwards-compatible functionality
-
-  ```text
-  feat(scope): Add a feature
-  ```
-
 - Major release `X.0.0`: backwards-incompatible modification
 
-  ```text
-  fix(scope): Close security holes
-
-  BREAKING CHANGE: We deleted all our code.
-  ```
-
-  Note that the `fix` type could be anything;
-  the `BREAKING CHANGE:` prefix in the commit body is what determines the release as major.
-
-Specifying a scope makes it easy to eyeball which part of **seek-datadog-custom-metrics** a change relates to:
-
-```text
-chore(docs): Update README
-
-fix(CloudWatchClient): Improve tag sanitisation
-```
+The Changesets CLI will generate a Markdown file under [.changeset](https://github.com/seek-oss/logger/tree/master/.changeset),
+which you should include in your pull request.
+It doesn't need to be part of the same commit as the rest of your changes.
+Feel free to manually edit this file to include more details about your change.
 
 ### Publishing a release
 
-When a pull request is merged,
-our [release](/.github/workflows/release.yml) GitHub Actions workflow will publish the associated GitHub release and npm package version.
+When a pull request with a changeset is merged,
+our CI workflow will create a new `Version Packages` PR.
+The changesets are used to infer the next semantic version and to update the [changelog].
 
-We [squash our commits],
-so the merged commit itself needs to have a [semantic commit message](#writing-a-semantic-commit-message).
+This PR may be left open to collate multiple changes into the next version.
+A maintainer will merge it once ready,
+and our [release workflow] will publish the associated GitHub release and npm package version.
 
 ### Publishing a prerelease
 
-We currently have limited support for prereleases on the `beta` [dist-tag].
-This can only be performed by a maintainer.
+Prereleases can be created on demand via [seek-oss/changesets-snapshot].
 
-Simply push changes to the `beta` branch on GitHub.
+Manually run the [release workflow] on any branch in GitHub Actions to publish a new snapshot version to npm.
 
 [#typescriptification]: https://seekchat.slack.com/channels/typescriptification
 [conventional commits]: https://www.conventionalcommits.org/en/v1.0.0-beta.2/
@@ -195,8 +170,8 @@ Simply push changes to the `beta` branch on GitHub.
 [fork the repo]: https://github.com/seek-oss/datadog-custom-metrics/fork
 [npm package]: https://www.npmjs.com/package/seek-datadog-custom-metrics
 [release notes]: https://github.com/seek-oss/datadog-custom-metrics/releases
+[release workflow]: https://github.com/seek-oss/datadog-custom-metrics/actions/workflows/release.yml
 [semantic versioning]: https://semver.org/
-[semantic-release]: https://github.com/semantic-release/semantic-release
 [skuba]: https://github.com/seek-oss/skuba
 [squash our commits]: https://github.blog/2016-04-01-squash-your-commits/
 [submit an issue]: https://github.com/seek-oss/datadog-custom-metrics/issues/new/choose

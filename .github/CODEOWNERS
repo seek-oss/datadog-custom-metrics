@@ -1,5 +1,6 @@
 * @seek-oss/indirect
 
 # Configured by Renovate
+
 package.json
-yarn.lock
+pnpm-lock.yaml

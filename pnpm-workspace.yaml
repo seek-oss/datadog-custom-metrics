@@ -1,0 +1,12 @@
+# managed by skuba
+packageManagerStrictVersion: true
+publicHoistPattern:
+  - '@types*'
+  - eslint
+  - eslint-config-skuba
+  - prettier
+  - esbuild
+  - jest
+  - tsconfig-seek
+  - typescript
+  # end managed by skuba
