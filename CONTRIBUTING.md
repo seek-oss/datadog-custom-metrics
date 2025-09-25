@@ -161,7 +161,7 @@ and our [release workflow] will publish the associated GitHub release and npm pa
 
 Prereleases can be created on demand via [seek-oss/changesets-snapshot].
 
-Run the [Release workflow] manually on any branch in GitHub Actions to publish a new snapshot version to npm.
+Manually run the [release workflow] on any branch in GitHub Actions to publish a new snapshot version to npm.
 
 [#typescriptification]: https://seekchat.slack.com/channels/typescriptification
 [conventional commits]: https://www.conventionalcommits.org/en/v1.0.0-beta.2/
