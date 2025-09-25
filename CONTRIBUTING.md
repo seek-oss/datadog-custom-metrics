@@ -170,7 +170,7 @@ Manually run the [release workflow] on any branch in GitHub Actions to publish a
 [fork the repo]: https://github.com/seek-oss/datadog-custom-metrics/fork
 [npm package]: https://www.npmjs.com/package/seek-datadog-custom-metrics
 [release notes]: https://github.com/seek-oss/datadog-custom-metrics/releases
-[release workflow]: https://github.com/seek-oss//datadog-custom-metrics/actions/workflows/release.yml
+[release workflow]: https://github.com/seek-oss/datadog-custom-metrics/actions/workflows/release.yml
 [semantic versioning]: https://semver.org/
 [skuba]: https://github.com/seek-oss/skuba
 [squash our commits]: https://github.blog/2016-04-01-squash-your-commits/
