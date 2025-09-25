@@ -51,12 +51,12 @@ If you're on Windows, we recommend the [Windows Subsystem for Linux].
 First, some JavaScript tooling:
 
 - Node.js 12+
-- Yarn 1.x
+- pnpm
 
 Next, install npm dependencies:
 
 ```shell
-yarn install
+pnpm install
 ```
 
 ### Git workflow
@@ -100,21 +100,21 @@ If all is well, they will merge your pull request into master.
 You may find it easier to develop alongside unit tests:
 
 ```shell
-yarn test --watch
+pnpm test --watch
 ```
 
 Format your code once you're happy with it:
 
 ```shell
-yarn format
+pnpm format
 ```
 
 We run linting and testing in CI,
 but consider running these commands locally for a faster feedback loop:
 
 ```shell
-yarn lint
-yarn test
+pnpm lint
+pnpm test
 ```
 
 ## Releases

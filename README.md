@@ -9,7 +9,7 @@
 Helpers for sending [Datadog custom metrics](https://docs.datadoghq.com/developers/metrics/custom_metrics/) via [hot-shots](https://github.com/brightcove/hot-shots).
 
 ```shell
-yarn add seek-datadog-custom-metrics
+pnpm add seek-datadog-custom-metrics
 ```
 
 ## Tagging convention
