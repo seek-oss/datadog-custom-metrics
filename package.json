@@ -39,7 +39,7 @@
     "@changesets/get-github-info": "0.6.0",
     "@types/node": "22.18.11",
     "datadog-lambda-js": "12.129.0",
-    "dd-trace": "5.67.0",
+    "dd-trace": "5.70.0",
     "hot-shots": "11.2.0",
     "skuba": "13.0.3"
   },
