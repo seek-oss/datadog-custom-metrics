@@ -25,8 +25,8 @@ importers:
         specifier: 12.129.0
         version: 12.129.0
       dd-trace:
-        specifier: 5.67.0
-        version: 5.67.0
+        specifier: 5.70.0
+        version: 5.70.0
       hot-shots:
         specifier: 11.2.0
         version: 11.2.0
@@ -1586,8 +1586,8 @@ packages:
     resolution: {integrity: sha512-9iSbB8XZ7aIrhUtWI5ulEOJ+IyUN+axquodHK+bZO4r7HfY/xwmo6I4fYYf+aiDom+WMcN/wnzCz+pKvHDDCug==}
     engines: {node: '>=12.17'}
 
-  dd-trace@5.67.0:
-    resolution: {integrity: sha512-tMHk8NYWFNn2t2L2Vj7VWWKIIRArZIjnlzcgon9PNfhOzAi0t+Zt+E4OaGLbGoftDf/S+ZK0o4aHQwsSu3UE3w==}
+  dd-trace@5.70.0:
+    resolution: {integrity: sha512-A757IJ3OIrRvFQXqa7bZ8KvwwtnjTEhj/2mNG88mNAbaildJI+FKQHDQWMM02YvQeJHwneeS6dmTj2V1mVnGrg==}
     engines: {node: '>=18'}
 
   debug@4.4.3:
@@ -2786,10 +2786,6 @@ packages:
 
   keyv@4.5.4:
     resolution: {integrity: sha512-oxVHkHR/EJf2CNXnWxRLW6mg7JyCCUcG0DtEGmL2ctUo1PNTin1PUil+r/+4r5MpVgC/fn1kjsx7mjSujKqIpw==}
-
-  koalas@1.0.2:
-    resolution: {integrity: sha512-RYhBbYaTTTHId3l6fnMZc3eGQNW6FVCqMG6AMwA5I1Mafr6AflaXeoi6x3xQuATRotGYRLk6+1ELZH4dstFNOA==}
-    engines: {node: '>=0.10.0'}
 
   leven@3.1.0:
     resolution: {integrity: sha512-qsda+H8jTaUaN/x5vzW2rzc+8Rw4TAQ/4KjB46IwK5VH+IlVeeeje/EoZRpiXvIqjFgK84QffqPztGI3VBLG1A==}
@@ -6112,7 +6108,7 @@ snapshots:
 
   dc-polyfill@0.1.10: {}
 
-  dd-trace@5.67.0:
+  dd-trace@5.70.0:
     dependencies:
       '@datadog/libdatadog': 0.7.0
       '@datadog/native-appsec': 10.2.1
@@ -6131,7 +6127,6 @@ snapshots:
       istanbul-lib-coverage: 3.2.2
       jest-docblock: 29.7.0
       jsonpath-plus: 10.3.0
-      koalas: 1.0.2
       limiter: 1.1.5
       lodash.sortby: 4.7.0
       lru-cache: 10.4.3
@@ -7682,8 +7677,6 @@ snapshots:
   keyv@4.5.4:
     dependencies:
       json-buffer: 3.0.1
-
-  koalas@1.0.2: {}
 
   leven@3.1.0: {}
 
