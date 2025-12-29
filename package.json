@@ -35,12 +35,12 @@
     "@types/aws-lambda": "^8.10.108"
   },
   "devDependencies": {
-    "@changesets/cli": "2.29.7",
-    "@changesets/get-github-info": "0.6.0",
+    "@changesets/cli": "2.29.8",
+    "@changesets/get-github-info": "0.7.0",
     "@types/node": "22.19.2",
-    "datadog-lambda-js": "12.129.0",
-    "dd-trace": "5.70.0",
-    "hot-shots": "11.2.0",
+    "datadog-lambda-js": "12.132.0",
+    "dd-trace": "5.79.0",
+    "hot-shots": "11.4.0",
     "skuba": "13.1.1"
   },
   "peerDependencies": {
