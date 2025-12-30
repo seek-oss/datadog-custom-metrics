@@ -37,7 +37,7 @@
   "devDependencies": {
     "@changesets/cli": "2.29.8",
     "@changesets/get-github-info": "0.7.0",
-    "@types/node": "22.19.2",
+    "@types/node": "22.19.3",
     "datadog-lambda-js": "12.132.0",
     "dd-trace": "5.79.0",
     "hot-shots": "11.4.0",
