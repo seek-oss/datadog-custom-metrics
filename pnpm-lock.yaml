@@ -28,8 +28,8 @@ importers:
         specifier: 5.79.0
         version: 5.79.0(@openfeature/core@1.9.1)(@openfeature/server-sdk@1.18.0(@openfeature/core@1.9.1))
       hot-shots:
-        specifier: 11.4.0
-        version: 11.4.0
+        specifier: 12.0.0
+        version: 12.0.0
       skuba:
         specifier: 13.1.1
         version: 13.1.1(@babel/core@7.28.4)(@jest/transform@30.2.0)(@typescript-eslint/eslint-plugin@8.45.0(@typescript-eslint/parser@8.45.0(eslint@9.39.1)(typescript@5.9.3))(eslint@9.39.1)(typescript@5.9.3))(@typescript-eslint/utils@8.45.0(eslint@9.39.1)(typescript@5.9.3))(babel-jest@30.2.0(@babel/core@7.28.4))(jest-util@30.2.0)
@@ -2579,8 +2579,8 @@ packages:
     resolution: {integrity: sha512-Rw/B2DNQaPBICNXEm8balFz9a6WpZrkCGpcWFpy7nCj+NyhSdqXipmfvtmWt9xGfp0wZnBxB+iVpLmQMYt47Tw==}
     engines: {node: ^18.17.0 || >=20.5.0}
 
-  hot-shots@11.4.0:
-    resolution: {integrity: sha512-IoyXi0eBFLbaARl6IjQxNzxqNxH3h1XX026PP5uru/RwVVLOt9Qr9f87GW+4L/sj7sNyMGzmIsh++0z5ibkP5w==}
+  hot-shots@12.0.0:
+    resolution: {integrity: sha512-VdEXhNX4FYOY/Qx8sPcdR8+y/jXgwGlQdhk77dgFvJsVx+uS9WwiHEc+NKJqEQmd+0FTwy2/5FOtqe4cZ/JV5g==}
     engines: {node: '>=16.0.0'}
 
   html-escaper@2.0.2:
@@ -7532,7 +7532,7 @@ snapshots:
     dependencies:
       lru-cache: 10.4.3
 
-  hot-shots@11.4.0:
+  hot-shots@12.0.0:
     optionalDependencies:
       unix-dgram: 2.0.7
 
