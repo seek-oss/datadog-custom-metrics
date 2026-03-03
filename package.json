@@ -40,12 +40,12 @@
     "@types/node": "24.10.14",
     "datadog-lambda-js": "12.133.0",
     "dd-trace": "5.83.0",
-    "hot-shots": "12.1.0",
+    "hot-shots": "14.0.0",
     "skuba": "14.1.1"
   },
   "peerDependencies": {
-    "datadog-lambda-js": "6.x || 7.x || 8.x || 9.x || 10.x || 12.x",
-    "hot-shots": "6.x || 7.x || 8.x || 9.x || 10.x || 11.x || 14.x"
+    "datadog-lambda-js": "6.x || 7.x || 8.x || 9.x || 10.x || 11.x || 12.x",
+    "hot-shots": "6.x || 7.x || 8.x || 9.x || 10.x || 11.x || 12.x || 13.x || 14.x"
   },
   "peerDependenciesMeta": {
     "datadog-lambda-js": {
