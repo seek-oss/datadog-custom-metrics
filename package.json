@@ -13,13 +13,19 @@
   },
   "license": "MIT",
   "sideEffects": false,
-  "main": "./lib-commonjs/index.js",
-  "module": "./lib-es2015/index.js",
-  "types": "./lib-types/index.d.ts",
+  "exports": {
+    ".": {
+      "@seek/datadog-custom-metrics/source": "./src/index.ts",
+      "import": "./lib/index.mjs",
+      "require": "./lib/index.cjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "main": "./lib/index.cjs",
+  "module": "./lib/index.mjs",
+  "types": "./lib/index.d.cts",
   "files": [
-    "lib*/**/*.d.ts",
-    "lib*/**/*.js",
-    "lib*/**/*.js.map"
+    "lib"
   ],
   "scripts": {
     "build": "skuba build-package",
@@ -56,10 +62,22 @@
     }
   },
   "packageManager": "pnpm@10.29.1",
+  "engines": {
+    "node": ">=22.14.0"
+  },
+  "publishConfig": {
+    "exports": {
+      ".": {
+        "import": "./lib/index.mjs",
+        "require": "./lib/index.cjs"
+      },
+      "./package.json": "./package.json"
+    }
+  },
   "skuba": {
     "entryPoint": "src/index.ts",
     "template": null,
     "type": "package",
-    "version": "14.1.1"
+    "version": "15.0.0"
   }
 }

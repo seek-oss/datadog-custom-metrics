@@ -1,5 +1,7 @@
 {
   "compilerOptions": {
+    "skipLibCheck": true, // tsdown has optional peer deps
+    "customConditions": ["@seek/datadog-custom-metrics/source"],
     "rootDir": ".",
     "lib": ["ES2023"],
     "outDir": "lib",
