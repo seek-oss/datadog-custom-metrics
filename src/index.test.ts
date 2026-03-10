@@ -1,5 +1,4 @@
 import {
-  createLambdaExtensionClient,
   createNoOpClient,
   createStatsDClient,
   createTimedSpan,
@@ -9,10 +8,6 @@ import {
 describe('index', () => {
   it('should export a createStatsDClient function', () => {
     expect(createStatsDClient).toBeInstanceOf(Function);
-  });
-
-  it('should export a createLambdaExtensionClient function', () => {
-    expect(createLambdaExtensionClient).toBeInstanceOf(Function);
   });
 
   it('should export a createNoOpClient function', () => {

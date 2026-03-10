@@ -19,6 +19,11 @@
       "import": "./lib/index.mjs",
       "require": "./lib/index.cjs"
     },
+    "./lambda": {
+      "@seek/datadog-custom-metrics/source": "./src/lambda/index.ts",
+      "import": "./lib/lambda/index.mjs",
+      "require": "./lib/lambda/index.cjs"
+    },
     "./package.json": "./package.json"
   },
   "main": "./lib/index.cjs",
@@ -70,6 +75,10 @@
       ".": {
         "import": "./lib/index.mjs",
         "require": "./lib/index.cjs"
+      },
+      "./lambda": {
+        "import": "./lib/lambda/index.mjs",
+        "require": "./lib/lambda/index.cjs"
       },
       "./package.json": "./package.json"
     }
