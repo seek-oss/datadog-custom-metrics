@@ -1,7 +1,7 @@
 import { defineConfig } from 'tsdown';
 
 export default defineConfig({
-  entry: ['src/index.ts'],
+  entry: ['src/index.ts', 'src/lambda/index.ts'],
   format: ['cjs', 'esm'],
   outDir: 'lib',
   dts: true,
@@ -9,7 +9,9 @@ export default defineConfig({
     legacyCjs: false,
   },
   publint: true,
-  attw: true,
+  attw: {
+    profile: 'node16',
+  },
   unbundle: true, // TODO: determine if your project can be bundled
   exports: { devExports: '@seek/datadog-custom-metrics/source' },
 });
