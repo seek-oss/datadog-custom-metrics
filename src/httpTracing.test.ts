@@ -1,4 +1,5 @@
 import tracer from 'dd-trace';
+import { describe, expect, it, vi } from 'vitest';
 
 import {
   httpTracingConfig,
@@ -177,7 +178,7 @@ describe('request', () => {
 
   it('infers a resource name tag from a simple URL', () => {
     const span = {
-      setTag: jest.fn(),
+      setTag: vi.fn(),
     };
 
     expect(() =>
@@ -197,7 +198,7 @@ describe('request', () => {
 
   it('gracefully continues on missing parameters', () => {
     const span = {
-      setTag: jest.fn(),
+      setTag: vi.fn(),
     };
 
     expect(() => request()).not.toThrow();
@@ -207,7 +208,7 @@ describe('request', () => {
 
   it('gracefully continues on inference failure', () => {
     const span = {
-      setTag: jest.fn(),
+      setTag: vi.fn(),
     };
 
     expect(() => request(span, undefined)).not.toThrow();

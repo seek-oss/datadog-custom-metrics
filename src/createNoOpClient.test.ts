@@ -1,9 +1,13 @@
+import { afterEach, describe, it, vi } from 'vitest';
+
 import { createNoOpClient } from './createNoOpClient.js';
 
 describe('createNoOpClient', () => {
   const metricsClient = createNoOpClient();
 
-  afterEach(() => jest.resetAllMocks());
+  afterEach(() => {
+    vi.resetAllMocks();
+  });
 
   describe('timing', () => {
     it('should not throw', () => {

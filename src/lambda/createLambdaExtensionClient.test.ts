@@ -1,15 +1,14 @@
 import type { Context, SQSEvent } from 'aws-lambda';
 import * as datadogJS from 'datadog-lambda-js';
+import { afterEach, describe, expect, it, vi } from 'vitest';
 
 import { createLambdaExtensionClient } from './createLambdaExtensionClient.js';
 
-const sendDistributionMetric = jest
+const sendDistributionMetric = vi
   .spyOn(datadogJS, 'sendDistributionMetric')
   .mockReturnValue();
 
-const datadog = jest
-  .spyOn(datadogJS, 'datadog')
-  .mockReturnValue(() => undefined);
+const datadog = vi.spyOn(datadogJS, 'datadog').mockReturnValue(() => undefined);
 
 describe('createLambdaExtensionClient', () => {
   const { metricsClient, withLambdaExtension } = createLambdaExtensionClient({
@@ -19,7 +18,9 @@ describe('createLambdaExtensionClient', () => {
 
   const tags = ['pipe|special|char', 'env:prod'];
 
-  afterEach(() => jest.resetAllMocks());
+  afterEach(() => {
+    vi.resetAllMocks();
+  });
 
   describe('withLambdaExtension', () => {
     it('should call the `datadog` wrapper', async () => {

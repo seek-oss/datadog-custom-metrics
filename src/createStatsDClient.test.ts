@@ -1,4 +1,5 @@
 import { StatsD } from 'hot-shots';
+import { describe, expect, it } from 'vitest';
 
 import { createStatsDClient } from './createStatsDClient.js';
 
