@@ -21,6 +21,9 @@ importers:
       '@changesets/get-github-info':
         specifier: 0.8.0
         version: 0.8.0
+      '@skuba-lib/changesets-changelog':
+        specifier: 1.0.1
+        version: 1.0.1
       '@types/node':
         specifier: 24.12.4
         version: 24.12.4
@@ -1766,6 +1769,11 @@ packages:
   '@skuba-lib/api@2.1.2':
     resolution: {integrity: sha512-T6MM3/pGimXPST2xPlrCnq805hGfA2B89sGC26zP6oTjnxHfSxYr9A1zPaLPoc0G2POK+C1dbBiS0XAQ2mW9uA==}
     engines: {node: '>=22.14.0'}
+
+  '@skuba-lib/changesets-changelog@1.0.1':
+    resolution: {integrity: sha512-UqESCamXhB2ExPWrc5Vu33NCPTso9PUG0atQ95+nhqKJ58vlPrGqKMF9LBXmY5/I5UR15lng2ckNOvrwNhR++A==}
+    engines: {node: '>=24'}
+    hasBin: true
 
   '@smithy/is-array-buffer@2.2.0':
     resolution: {integrity: sha512-GGP3O9QFD24uGeAXYUjwSTXARoqpZykHadOmA8G5vfJPK0/DC67qa//0qvqrJzL1xc8WQWX7/yc7fwudjPHPhA==}
@@ -7325,6 +7333,12 @@ snapshots:
       npm-run-path: 6.0.0
       npm-which: 3.0.1
       zod: 4.3.6
+
+  '@skuba-lib/changesets-changelog@1.0.1':
+    dependencies:
+      '@changesets/get-github-info': 0.8.0
+    transitivePeerDependencies:
+      - encoding
 
   '@smithy/is-array-buffer@2.2.0':
     dependencies:
