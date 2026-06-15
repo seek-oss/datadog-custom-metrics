@@ -13,6 +13,6 @@ export default defineConfig({
   attw: {
     profile: 'node16',
   },
-  unbundle: true, // TODO: determine if your project can be bundled
   exports: { devExports: '@seek/datadog-custom-metrics/source' },
+  sourcemap: true,
 });
