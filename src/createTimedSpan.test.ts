@@ -1,4 +1,5 @@
 import { StatsD } from 'hot-shots';
+import { afterEach, describe, expect, it, vi } from 'vitest';
 
 import { createStatsDClient } from './createStatsDClient.js';
 import { createTimedSpan } from './createTimedSpan.js';
@@ -11,12 +12,12 @@ const timedSpan = createTimedSpan(metricsClient);
 
 describe('timedSpan', () => {
   afterEach(() => {
-    jest.restoreAllMocks();
+    vi.restoreAllMocks();
   });
 
   it('should handle successful completion', async () => {
-    const mockIncrement = jest.spyOn(metricsClient, 'increment');
-    const mockTiming = jest.spyOn(metricsClient, 'timing');
+    const mockIncrement = vi.spyOn(metricsClient, 'increment');
+    const mockTiming = vi.spyOn(metricsClient, 'timing');
 
     const result = await timedSpan(
       'test',
@@ -44,8 +45,8 @@ describe('timedSpan', () => {
   });
 
   it('should call afterCompletion', async () => {
-    jest.spyOn(metricsClient, 'increment');
-    jest.spyOn(metricsClient, 'timing');
+    vi.spyOn(metricsClient, 'increment');
+    vi.spyOn(metricsClient, 'timing');
 
     let duration = 0;
 
@@ -65,8 +66,8 @@ describe('timedSpan', () => {
   });
 
   it('should pass along tags from `timedSpan`', async () => {
-    const mockIncrement = jest.spyOn(metricsClient, 'increment');
-    const mockTiming = jest.spyOn(metricsClient, 'timing');
+    const mockIncrement = vi.spyOn(metricsClient, 'increment');
+    const mockTiming = vi.spyOn(metricsClient, 'timing');
 
     await timedSpan(
       'test',
@@ -89,8 +90,8 @@ describe('timedSpan', () => {
   });
 
   it('should pass along tags from `afterCompletion`', async () => {
-    const mockIncrement = jest.spyOn(metricsClient, 'increment');
-    const mockTiming = jest.spyOn(metricsClient, 'timing');
+    const mockIncrement = vi.spyOn(metricsClient, 'increment');
+    const mockTiming = vi.spyOn(metricsClient, 'timing');
 
     await timedSpan(
       'test',
@@ -114,8 +115,8 @@ describe('timedSpan', () => {
   });
 
   it("should pass along tags from `afterCompletion` when original tags aren't provided", async () => {
-    const mockIncrement = jest.spyOn(metricsClient, 'increment');
-    const mockTiming = jest.spyOn(metricsClient, 'timing');
+    const mockIncrement = vi.spyOn(metricsClient, 'increment');
+    const mockTiming = vi.spyOn(metricsClient, 'timing');
 
     await timedSpan(
       'test',
@@ -137,8 +138,8 @@ describe('timedSpan', () => {
   });
 
   it('should handle failure', async () => {
-    const mockIncrement = jest.spyOn(metricsClient, 'increment');
-    const mockTiming = jest.spyOn(metricsClient, 'timing');
+    const mockIncrement = vi.spyOn(metricsClient, 'increment');
+    const mockTiming = vi.spyOn(metricsClient, 'timing');
 
     await expect(
       timedSpan('test', () => {

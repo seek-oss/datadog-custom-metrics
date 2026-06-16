@@ -1,7 +1,7 @@
-const { defineConfig } = require('eslint/config');
-const skuba = require('eslint-config-skuba');
+import { defineConfig } from 'eslint/config';
+import skuba from 'eslint-config-skuba';
 
-module.exports = defineConfig([
+export default defineConfig([
   {
     extends: skuba,
   },
