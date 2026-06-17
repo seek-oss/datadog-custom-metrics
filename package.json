@@ -38,7 +38,7 @@
     "format": "skuba format",
     "lint": "skuba lint",
     "release": "pnpm build && changeset publish",
-    "stage": "changeset version && node ./.changeset/inject.js && pnpm format",
+    "stage": "changeset version && pnpm format",
     "test": "skuba test",
     "test:ci": "skuba test --coverage",
     "test:watch": "skuba test --watch"
