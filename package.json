@@ -53,7 +53,7 @@
     "datadog-lambda-js": "12.137.0",
     "dd-trace": "5.97.0",
     "hot-shots": "14.3.1",
-    "skuba": "16.1.0"
+    "skuba": "16.2.0"
   },
   "peerDependencies": {
     "datadog-lambda-js": "6.x || 7.x || 8.x || 9.x || 10.x || 11.x || 12.x",
@@ -88,6 +88,6 @@
     "entryPoint": "src/index.ts",
     "template": null,
     "type": "package",
-    "version": "16.1.0"
+    "version": "16.2.0"
   }
 }
