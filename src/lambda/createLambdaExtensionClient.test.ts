@@ -1,4 +1,4 @@
-import type { Context, SQSEvent } from 'aws-lambda';
+import type { Context } from 'aws-lambda';
 import * as datadogJS from 'datadog-lambda-js';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 
@@ -26,7 +26,7 @@ describe('createLambdaExtensionClient', () => {
     it('should call the `datadog` wrapper', async () => {
       const handler = withLambdaExtension(() => Promise.resolve());
 
-      await handler({} as SQSEvent, {} as Context);
+      await handler({}, {} as Context);
 
       expect(datadog).toHaveBeenCalledTimes(1);
     });
@@ -43,7 +43,7 @@ describe('createLambdaExtensionClient', () => {
         return Promise.resolve();
       });
 
-      await handler({} as SQSEvent, {} as Context);
+      await handler({}, {} as Context);
 
       expect(datadog).not.toHaveBeenCalled();
     });
