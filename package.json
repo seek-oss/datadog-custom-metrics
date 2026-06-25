@@ -52,7 +52,7 @@
     "@types/node": "24.12.4",
     "datadog-lambda-js": "12.137.0",
     "dd-trace": "5.97.0",
-    "hot-shots": "14.3.1",
+    "hot-shots": "16.0.0",
     "skuba": "16.2.0"
   },
   "peerDependencies": {
