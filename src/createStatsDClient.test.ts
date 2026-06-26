@@ -55,6 +55,7 @@ describe('createStatsDClient', () => {
     process.env.DD_ENV = 'env_var';
     process.env.DD_SERVICE = 'my_service';
     process.env.DD_VERSION = 'my_version';
+    process.env.DD_ORIGIN_DETECTION_ENABLED = 'false';
 
     const client = createStatsDClient(StatsD, {
       environment: 'client_config',
