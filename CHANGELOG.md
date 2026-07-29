@@ -1,5 +1,11 @@
 # seek-datadog-custom-metrics
 
+## 9.2.0
+
+### Minor Changes
+
+- Allow hot-shots 17.x in peer dependencies ([#393](https://github.com/seek-oss/datadog-custom-metrics/pull/393))
+
 ## 9.1.0
 
 ### Minor Changes
