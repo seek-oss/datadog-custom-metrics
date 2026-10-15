@@ -46,7 +46,6 @@ import { createStatsDClient } from 'seek-datadog-custom-metrics';
 
 // Expects `name` and `metricsServer` properties
 import config from '../config';
-
 // This example assumes Bunyan/pino
 import { rootLogger } from '../logger';
 const errorHandler = (err: Error) => {
