@@ -13,7 +13,7 @@ jobs:
     name: Publish
     if: github.event_name == 'push'
     permissions:
-      contents: write
+      contents: read
       id-token: write
     runs-on: ubuntu-latest
     steps:
