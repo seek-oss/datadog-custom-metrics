@@ -61,7 +61,7 @@
   },
   "devDependencies": {
     "@changesets/cli": "2.31.0",
-    "@skuba-lib/changesets-changelog": "1.0.1",
+    "@skuba-lib/changesets-changelog": "2.0.0",
     "@types/node": "24.12.4",
     "datadog-lambda-js": "12.137.0",
     "dd-trace": "5.97.0",
