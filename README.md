@@ -40,6 +40,18 @@ One global tag may be optionally added to every custom metric:
 `createStatsDClient` creates a [hot-shots](https://github.com/brightcove/hot-shots) client.
 This is intended for containerized services, particularly those deployed with [Gantry](https://github.com/SEEK-Jobs/gantry).
 
+> [!WARNING]
+>
+> The `increment()` and `timing()` methods on the StatsD client submit gauge/rate metrics.
+> If you previously used a metric name with one of these methods in the [_Lambda_ client](#createlambdaextensionclient),
+> Datadog would have recorded it as a [distribution] metric,
+> and may silently drop data later submitted under a different metric type.
+>
+> If you are missing data for a specific metric,
+> look for its name in the metric catalog in the Datadog web UI (`/metric/catalog`).
+> If a different metric type is already recorded against that name,
+> modify your code to use that metric type (e.g. with `distribution()`) or a new metric name.
+
 ```typescript
 import { StatsD } from 'hot-shots';
 import { createStatsDClient } from 'seek-datadog-custom-metrics';
@@ -61,7 +73,19 @@ const metricsClient = createStatsDClient(StatsD, config, errorHandler);
 `createLambdaExtensionClient` creates a [Lambda extension](https://docs.datadoghq.com/serverless/libraries_integrations/extension/) client.
 This is intended for AWS Lambda functions and is a replacement for `createCloudWatchClient`.
 
-This client will only submit metrics as a [distribution](https://docs.datadoghq.com/metrics/distributions/) which enables globally accurate aggregations for percentiles (p50, p75, p90, etc).
+This client will only submit metrics as a [distribution] which enables globally accurate aggregations for percentiles (p50, p75, p90, etc).
+
+> [!WARNING]
+>
+> The `increment()` and `timing()` methods on the Lambda client submit [distribution] metrics.
+> If you previously used a metric name with one of these methods in the [_StatsD_ client](#createstatsdclient),
+> Datadog would have recorded it as a rate/gauge metric,
+> and may silently drop data later submitted under a different metric type.
+>
+> If you are missing data for a specific metric,
+> look for its name in the metric catalog in the Datadog web UI (`/metric/catalog`).
+> If a different metric type is already recorded against that name,
+> modify your code to use a new metric name.
 
 ```typescript
 import { createLambdaExtensionClient } from 'seek-datadog-custom-metrics';
@@ -154,3 +178,4 @@ This configuration may be superseded in future if the underlying [dd-trace] impl
 [DataDog/dd-trace-js#1118](https://github.com/DataDog/dd-trace-js/issues/1118)
 
 [dd-trace]: https://github.com/DataDog/dd-trace-js
+[distribution]: https://docs.datadoghq.com/metrics/distributions/
